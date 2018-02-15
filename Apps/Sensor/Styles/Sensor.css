@@ -1,0 +1,530 @@
+﻿/*
+CSS reset
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/*
+These styles control the page color, font and color.
+*/
+body,
+html,
+div {
+     margin: 0;
+     padding:0;
+     font-family: 'Segoe UI';
+     color:white;
+     background-color: rgb(128, 128, 128);
+}
+a {text-decoration: none;}
+a:link {text-decoration: none;  color:white;}
+a:visited {color: white}  /* #E0E0E0;*/
+a:hover {COLOR: darkblue;}
+
+ 
+/*
+Page is the primary container; don't mess with it.
+*/
+.page {
+     margin: 0 auto;
+     max-width: 95%;
+     overflow:hidden;
+     position:relative;
+}
+/* 
+Reusable column setup.  Background style controls the box colors.  
+Swap with other colors in the palette by replacing 'background: #3ECFF9' with any of these:
+#2D97B5 = rgb(45,151,181), #007B9D = rgb(0,123,157), #70DAF9 = rgb(112,218,249)
+*/
+.col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+    background: #3ECFF9;
+	margin-bottom: 12px;
+}
+
+
+
+    /* 1. 2 Column Grid 0px - 339px viewport, basically smartphone browsers 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1: 50%
+    Span 2: 100%
+    
+    ----------------------------------------------------------------------------- */
+    /*This bit of CSS fixes the issues with Chrome font rendering smaller than IE*/
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        .homeID_title {
+            font-size: 150%;      
+        }
+        .dashboard_toolbar {
+             padding:0 12px 12px;
+         }
+    }
+
+    @media screen and (min-width: 0px) and (max-width: 339px) {
+        
+        .row {
+            margin-left:-12px;
+        }
+        .col {
+            border-left-width:12px;
+        	padding:0 12px;
+            height:50px;
+        }
+        
+        
+        /*
+        Add your semantic classnames in alongside their corresponding spans here. e.g.
+        
+        .span_3,
+        .my_semantic_class_name {
+            ...
+        }
+        */
+        
+        .span_1 {
+            width:50%;
+        }
+        /* Using .col to target ALL columns and make them 100% */
+        .span_2,
+        .col {
+            width:100%;
+            margin-left:0;
+        }
+        .media_block {
+            height: 120px;
+        }
+        .store_block {
+            height: 49.0%;
+        }
+        .app_block {
+            padding:0;
+            margin:0;
+            font-size: 90%;
+            background-color: rgb(128, 128, 128);
+        }
+        .app_desc,
+        .app_rating,
+        .app_reqs {
+            font-size: 75%;
+            padding: 1%;
+            background-color:#3ECFF9;
+        }
+        .app_image {
+            max-width: 75%;
+            max-height: 75%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-left: 30%;
+        }
+        .dashboard_toolbar {
+             max-width: 100%;
+             border-left-width:12px;
+             padding:0 12px;
+             background-color: #00BDF2;
+         }
+        .span_6,
+        .header,
+        .homeID_title,
+        .footer {
+            width: 100%;
+            height: 25px;
+            margin-left: 6px;
+            background-color: #00BDF2;
+        }
+        .page_title {
+            width: 100%;
+            margin-left: 0;
+            font-size: 150%;
+            background-color: rgb(128, 128, 128);
+        }
+        .status {
+            width: 100%;
+            margin-left: 0;
+        }
+        .app_content {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+            background-color:rgb(128, 128, 128);
+        }
+        .app_form {
+            font-family: 'Segoe UI';
+            padding: 1%;
+        }
+        .app_button {
+            width: 100px;
+            border:none;
+            padding: 5px;
+            margin-left: 0;
+            margin-right: 5px;
+            margin-bottom: 20px;
+            background-color: steelblue;
+            color: white;
+            font-size: 110%;
+        }
+           .app_button:hover {
+             background: #2D97B5;
+         }
+        .app_button2 {
+            width: 150px;
+            padding: 5px;
+            margin-top: 15px;
+            background-color: #C0C0C0;
+            color: white;
+            font-size: 110%;
+        }
+        .app_button2:hover {
+             background: #2D97B5;
+         }
+        input[type=email] {
+            border-style: solid;
+            border-width: medium;
+            border-color: White;
+            padding: 5px;
+            margin-top: 10px;
+            font-size: 90%;
+            width: 90%;
+        }
+        textarea {
+            width: 100%;
+        }
+    }
+
+    /* 2. 6 Column Grid 340px - 919px viewport, basically 7" and older tablets
+    ----------------------------------------------------------------------------- 
+    
+    Span 1: 15.0%
+    Span 2: 32.0%
+    Span 3: 49.0%
+    Span 4: 66.0%
+    Span 5: 83.0%
+    Span 6: 1000%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 340px) and (max-width: 919px) {
+        
+        .col {
+            margin-left:2%;
+        	padding:0 2%;
+            font-size:150%;
+        }
+        
+        .row .col:first-child {
+            margin-left:0;
+        }
+        
+        /*
+        Add your semantic classnames in alongside their corresponding spans here. e.g.
+        
+        .span_3,
+        .my_semantic_class_name {
+            ...
+        }
+        */
+        
+        .span_1 {
+            width:15.0%;
+        }
+        /*
+        Here we have used our semantic names 'navigation' and 'media_block' and appended
+        them next to their corresponding widths
+        */
+        .span_2,
+        .navigation,
+        .media_block {
+            width:32.0%;
+            height: 200px;
+        }
+        .navigation {
+            height: 40px;
+        }
+        .span_3,
+        .store_block {
+            width:49.0%;
+        }
+        .app_block {
+            width:33.3333333333%;
+            height: 300px;
+            float: left;
+        }
+        .app_desc,
+        .app_rating,
+        .app_reqs {
+            font-size: 80%;
+            padding: 1%;
+            background-color: rgb(128, 128, 128);
+        }
+        .app_image {
+            max-width: 75%;
+            max-height: 75%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }        
+        .span_4,
+        .main_content {
+            width:66.0%;
+            height: 400px;
+        }
+        .span_5 {
+            width:83.0%;
+        }
+        .dashboard_toolbar {
+             max-width: 100%;
+             border-left-width:12px;
+             padding:0 24px;
+             background-color: #00BDF2;
+         }
+        .span_6,
+        .header,
+        .homeID_title,
+        .footer {
+            width:100%;
+            height: 40px;
+            margin-left: 9px;
+            /*padding-left: 13px;*/
+            background-color: #00BDF2;
+            font-size: 150%;
+        }
+        .page_title {
+            width: 100%;
+            margin-left: 0;
+            font-size: 250%;
+            background-color: rgb(128, 128, 128);
+        }
+        .app_content {
+            width: 100%;
+            height: auto;
+            margin-left: 9px;
+            padding-left: 12px;
+            background-color:rgb(128, 128, 128); 
+        }
+       .app_form {
+            font-family: 'Segoe UI';
+            padding: 1%;
+            /*font-size: 75%;*/
+        }
+        .app_button {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 20px;
+            background-color: steelblue;
+            color: white;
+            font-size: 105%;
+        }
+        .app_button:hover {
+             background: #2D97B5;
+         }
+        .app_button2 {
+            width: 200px;
+            padding: 5px;
+            margin-top: 15px;
+            background-color: #C0C0C0;
+            color: white;
+            font-size: 105%;
+        }
+        .app_button2:hover {
+             background: #2D97B5;
+         }
+
+        input[type=email] {
+            width: 300px;
+            border-style: solid;
+            border-width: medium;
+            border-color: White;
+            padding: 5px;
+            margin-top: 10px;
+            font-size: 80%;
+        }
+
+    }
+
+    /* 3. 12 Column Grid 920px - Infinity viewport, basically modern tablets, desktops
+    ----------------------------------------------------------------------------------- 
+    
+    Span 1: 8.33333333333%
+    Span 2: 16.6666666667%
+    Span 3: 25.0%
+    Span 4: 33.3333333333%
+    Span 5: 41.6666666667%
+    Span 6: 50.0%
+    Span 7: 58.3333333333%
+    Span 8: 66.6666666667%
+    Span 9: 75.0%
+    Span 10: 83.3333333333%
+    Span 11: 91.6666666667%
+    Span 12: 100%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 920px) {
+        
+        .row {
+            margin-left:-12px;
+        }
+        .col {
+            border-left-width:12px;
+        	padding:0 12px;
+            font-size: 200%;
+        }
+        
+        
+        /*
+        Add your semantic classnames in alongside their corresponding spans here. e.g.
+        
+        .span_3,
+        .my_semantic_class_name {
+            ...
+        }
+        */
+        
+        .span_1 {
+            width:8.33333333333%;
+        }
+        .span_2 {
+            width:16.6666666667%;
+        }
+        .span_3,
+        .navigation,
+        .app_content {
+            width:100%;
+            height: 50px;
+            margin-left:0;
+            background-color: rgb(128, 128, 128);
+        }
+        .span_4,
+        .media_block {
+            width:33.3333333333%;
+            height: 300px;
+        }
+        .app_block {
+            width:33.3333333333%;
+            height: 300px;
+            float:left;
+            background-color: rgb(128, 128, 128);
+        }
+        .app_desc,
+        .app_rating,
+        .app_reqs {
+            font-size: 80%;
+            padding: 1%;
+            background-color: #3ECFF9;
+        }
+        .app_image {
+            max-width: 80%;
+            max-height: 80%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-left: 20%;
+            background-color: #3ECFF9;
+        }
+        .span_5 {
+            width:41.6666666667%;
+        }
+        .span_6,
+        .main_content {
+            width:50.0%;
+            height: 400px;
+        }
+        .span_7 {
+            width:58.3333333333%;
+        }
+        .span_8  {
+            width:66.6666666667%;
+        }
+        .span_9 {
+            width:75.0%;
+        }
+        .span_10 {
+            width:83.3333333333%;
+        }
+        .span_11 {
+            width:91.6666666667%;
+        }
+        .dashboard_toolbar {
+             max-width: 100%;
+             border-left-width:12px;
+             padding:0 24px;
+             background-color: #00BDF2;
+         }
+        .span_12,
+        .header,
+        .homeID_title,
+        .footer {
+            width:100%;
+            height: 50px;
+            /*margin-left: 26px;*/
+            /*padding-left: 12px;*/
+            background-color: #00BDF2;
+            font-size: 150%;
+        }
+        .page_title {
+            width: 100%;
+            margin-left: 0;
+            font-size: 250%;
+            background-color: rgb(128, 128, 128);
+        }
+        .app_content {
+            height: auto;
+        }
+        .status {
+            width: 100%;
+            height: 50px;
+            margin-left: 0;
+        }
+        .app_form {
+            font-family: 'Segoe UI';
+            padding: 1%;
+            /*font-size: 75%;*/
+        }
+        .app_button {
+            width: 100px;
+            padding: 5px;
+            margin-left: 0;
+            margin-right: 5px;
+            margin-bottom: 20px;
+            background-color: steelblue;
+            color: white;
+            font-size: 80%;
+        }
+         .app_button:hover {
+             background: #2D97B5;
+         }
+        .app_button2 {
+            width: 200px;
+            padding: 5px;
+            margin-top: 20px;
+            background-color: #C0C0C0;
+            color: white;
+            font-size: 80%;
+        }
+        .app_button2:hover {
+             background: #2D97B5;
+         }
+
+        input[type=email] {
+            border-style: solid;
+            border-width: medium;
+            border-color: White;
+            padding: 5px;
+            font-size: 90%;
+            width: 60%;
+        }
+     
+    }

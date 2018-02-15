@@ -1,0 +1,7 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Scouts\HomeOS.Hub.Scouts.Dummy\index.html
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Scouts\HomeOS.Hub.Scouts.Dummy\HomeOS.Hub.Scouts.Dummy.dll.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Scouts\HomeOS.Hub.Scouts.Dummy\HomeOS.Hub.Scouts.Dummy.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Scouts\HomeOS.Hub.Scouts.Dummy\HomeOS.Hub.Scouts.Dummy.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Scouts\Dummy\obj\Debug\Dummy.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Scouts\Dummy\obj\Debug\HomeOS.Hub.Scouts.Dummy.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Scouts\Dummy\obj\Debug\HomeOS.Hub.Scouts.Dummy.pdb

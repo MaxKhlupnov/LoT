@@ -1,0 +1,15 @@
+﻿<Group Name="Everyone">
+  <User Name="systemlow" Password="" ActiveFrom="0001/1/1 12:00:00 AM" ActiveUntil="2100/1/1 11:59:59 PM" />
+  <User Name="systemhigh" Password="highpass" ActiveFrom="0001/1/1 12:00:00 AM" ActiveUntil="2100/1/1 11:59:59 PM" />
+  
+<Group Name="Residents">
+  <Group Name="Adults">
+  </Group>
+
+  <Group Name="Kids">
+  </Group>
+</Group>
+
+<Group Name="Guests">
+</Group>  
+</Group>

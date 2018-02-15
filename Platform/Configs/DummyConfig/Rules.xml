@@ -1,0 +1,24 @@
+﻿<Rules>
+   <!--<Rule Name="dummy" Module="AppDummy">
+    <User Name="everyone" Type="Allow" Priority="0">
+      <Service FriendlyName="port-DriverDummy" />
+      <Time DayOfWeek="-1" StartMins="0" EndMins="2400" />
+    </User>
+  </Rule>
+
+
+  <Rule Name="Access for AppDummy" Module="AppDummy">
+    <User Name="everyone" Type="Allow" Priority="0">
+      <Service FriendlyName="*" />
+      <Time DayOfWeek="-1" StartMins="0" EndMins="2400" />
+    </User>
+  </Rule>-->
+
+  <Rule Name="GuiWebRule" Module="GuiWeb">
+    <Group Name="Everyone" Type="Allow" />
+  </Rule>
+  <Rule Name="ScoutRule" Module="scouts">
+    <Group Name="Everyone" Type="Allow" />
+  </Rule>
+
+</Rules>

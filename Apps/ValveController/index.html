@@ -1,0 +1,115 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html lang="en" class="js-disabled home">
+
+<head>
+  <title>ValveController | HomeOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+   <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="../GuiWeb/common.js"></script>
+  <link rel="Stylesheet" type="text/css" href="Styles/AppAlertsStyleSheet.css" />
+ <style>
+     ul li {
+         display: block;
+         padding: 5px;
+         background-color: white;
+         width:200px;
+         margin:5px;
+         color:black;
+     }
+ </style>
+    <script>
+
+        
+
+        var totalValves = 8;
+        var hasSetup = false;
+
+        function SendValveAddressFunction() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/SendValveAddress", "{\"data\":0}", SendCallback);
+        }
+
+        function ResetValveAddressFunction() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/ResetValveAddress", "{\"data\":0}", SendCallback);
+            hasSetup = false;
+        }
+
+        function DoneValveAddressFunction() {
+            if (!hasSetup) {
+                new PlatformServiceHelper().MakeServiceCall("webapp/DoneValveAddress", "{\"data\":0}", SendCallback);
+                hasSetup = true;
+            }
+        }
+
+        function SendCallback(context, result) {
+            console.log("Received callback!");
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetTotalValveNumber", "{\"data\":0}", ReceivedTotalValveNumber);
+        }
+
+        function SetAllValves() {
+            if (hasSetup) new PlatformServiceHelper().MakeServiceCall("webapp/SetAllValves", "{\"percentage\":" + $("#allvalves").val() + "}", SendCallback);
+            else alert("You haven't finished setup");
+        }
+
+        function setupValveBox() {
+            var html = "";
+            for (var i = 1; i <= totalValves; i++) {
+                html += "<option value=\"" + i.toString() + "\">Valve " + i.toString() + "</option>";
+            }
+            $("#selectValve").html(html);
+        }
+
+        function SetCertainValve() {
+            if (hasSetup) new PlatformServiceHelper().MakeServiceCall("webapp/SetOneValve", "{\"percentage\":" + $("#onevalve").val() + ", \"valve\":" + $("#selectValve").val() + "}", SendCallback);
+            else alert("You haven't finished setup");
+        }
+
+        $(document).ready(function () {
+            setupValveBox();
+            //Check total number of real valves
+        });
+
+        function ReceivedTotalValveNumber(context, result) {
+            totalValves = parseInt(result.GetTotalValveNumberResult);
+            setupValveBox();
+        }
+    </script>
+</head>
+<body>
+        <div class="dashboard_toolbar">
+            <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | Valve Controller </div>
+        </div>
+        
+        <div class="page">
+            <div class="row">
+                <div class="page_title col">Valve Controller</div>
+            </div>
+            <h1>
+                Setup process
+            </h1>
+            <!--<div class="row">-->
+                <ul>
+                    <li onclick="SendValveAddressFunction()">Set up new valve</li>
+                    <li onclick="DoneValveAddressFunction()">Done setting up valves</li>
+                    <li onclick="ResetValveAddressFunction()">Reset all valves</li>
+                </ul>
+            <hr />
+            <h1>Set all valve positions</h1>
+            <input type="number" placeholder="Value for all" value="30" id="allvalves"/>
+            <input type="submit" value="Set all valves" onclick="SetAllValves()" />
+            <!--</div>-->
+            <h1>Set specific valve position</h1>
+            <select id="selectValve">
+            </select>
+            <input type="number" value="Set valve position" value="30" id="onevalve" />
+            <input type="submit" value="Set certain valve" onclick="SetCertainValve()" id="setcertainvalve" />
+        </div>
+
+        <!--Used for debugging messages, set style="display:none" to turn off showing them, common.js will put text into div with id =divDebugInfo when calls are made to service -->
+        <div id="divServiceDebug" style="display:block">
+        Service Status Debug Info: <p id="divDebugInfo"></p>
+        </div>
+
+    
+</body>
+</html>

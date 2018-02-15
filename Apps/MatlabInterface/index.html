@@ -1,0 +1,55 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title> Matlab Interface Application</title>
+   <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+      <script type="text/javascript" src="../GuiWeb/common.js"></script>  <!--contains helpful calls for calling WCF service-->
+  <link rel="Stylesheet" type="text/css" href="Styles/Dummy.css" />
+
+    <script>
+
+        function ShowDummyPortsInfo() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetReceivedMessages", "", GetReceivedMessagesCallback);
+        }
+
+
+        function GetReceivedMessagesCallback(context, result) {
+            var portsInfo = result.GetReceivedMessagesResult;
+            $("#DummyList").html('');
+            for (i = 0; i < result.GetReceivedMessagesResult.length; i++) {
+                $("#DummyList").append(portsInfo[i] + "<br />");
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="dashboard_toolbar">
+            <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | Matlab Interface</div>
+        </div>
+        
+        <div class="page">
+            <div class="row">
+                <div class="page_title col">Matlab Interface Application</div>
+            </div>
+
+         <div><button class="app_button" id="Button1" onclick="ShowDummyPortsInfo()">Call Matlab Function</button></div> 
+     
+        <textarea id="DummyList" class="app_form" rows="30" cols="50" wrap="hard"></textarea>
+
+ 
+    <br />
+
+    <!--Used for debugging messages, set style="display:none" to turn off showing them, common.js will put text into div with id =divDebugInfo when calls are made to service -->
+    <div id="divDummyServiceDebug" style="display:block">
+    Dummy Service Status Debug Info: <p id="divDebugInfo"></p>
+    </div>
+
+   
+</div>
+</body>
+
+</html>

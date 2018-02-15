@@ -1,0 +1,50 @@
+﻿<script type="text/javascript" src="homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html manifest="/test.manifest" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>HomeOS Dashboard</title>
+  <script type="text/javascript" src="jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="DashboardWebJavascript.js"></script>
+    
+  <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+<body>
+
+
+ <div class="page">
+            <div class="row">
+                <div class="homeID_title col" id="homeIDDisplay" >Home</div>
+                <div class="page_title col">Home Dashboard</div>
+                <div class="status col" id="status" style="display:none" >System Status</div> 
+            </div>
+            <div class="row">
+                <div class="media_block col" onclick="GoToHTMLPage('HomeStore.html')"><a>Store</a><br /> <!-- straight <a> to make the text look like link when you mouse over, click will do the correct onclick of the div-->
+                    <img class="app_image" alt="Store" src="Assets/store-icon.png" />
+                </div>
+                
+                <div class="media_block col" onclick="GoToAddUnconfiguredDevice('')" ><a>Add Devices</a><br /> 
+                 <img class="app_image" alt="Devices" src="Assets/devices-icon.png" />
+                </div>
+                <div class="media_block col" onclick="GoToHTMLPage('Settings.html')"><a>Settings</a><br />
+                     <img class="app_image" alt="Settings" src="Assets/settings-icon.png" />
+                </div>
+              
+            </div>
+         
+            <div class="row" id="appsInstalled"> </div>
+
+      
+            <div class="row">
+                <div class="footer col"></div>
+            </div>
+        </div>
+   
+
+
+<!-- Change display style to 'normal' to show debug information and 'none' to turn it off  -->
+<div  class="settings_listitem" id="divDebugInfo" style="display:none"></div>
+
+</body>
+</html>

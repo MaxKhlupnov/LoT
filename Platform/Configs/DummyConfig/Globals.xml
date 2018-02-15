@@ -1,0 +1,4 @@
+﻿<Globals>
+  <!--Some values cannot be reset using globals.xml : AddInRoot ScoutRoot HomeStoreBase ConfigDir GuiDefaultFile UserSystem  /-->
+
+</Globals>

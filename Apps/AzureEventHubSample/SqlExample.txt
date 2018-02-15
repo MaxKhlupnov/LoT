@@ -1,0 +1,12 @@
+CREATE TABLE [lotsensors].[LotSensorStream] (
+    [HomeHubId]     NVARCHAR (50)  NULL,
+    [SensorName]    NVARCHAR (150) NULL,
+    [SensorRole]    NVARCHAR (150) NULL,
+    [SensorData]    NVARCHAR (150) NULL,
+    [EntryDateTime] DATETIME2 (7)  NULL
+);
+
+
+GO
+CREATE CLUSTERED INDEX [LotSensorStream]
+    ON [lotsensors].[LotSensorStream]([HomeHubId] ASC);

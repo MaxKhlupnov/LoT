@@ -1,0 +1,36 @@
+﻿<Window x:Class="HomeOS.Hub.Common.Bolt.Tools.LotDataExport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LoT Data Export" Height="478.947" Width="722.515">
+    <Grid Margin="0,0,2,0">
+        <Grid.Resources>
+            <DataTemplate x:Key="KeyItemTemplate">
+                    <CheckBox Name="cBox" Content="{Binding}" IsChecked="true" />
+            </DataTemplate>
+        </Grid.Resources>
+        <Button Name= "btnKeyList" Content="Load Stream" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" Width="119" Click="btnLoadStream_Click" Height="41"/>
+        <Label Content="Storage Access Parameters (can be set in App.config)" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Account Name:" HorizontalAlignment="Left" Height="25" Margin="10,41,0,0" VerticalAlignment="Top" Width="90"/>
+        <TextBox Name="accountName" HorizontalAlignment="Left" Height="25" Margin="110,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="253"/>
+        <Label Content="Account Key:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Home ID:" HorizontalAlignment="Left" Height="25" Margin="10,101,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="App ID:" HorizontalAlignment="Left" Height="25" Margin="10,135,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Stream ID:" HorizontalAlignment="Left" Height="25" Margin="10,162,0,0" VerticalAlignment="Top" Width="108"/>
+        <TextBox Name ="accountKey" HorizontalAlignment="Left" Height="25" Margin="110,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="253"/>
+        <TextBox Name = "homeID" HorizontalAlignment="Left" Height="25" Margin="110,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="253"/>
+        <TextBox Name ="appID" HorizontalAlignment="Left" Height="25" Margin="110,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="253"/>
+        <TextBox Name = "streamID" HorizontalAlignment="Left" Height="25" Margin="110,167,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="253"/>
+        <ListBox Name ="keyList" ItemsSource = "{Binding}" ItemTemplate="{StaticResource KeyItemTemplate}"  VirtualizingPanel.IsVirtualizing="False" HorizontalAlignment="Left" Height="155" Margin="10,278,0,0" VerticalAlignment="Top" Width="353"/>
+        <Label Content="Start Day:" HorizontalAlignment="Left" Margin="404,39,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label Content="End Day:" HorizontalAlignment="Left" Height="30" Margin="404,72,0,0" VerticalAlignment="Top" Width="66"/>
+        <DatePicker Name= "startDay" HorizontalAlignment="Left" Margin="468,41,0,0" VerticalAlignment="Top" Width="161"/>
+        <DatePicker Name= "endDay" HorizontalAlignment="Left" Margin="468,73,0,0" VerticalAlignment="Top" Width="161"/>
+        <Label Content="Output File:" HorizontalAlignment="Left" Height="25" Margin="390,114,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox Name="outputFileName" HorizontalAlignment="Left" Height="23" Margin="468,116,0,0" TextWrapping="Wrap" Text="LotData.csv" VerticalAlignment="Top" Width="161"/>
+        <Button Name="btnExportData" Content="Export Data" HorizontalAlignment="Left" Margin="468,162,0,0" VerticalAlignment="Top" Width="128" Height="38" Click="btnExportData_Click" IsEnabled="False"/>
+        <Label Name ="infoText" Content="" HorizontalAlignment="Left" Height="30" Margin="390,248,0,0" VerticalAlignment="Top" Width="189"/>
+        <Label Content="Keys to export (listed after stream is loaded)" HorizontalAlignment="Left" Height="26" Margin="10,252,0,0" VerticalAlignment="Top" Width="311"/>
+        <Label Content="Export data between (end day not included):" HorizontalAlignment="Left" Height="26" Margin="404,10,0,0" VerticalAlignment="Top" Width="260"/>
+
+    </Grid>
+</Window>

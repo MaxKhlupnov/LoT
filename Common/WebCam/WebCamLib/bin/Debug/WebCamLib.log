@@ -1,0 +1,18 @@
+﻿Build started 20.04.2015 18:04:03.
+     1>Project "C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamLib\WebCamLib.vcxproj" on node 5 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamLib\bin\Debug\\" /Fd"C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamLib\bin\Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib WebCamLib.cpp
+         WebCamLib.cpp
+         To compile qedit.h you must install the DirectX 9 SDK, to obtain the dxtrans.h header.
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamLib\bin\Debug\\" /Fd"C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamLib\bin\Debug\vc120.pdb" /TP /analyze- /errorReport:prompt "C:\Users\makhlu\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\Debug\HomeOS.Hub.Common.WebCam.WebCamLib.dll" /INCREMENTAL /NOLOGO /FORCE Strmiids.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"bin\Debug\HomeOS.Hub.Common.WebCam.WebCamLib.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE:NO /FIXED:NO /MACHINE:X86 /SAFESEH /DLL C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamLib\bin\Debug\WebCamLib.obj
+         "C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamLib\bin\Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/FORCE' specification
+         WebCamLib.vcxproj -> C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamLib\bin\Debug\HomeOS.Hub.Common.WebCam.WebCamLib.dll
+     1>Done Building Project "C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamLib\WebCamLib.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.02

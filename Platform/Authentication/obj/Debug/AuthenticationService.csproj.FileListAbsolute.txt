@@ -1,0 +1,16 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Authentication\bin\Debug\HomeOS.Hub.Platform.Authentication.dll.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Authentication\bin\Debug\HomeOS.Hub.Platform.Authentication.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Authentication\bin\Debug\HomeOS.Hub.Platform.Authentication.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Authentication\bin\Debug\HomeOS.Shared.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Authentication\bin\Debug\HomeOS.Shared.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Authentication\obj\Debug\AuthenticationService.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Authentication\obj\Debug\HomeOS.Hub.Platform.Authentication.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Authentication\obj\Debug\HomeOS.Hub.Platform.Authentication.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\Authentication\bin\Debug\HomeOS.Hub.Platform.Authentication.dll.config
+C:\PROJECTS\IoT\LoT\Hub\Platform\Authentication\bin\Debug\HomeOS.Hub.Platform.Authentication.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\Authentication\bin\Debug\HomeOS.Hub.Platform.Authentication.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\Authentication\bin\Debug\HomeOS.Shared.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\Authentication\bin\Debug\HomeOS.Shared.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\Authentication\obj\Debug\AuthenticationService.csprojResolveAssemblyReference.cache
+C:\PROJECTS\IoT\LoT\Hub\Platform\Authentication\obj\Debug\HomeOS.Hub.Platform.Authentication.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\Authentication\obj\Debug\HomeOS.Hub.Platform.Authentication.pdb

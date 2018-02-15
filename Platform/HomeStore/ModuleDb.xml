@@ -1,0 +1,111 @@
+﻿<Modules>
+
+  <Module AppName="AzureEventHubSample" BinaryName="HomeOS.Hub.Apps.AzureEventHubSample" Description="A sample app to demonstrate how to send sensor data to an Azure Event Hub" Rating="5" IconUrl="icon.png">
+    <RoleList>
+      <Role Name=":crestronsignal:"/>
+    </RoleList>
+  </Module>
+  
+  <Module AppName="Alerts" BinaryName="HomeOS.Hub.Apps.Alerts" Description="Get an alert when a sensor is triggered" Rating="5" IconUrl="icon.png">
+    <RoleList>
+      <Role Name=":sensor:"/>
+    </RoleList>
+    <RoleList Optional="true">
+      <Role Name=":camera:"/>
+    </RoleList>
+  </Module>
+
+  <Module AppName="CameraViewer" BinaryName="HomeOS.Hub.Apps.SmartCam" Description="View your cameras from anywhere" Rating="5" IconUrl="icon.png" Version="1.0.0.0">
+    <RoleList>
+      <Role Name=":camera:"/>
+    </RoleList>
+  </Module>
+
+  <Module AppName="Lights" BinaryName="HomeOS.Hub.Apps.Switch" Description="Control your lights and switches from anywhere" Rating="5" IconUrl="icon.png" Version="1.0.0.0">
+    <RoleList>
+      <Role Name=":switchbinary:"/>
+      <Role Name=":switchmultilevel:"/>
+    </RoleList>
+    <RoleList Optional="true">
+      <Role Name=":speechreco:"/>
+    </RoleList>
+  </Module>
+
+  <Module AppName="DigitalMediaPanel" BinaryName="HomeOS.Hub.Apps.DigitalMedia" Description="Control Crestron digital media panel from anywhere" Rating="5">
+    <RoleList>
+      <Role Name=":crestronsignal:"/>
+    </RoleList>
+  </Module>
+  
+
+  <!--<Module AppName="SpeechInteraction" BinaryName="HomeOS.Hub.Apps.SpeechInteraction" Description="Use your voice to interact" Rating="5" IconUrl="icon.png" Version="1.0.0.0">
+    <RoleList>
+      <Role Name=":microphone:"/>     
+    </RoleList>
+    <RoleList Optional="true">
+      <Role Name=":switchbinary:"/>
+      <Role Name=":switchmultilevel:"/>
+    </RoleList>
+  </Module>-->
+
+  <!--<Module AppName="AppDoorjamb" BinaryName="HomeOS.Hub.Apps.Doorjamb" Description="Find your location" Rating="5" IconUrl="icon.png">
+    <RoleList>
+      <Role Name=":doorjamb:"/>
+    </RoleList>
+  </Module>-->
+
+  <!--Module AppName="Rules" BinaryName="HomeOS.Hub.Apps.Rules" Description="Create your app in a few steps" Rating="5" IconUrl="icon.png" Version="1.0.0.0">
+    <RoleList>
+      <Role Name=":camera:"/>
+      <Role Name=":sensor:"/>
+      <Role Name=":depthcam:"/>
+      <Role Name=":microphone:"/>
+      <Role Name=":skeletontracker:"/>
+    </RoleList>
+  </Module-->
+
+
+  <!--<Module AppName="EmotoCouch" BinaryName="HomeOS.Hub.Apps.EmotoCouch" Description="Get Cozy with your Couch" Rating="5" IconUrl="Assets/Foscam.png">
+    --><!--<RoleList>
+      <Role Name="camera"/>
+    </RoleList>--><!--
+    <RoleList>
+      <Role Name=":couch:"/>
+    </RoleList>
+  </Module>-->
+
+
+  <Module AppName="AppDummy" BinaryName="HomeOS.Hub.Apps.Dummy" Description="Example basic application" Rating="5">
+    <RoleList>
+      <Role Name=":dummy:"/>
+    </RoleList>
+  </Module>
+
+  <!--<Module AppName="ThermoAlerts" BinaryName="HomeOS.Hub.Apps.Thermometer" Description="Sample application for Gadgeteer guide" Rating="5">
+    <RoleList>
+      <Role Name=":sensor:" />
+    </RoleList>
+  </Module>-->
+
+  <Module AppName="Sensor" BinaryName="HomeOS.Hub.Apps.Sensor" Description="Prints sensor values" Rating="5" IconUrl="icon.png">
+    <RoleList>
+      <Role Name=":sensor:"/>
+      <Role Name=":sensormultilevel:"/>
+    </RoleList>
+  </Module>
+
+  <Module AppName="ConFurniture" BinaryName="HomeOS.Hub.Apps.ConnectedFurniture" Description="Connected Furniture" Rating="5" IconUrl="icon.png">
+    <RoleList>
+      <Role Name=":sensor:"/>
+      <Role Name=":sensormultilevel:"/>
+      <Role Name=":dummy:"/>
+    </RoleList>
+  </Module>
+
+  <Module AppName="Weather" BinaryName="HomeOS.Hub.Apps.Weather" Description="Shows current weather" Rating="5" IconUrl="icon.png">
+    <RoleList>
+      <Role Name=":weather:"/>
+    </RoleList>
+  </Module>
+
+</Modules>

@@ -1,0 +1,36 @@
+﻿ <script type="text/javascript" src="../../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <meta charset="utf-8" />
+    <title>Gadgeteer Scout</title>
+    <script type="text/javascript" src="../../GuiWeb/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="../../GuiWeb/common.js"></script>
+  <script type="text/javascript" src="GadgeteerScout.js"></script>
+    <link rel="stylesheet" media="all" type="text/css" href="../../GuiWeb/Styles/HomeOSMasterStyleSheet.css" />
+</head>
+<body>
+
+     <div class="page">
+            <div class="row">
+                <div class="homeID_title col"><a href="../../GuiWeb/index.html">Dashboard</a> | <a href="../../GuiWeb/AddDeviceUnconfiguredDevicesForScout.html">Add Devices </a> | Add Gadgeteer</div>
+                <div class="page_title col">Gadgeteer Setup: Determining next setup step</div>
+                <div class="status col" id="status" style="display:none">System Status</div> 
+            </div>
+
+     <div style="display:none" id="homeWirelessQuestion">Click next when device joins the home wireless.
+        <p><button class="btn" onclick="GoNext()">Next</button>  </p>
+    </div>
+
+     <div style="display:none" id="secretKeyInput">Please enter secret key:
+        <p>    <input type="text" id="keyText"/><br />          
+          <button class="btn" onclick="SendKey()">Go</button></p>
+    </div>
+   </div>
+
+       <!-- Change display style to 'normal' to show debug information and 'none' to turn it off  -->
+  <div id="divDebugInfo" style="display:none"></div>
+</body>
+</html>

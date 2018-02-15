@@ -1,0 +1,76 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Camera Viewer Application</title>
+
+  <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="../GuiWeb/common.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <link rel="stylesheet" media="all" type="text/css" href="Styles/AppSmartCameraStyleSheet.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />    <!-- Back-up in case there is problem with responsive css-->
+
+
+</head>
+<body>
+
+      <div class="dashboard_toolbar">
+         <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | Camera Viewer </div>
+          
+        </div>
+
+           <div class="page">
+            <div class="row">
+                <div class="page_title col">Camera Viewer</div>
+                 <div class="page_title col" id="status" style="display:none">No Cameras installed, add some using Add Devices</div> 
+            </div>
+            <div class="row">
+                <div id="cameraGoodness" class="app_block col">
+                   
+                    <img  id="camera1Image" class="app_image flip-h"  />
+                    
+                    <div class="app_control">
+                        <img id="recordBTN" class="app_button3" src="Assets/MetroRecord.png" onclick="RecordToggle()" />
+                        <img id="left" class="app_button3" src="Assets/MetroLeftArrow.png" onclick="ControlCamera('left')" />
+                        <img id="right" class="app_button3" src="Assets/MetroRightArrow.png" onclick="ControlCamera('right')" />
+                        <img id="up" class="app_button3" src="Assets/MetroUpArrow.png" onclick="ControlCamera('up')" />
+                        <img id="down" class="app_button3" src="Assets/MetroDownArrow.png" onclick="ControlCamera('down')" />
+                         
+                        <div id="recordText"></div>
+                        <div id="recordOnMotion"><input type="checkbox" id="mCheckbox" onclick="ToggleMotionRecording(this)" /> Record when motion is sensed </div>
+                        <div id="refreshButton">  <button id="btnRefreshVideos" class="btn" onclick="RefreshVideos()"> Refresh </button> </div>
+            <!--            <div id="uploadVideos"> <input type="checkbox" id="videoCheckbox"  onclick="ToggleVideoUploading(this)"  /> Upload recordings to cloud storage </div>-->
+
+                                        
+                      </div>
+            <!--        <br />-->
+                    
+                </div>
+                <div class="app_block col">
+                    <select id="cameraList" onchange="CameraSelected()">
+                   
+                    </select>
+                </div>
+
+
+               
+            </div>
+
+              <div class="row">
+<div id="videoClips" class="recordings_block col">
+   <!-- <div><a href="Assets/TestVideo2.mp4">TestVideo Link</a></div>-->
+ <!--    <div><video class="snapshot_image col" id="video1" src="Assets/TestVideo2.mp4" controls="controls" /></div>
+     <div><video class="snapshot_image col" id="video2" controls="controls"><source src="Assets/TestVideo2.mp4" type="video/mp4"> <object data="Assets/TestVideo2.mp4"></object></video></div>-->
+
+</div>
+</div>
+            
+
+            </div>
+       
+     
+            <div class="settings_listitem" id="divDebugInfo" style="display:none"></div>
+  
+
+</body>
+</html>

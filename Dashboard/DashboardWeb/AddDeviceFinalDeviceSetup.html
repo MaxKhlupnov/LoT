@@ -1,0 +1,77 @@
+﻿<script type="text/javascript" src="homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Final Device Setup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <script type="text/javascript" src="jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="AddDeviceFinalDeviceSetup.js"></script>
+   <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" /> 
+
+</head>
+<body>
+
+
+<div class="page">
+    <div class="row">
+                <div class="homeID_title col"><a href="index.html">Dashboard</a> | <a href="AddDeviceFinalDeviceSetup.html">Add Device </a> | Final Device Setup </div>
+                <div class="page_title col">Final Device Setup</div>
+                <div class="status col" id="status" style="display:none">System Status</div> 
+            </div>
+
+ <!--  Expect URL to be called with DeviceId parameter
+    e.g. http://localhost:51430/GuiWeb/AddDeviceUnconfiguredDevicesForScout.html?DeviceId=Camera
+     and optinally with the Orphan parameter.  If Orphan=1 then this is a orphaned device and we should not start driver
+      -->
+
+    <div class="row">
+        <!--add style="display:none" after testing style changes-->
+      </div>
+    <div class="row">
+       
+        <div class="settings_block col" id="divName" >Name:&nbsp;&nbsp; <input type="text" id="friendlyName"/> </div>
+      <!--  <div class="settings2 col" id="divDevicePicture" style="display:none"><img alt="devicePicture" id="devicePicture" class="device_image" src="Styles/MissingDevice.png" /></div>  
+   -->
+    </div>
+
+    <div class="row">
+        <div class="settings_block col" id="divLocation">Location:&nbsp;&nbsp; <select class="settings_select" id="locationList"></select></div>
+        <div class="settings_block col" id="divNewLocation">
+            <button class="setup_btn" id="AddLocationButton" onclick="ToggleAddLocationOption()">Add New Location</button>
+        </div>
+    </div>
+    <div class="row">    
+        <div class="settings_block col" id="divAddNewLocationOptions" style="display:none">
+            <div class="settings_block col" >New Location:&nbsp;&nbsp; <input type="text" class="settings_input" id="newLocation"/></div>
+            <div class="settings_block col">In:&nbsp;&nbsp; <select class="settings_select" id="locationList2"></select></div>
+            <div class="settings_block col"><button class="setup_btn" onclick="AddNewLocation()">Add</button></div>
+        </div>
+    </div>
+    <div class="row">  
+        <div class="settings_block col" id="divInformationText"></div>
+        <div class="settings_content col" id="divNIAppsName"> Install these applications:</div> 
+        <div class="settings_block col" id="divNIApps">
+            No new applications to install. 
+        <!-- Test code - will be populated based on what apps are available
+            <input type="checkbox" id="App1" /> App 1 name   <br/>-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="settings_content col" id="divIAppsName">Permit these applications to use this device: </div>
+        <div class="settings_block col" id="divIApps">No applications to permit.<br /></div>
+    </div>
+    <div class="row">
+        <div class="settings_block col">
+            <button class="setup_btn" id="retryButton" onclick="RetryDeviceReady()" style="display:none">Retry</button>
+            <button class="setup_btn" id="doneButton" onclick="DoneButtonClicked()">Done</button>
+        </div>
+    </div>
+ 
+<!-- Change display style to 'normal' to show debug information and 'none' to turn it off  -->
+<div id="divDebugInfo" style="display:none">Test</div>
+
+       
+</div>
+</body>
+</html>

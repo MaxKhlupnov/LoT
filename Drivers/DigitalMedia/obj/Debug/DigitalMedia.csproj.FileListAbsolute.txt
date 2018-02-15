@@ -1,0 +1,7 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.DigitalMedia\icon.png
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.DigitalMedia\HomeOS.Hub.Drivers.DigitalMedia.dll.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.DigitalMedia\HomeOS.Hub.Drivers.DigitalMedia.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.DigitalMedia\HomeOS.Hub.Drivers.DigitalMedia.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Drivers\DigitalMedia\obj\Debug\DigitalMedia.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Drivers\DigitalMedia\obj\Debug\HomeOS.Hub.Drivers.DigitalMedia.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Drivers\DigitalMedia\obj\Debug\HomeOS.Hub.Drivers.DigitalMedia.pdb

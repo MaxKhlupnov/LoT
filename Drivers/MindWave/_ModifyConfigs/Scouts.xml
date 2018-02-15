@@ -1,0 +1,5 @@
+﻿<Scouts>
+ 
+<!--Add the following entry to your Scouts.xml  (\Hub\Platform\Configs\<Config>)--> 
+  <Scout Name="HomeOS.Hub.Scouts.Mindwave" DllName="HomeOS.Hub.Scouts.Mindwave.dll" Description="Mindwave" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+</Scouts>

@@ -1,0 +1,6 @@
+﻿<Modules>
+  <!-- zwave driver -->
+  <Module FriendlyName="zwavezensys" AppName="zwave driver based on zensys sdk" BinaryName="HomeOS.Hub.Drivers.ZwaveZensys_4_55" AutoStart="1" Background="1">
+    <Args Count="0"/> 
+  </Module>
+</Modules>

@@ -1,0 +1,15 @@
+﻿<Modules>
+
+  <!-- no need to list them here since we now bootstrap everything through the scout -->
+  <!--<Module FriendlyName="DriverDummy" AppName="DriverDummy" BinaryName="HomeOS.Hub.Drivers.Dummy" AutoStart="1" Background="1" Version="1.0.0.0">
+    <Args Count="1" val1="Hero"/>
+  </Module>
+
+  <Module FriendlyName="AppDummy" AppName="AppDummy" BinaryName="HomeOS.Hub.Apps.Dummy" AutoStart="1" Version="1.0.0.0">
+    <Args Count="1" val1="Zero"/>
+    <RoleList>
+      <Role Name=":dummy:"/>
+    </RoleList>
+  </Module>-->
+
+</Modules>

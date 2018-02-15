@@ -1,0 +1,5 @@
+<Services>
+  <Service FriendlyName="Techaer" Location="Home" Module="HomeOS.Hub.Drivers.DigitalMedia for Crestron control panel" ModuleFacingName="digitalsignal">
+    <Role Name=":crestronsignal:" />
+  </Service>
+</Services>

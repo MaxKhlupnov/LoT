@@ -1,0 +1,6 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.DNW\HomeOS.Hub.Common.Bolt.Apps.DNW.exe.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.DNW\HomeOS.Hub.Common.Bolt.Apps.DNW.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.DNW\HomeOS.Hub.Common.Bolt.Apps.DNW.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\DNW\obj\Debug\HomeOS.Hub.Common.Bolt.Apps.DNW.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\DNW\obj\Debug\HomeOS.Hub.Common.Bolt.Apps.DNW.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\DNW\obj\Debug\DNW.csprojResolveAssemblyReference.cache

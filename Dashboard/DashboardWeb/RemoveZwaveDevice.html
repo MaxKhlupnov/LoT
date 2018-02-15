@@ -1,0 +1,81 @@
+﻿<script type="text/javascript" src="homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Remove Zwave Device</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <script type="text/javascript" src="jquery-1.7.1.js"></script>
+     <script type="text/javascript" src="common.js"></script>
+     <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+
+    <script>
+
+        var DEVICENAME;
+        var NODEID;
+
+        $(document).ready(
+            function () {
+                var qs = getQueryStringArray();
+                if ((qs.DeviceName != undefined && qs.DeviceName) && (qs.NodeId != undefined)) {
+                    DEVICENAME = qs.DeviceName;
+                    NODEID = qs.NodeId;
+                    $("#deviceQuestion").html("Do you have the " + DEVICENAME + "?" );
+                } else {
+                    UpdateDebugInfo(this, "Could not extract DeviceName from the URL " + window.location);
+                }
+            }
+         );
+
+
+        //if you are removing a device you have, the parameters are (deviceFriendlyName, “false”) 
+        //if you are removing a device that does not exist any more, the parameters should be (nodeId, “true”)
+        //List<string> RemoveZwaveWeb(string friendlyName, string failedNode);   
+
+        function HaveDeviceRemove() {
+
+            $("#removeInstruct").show();
+            new PlatformServiceHelper().MakeServiceCall("webapp/RemoveZwaveWeb", '{"friendlyName": "' + DEVICENAME + '","failedNode": "' + false + '"}', RemoveZDeviceCallback);
+            //'{"locationToAdd": "' + newLocation + '","parentLocation": "' + parentLocation + '"}';
+        }
+
+        function NoDeviceRemove() {
+
+            new PlatformServiceHelper().MakeServiceCall("webapp/RemoveZwaveWeb", '{"friendlyName": "' + NODEID + '","failedNode": "' + true + '"}', RemoveZDeviceCallback);
+
+        }
+
+        function RemoveZDeviceCallback(context, result) {
+            if (result[0] != "") {
+                $("#status").show();
+                $("#status").html("Problem with remove:" + result[0]);
+            }
+            else {
+                GoToHTMLPage("Settings.html");
+            }
+
+        }
+
+        </script>
+
+</head>
+<body>
+    <div class="page">
+            <div class="row">
+                <div class="homeID_title col"><a href="index.html">Dashboard</a> | <a href="Settings.html">Settings </a> | Remove Zwave Device </div>
+                <div class="page_title col">Remove Zwave Device</div>
+                <div class="status col" id="status" style="display:none">System Status</div> 
+            </div>
+
+        <div class="settings_listitem" id="deviceQuestion"> Do you have the device? </div>
+        <p></p> 
+             <button class="btn" onclick="HaveDeviceRemove()">Yes</button>  <button class="btn" onclick="NoDeviceRemove()">No</button>
+            <div id="removeInstruct" style="display:none"> Please press the program button on your z-wave sensor now to remove it</div>
+   
+
+         <div class="settings_listitem" id="divDebugInfo" style="display:none">DEBUG info</div>
+
+  </div>
+
+
+</body>
+</html>

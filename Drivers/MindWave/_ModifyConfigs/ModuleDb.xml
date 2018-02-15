@@ -1,0 +1,11 @@
+﻿<Modules>
+<!--Add the following entry to your ModuleDB.xml  (\Hub\Platform\HomeStore)--> 
+
+ <Module AppName="MentalHouse" BinaryName="HomeOS.Hub.Apps.MentalHouse" Description="A pretty MindWave front-end" Rating="5" IconUrl="icon.png">
+    <RoleList>
+      <Role Name=":mindwave:"/>
+    </RoleList>
+  </Module>
+ 
+
+</Modules>

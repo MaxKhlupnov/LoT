@@ -1,0 +1,1 @@
+This folder contains the board schematic and the firmware needed to create and drive the pSoc Valve Controller Transmitter that the HomeOS system will communicate with.

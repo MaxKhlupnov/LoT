@@ -1,0 +1,6 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.EDA\HomeOS.Hub.Common.Bolt.Apps.EDA.exe.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.EDA\HomeOS.Hub.Common.Bolt.Apps.EDA.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.EDA\HomeOS.Hub.Common.Bolt.Apps.EDA.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\EDA\obj\Debug\HomeOS.Hub.Common.Bolt.Apps.EDA.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\EDA\obj\Debug\HomeOS.Hub.Common.Bolt.Apps.EDA.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\EDA\obj\Debug\Energy Data Analytics.csprojResolveAssemblyReference.cache

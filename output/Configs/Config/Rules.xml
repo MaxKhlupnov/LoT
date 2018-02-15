@@ -1,0 +1,30 @@
+﻿<Rules>
+
+  <Rule Name="GuiWebRule" Module="GuiWeb">
+    <Group Name="Everyone" Type="Allow" />
+  </Rule>
+  <Rule Name="ScoutRule" Module="scouts">
+    <Group Name="Everyone" Type="Allow" />
+  </Rule>
+
+
+  <!-- Sample Rule to make this app AppDummy1 available to all users in users.xml (i.e. including systemlow and systemhigh users)
+  
+  Rule Name="MyAppRule1" Module="AppDummy1">
+    <Group Name="Everyone" Type="Allow" />
+  </Rule-->
+
+  <!-- Sample Rule to make this app AppDummy1 available to jane  on Sundays from 6pm to 8pm 
+  Note: system high can access this app at all times.
+   <Rule Name="MyAppRule2" Module="AppDummy1">
+    <User Name="jane" Type="Allow">
+      <Time DayOfWeek="0" StartMins="1800" EndMins="2000"/>
+    </User>
+  </Rule>
+  
+  
+  -->
+
+ 
+  
+</Rules>

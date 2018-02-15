@@ -1,0 +1,243 @@
+﻿/*
+CSS reset
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* 
+Reusable column setup.  Background style controls the box colors.  
+Swap with other colors in the palette by replacing 'background: #3ECFF9' with any of these:
+#2D97B5 = rgb(45,151,181), #007B9D = rgb(0,123,157), #70DAF9 = rgb(112,218,249),  background-color: #f24900;
+*/
+
+body, html, div {
+    margin: 0;
+    padding:0;
+    font-family: 'Segoe UI', Verdana, Arial;
+    color:white;
+    background-color: #007B9D 
+}
+a {text-decoration: none;}
+a:link {text-decoration: none;  color:white;}
+
+.dashboard_toolbar {
+    padding: 3% 3% 3% 6%;
+    background-color: #00bdf2;
+    font-size: 125%;
+}
+.homeid_title {
+    background-color: #00bdf2;
+}
+
+.page {
+    padding: 3% 3% 3% 6%;
+    background-color: #007B9D;
+}
+
+
+.row {
+    margin: 0 0 3% 0;
+}
+.spacer {
+    width: 100%;
+    border-top: solid;
+    border-top-color: #C0C0C0;
+    margin: 3% 0 3% 0;
+}
+
+.page_title {
+    font-size: 150%;
+}
+
+.app_button {
+    border:none;
+    padding: 1% 3% 1% 3%;
+    margin: 0 3% 3% 0;
+    background-color: #C0C0C0;
+    color: white;
+    font-size: 110%;
+}
+.app_button:hover {
+    background: #a78686;
+}
+
+.slider {
+    width: 20%;
+    margin: 0 3% 6% 0;
+}
+
+.app_block {
+    font-size: 100%;
+}
+
+.location {
+    font-size: 125%;
+    margin: 9% 3% 3% 0;
+    width: auto;
+    display: inline;
+}
+select {
+    display: inline;
+    float: none;
+    padding: 1%;
+    font-size: 100%;
+    line-height: 20px;
+    font-weight: 300;
+    color: #fff;
+    background: #C0C0C0;
+}
+#light_state {
+        margin: 0 3% 0 0;
+        width: auto;
+    }
+
+/* 1. 2 Column Grid 0px - 339px viewport, basically smartphone browsers */
+    /*This bit of CSS fixes the issues with Chrome font rendering smaller than IE*/
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        .homeID_title {
+            font-size: 150%;      
+        }
+        .page_title {
+            font-size: 200%;
+        }
+
+    }
+
+@media screen and (max-width: 480px) {
+    .slider {
+        width: 100%;
+        margin: 0 3% 6% 0;
+    }
+
+    #knob {
+        width: 150px;
+        height: 150px;
+    }
+
+    .location {
+        margin: 0 3% 3% 0;
+        display: inline;
+        width: auto;
+    }
+
+    select {
+        font-size: 100%;
+        font-weight: 200;
+        line-height: 20px;
+        margin: 0 0 3% 0;
+        display: inline;
+        float: none;
+    }
+
+    #light_state {
+        margin: 0 3% 0 6%;
+        width: auto;
+    }
+
+    .spacer {
+        margin: 6% 0 6% 0;
+    }
+
+    .related_content {
+        width: 100%;
+        height: 45px;
+        margin-left: 0;
+        background-color: #2D97B5;
+    }
+}
+
+      /* 2. 6 Column Grid 340px - 919px viewport, basically 7" and older tablets
+    ----------------------------------------------------------------------------- 
+    
+    Span 1: 15.0%
+    Span 2: 32.0%
+    Span 3: 49.0%
+    Span 4: 66.0%
+    Span 5: 83.0%
+    Span 6: 1000%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 340px) and (max-width: 919px) {
+
+        .col {
+            margin-left: 2%;
+            padding: 0 2%;
+            font-size: 150%;
+        }
+
+        .row .col:first-child {
+            margin-left: 0;
+        }
+
+        .related_content {
+            width:100%;
+            height: 40px;
+            margin-left:0;
+            background-color:#2D97B5;
+        }
+    }
+
+     /* 3. 12 Column Grid 920px - Infinity viewport, basically modern tablets, desktops
+    ----------------------------------------------------------------------------------- 
+    
+    Span 1: 8.33333333333%
+    Span 2: 16.6666666667%
+    Span 3: 25.0%
+    Span 4: 33.3333333333%
+    Span 5: 41.6666666667%
+    Span 6: 50.0%
+    Span 7: 58.3333333333%
+    Span 8: 66.6666666667%
+    Span 9: 75.0%
+    Span 10: 83.3333333333%
+    Span 11: 91.6666666667%
+    Span 12: 100%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 920px) {
+
+        .row {
+            margin-left: -12px;
+        }
+
+        .col {
+            border-left-width: 12px;
+            padding: 0 12px;
+            font-size: 200%;
+        }
+           .dashboard_toolbar {
+             max-width: 100%;
+             border-left-width:12px;
+             padding:0 24px;
+             background-color: #00BDF2;
+         }
+
+           .page_title {
+            width: 100%;
+            margin-left: 0;
+            font-size: 250%;
+        }
+        .app_content {
+            height: auto;
+        }
+        .related_content {
+            width:100%;
+            height: 50px;
+            margin-left:0;
+            background-color:#2D97B5;
+        }
+    }
+}
+
+
+
+
+
+
+
+

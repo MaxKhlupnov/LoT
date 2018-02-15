@@ -1,0 +1,70 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title> Dummy Application</title>
+   <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+      <script type="text/javascript" src="../GuiWeb/common.js"></script>  <!--contains helpful calls for calling WCF service-->
+  <link rel="Stylesheet" type="text/css" href="Styles/Dummy.css" />
+
+    <script>
+
+        //run when document loads
+        $(document).ready(
+            function () {
+
+                //get any messages 
+                ShowDummyPortsInfo();
+
+                //Set up timer function to refresh display every 1 seconds
+                dummyCheck = setInterval(function () { ShowDummyPortsInfo() }, 1000);
+                //To stop do this: clearInterval(dummyCheck);     
+            }
+        );
+
+        function ShowDummyPortsInfo() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetReceivedMessages", "", GetReceivedMessagesCallback);
+        }
+
+
+        function GetReceivedMessagesCallback(context, result) {
+            $("#DummyList").html('');
+            for (i = 0; i < result.length; i++) {
+                $("#DummyList").append(result[i] + "&#13;&#10"); //replace <br /> with &#13;&#10 because that makes newlines in more browsers
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="dashboard_toolbar">
+            <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | Dummy </div>
+        </div>
+        
+        <div class="page">
+            <div class="row">
+                <div class="page_title col">Dummy Application</div>
+            </div>
+
+        <textarea id="DummyList" class="app_form" rows="30" cols="50" wrap="hard"></textarea>
+           
+        <br />
+        <br />
+
+        <div><button class="app_button" id="Button1" onclick="ShowDummyPortsInfo()">Manual Update</button></div> 
+
+ 
+  
+
+    <!--Used for debugging messages, set style="display:none" to turn off showing them, common.js will put text into div with id =divDebugInfo when calls are made to service -->
+    <div id="divDummyServiceDebug" style="display:block">
+    Dummy Service Status Debug Info: <p id="divDebugInfo"></p>
+    </div>
+
+   
+</div>
+</body>
+
+</html>

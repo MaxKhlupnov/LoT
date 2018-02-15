@@ -1,0 +1,14 @@
+﻿<Scouts>
+  <Scout Name="HomeOS.Hub.Scouts.Arduino" DllName="HomeOS.Hub.Scouts.Arduino.dll" Description="Arduino devices built for HomeOS connected via COM Port " Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+  <Scout Name="HomeOS.Hub.Scouts.AxisCam" DllName="HomeOS.Hub.Scouts.AxisCam.dll" Description="Axis IP cameras" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+  <Scout Name="HomeOS.Hub.Scouts.DigitalMedia" DllName="HomeOS.Hub.Scouts.DigitalMedia.dll" Description="Crestron digital media panels" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+  <Scout Name="HomeOS.Hub.Scouts.Foscam" DllName="HomeOS.Hub.Scouts.Foscam.dll" Description="Foscam IP cameras" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+  <Scout Name="HomeOS.Hub.Scouts.Gadgeteer" DllName="HomeOS.Hub.Scouts.Gadgeteer.dll" Description="Gadgeteer devices built for HomeOS" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+  <Scout Name="HomeOS.Hub.Scouts.GadgeteerSerial" DllName="HomeOS.Hub.Scouts.GadgeteerSerial.dll" Description="Gadgeteer devices connected only via serial for HomeOS" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+  <Scout Name="HomeOS.Hub.Scouts.HueBridge" DllName="HomeOS.Hub.Scouts.HueBridge.dll" Description="Hue bridges" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+  <Scout Name="HomeOS.Hub.Scouts.Kinect" DllName="HomeOS.Hub.Scouts.Kinect.dll" Description="Kinects attached to the hub" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+  <Scout Name="HomeOS.Hub.Scouts.SynapseWireless" DllName="HomeOS.Hub.Scouts.SynapseWireless.dll" Description="Synapse wireless devices" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+  <Scout Name="HomeOS.Hub.Scouts.OpenWeatherMap" DllName="HomeOS.Hub.Scouts.OpenWeatherMap.dll" Description="Open Weather Map" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+  <Scout Name="HomeOS.Hub.Scouts.WebCam" DllName="HomeOS.Hub.Scouts.WebCam.dll" Description="Web cams attached to the hub" Rating="5" IconUrl="icon.png" Version="1.0.0.0"/>
+
+</Scouts>

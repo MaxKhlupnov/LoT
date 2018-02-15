@@ -1,0 +1,93 @@
+﻿* We want to evaluate HDS in three aspects
+	
+	1. Efficiency in sharing of data
+		- Read and write performance where reader is != writer
+		- For local versus out of home scenarios
+		- Also efficient in terms of storage overhead, communication bw and latency
+
+	2. Overhead of providing security
+		- Break up the numbers above.
+
+	3. What is the overhead of providing configurability in location of data?
+
+
+In terms of graphs:-
+
+1. X axis is data size like 10B, 100B, 10KB, 100KB
+	Y axis is time/throughput/latency/storage overhead/cpu overhead etc.
+
+	And for each datasize there are 4 bars corresponding to types of streams: local, localEnc, remote, remoteEnc
+
+	Graph for both reads and writes. Reads must be random reads.
+
+	Baseline is Local stream type and also raw disk throughput or raw network bandwidth
+
+2. For configurability we can add more types of streams: remoteEnc + replicated and remoteEnc + partitioned.
+   Random reads would now look at all partitions/segments.
+
+3. Should be evaluate dependence on trusted server?
+
+
+What do existing systems evaluate?
+
+1. Sundr-
+	Y axis is run time or MB/s for a benchmark (LFS small file benchmark, 1000 ops with 1KB random content)
+	X axis is the benchmark or the number of clients.
+
+	They also experiment using real workloads.
+
+	Takeaway: How does system perform with concurrent clients?
+
+2. SPORC-
+
+	Y axis is the latency of operations
+	X axis is the number of clients
+
+	Y axis is split into cryptograpic cost, etc.
+
+3. Depot-
+	Y axis is latency
+	X axis is data size and the type of operation (get, put)
+	Plot bars for baseline, Depot etc.
+
+	For costs, Y axis is the resource consumption normalized to baseline
+	X axis is based on resource and the operation.
+
+	They also plot
+	Y axis as dollar cost
+	X axis as operations
+
+	The also do some experiments where they inject failures and see the affect on latency during faults.
+
+	Takeaway:
+	1. Resorce overheads can be combined into one figure.
+	2. Dollar cost is interesting
+	3. Fault tolerance?
+
+4. Chefs-
+	X axis is the benchmark: small file or large file benchmark with sequential 
+	Y axis is server throughput etc.
+
+	Focus on overhead on clients. Want it low for mobile access.
+	Talk about server side and client side caching.
+
+5. SiRiUS
+	Xaxis is file size and operations (file creation, deletion etc)
+	Y axis is time.
+
+	Baselines are kernel NFS and DumbFS
+
+6. Perspective-
+	Eval focused on ease of management for users.
+	It is a user study on the effectiveness of the abstraction.
+
+7. HomeViews-
+	Y axis is the query time
+	X axis is the data size
+
+	Plot different bars for Local, LAN, broadband cases.
+
+	Also plot scalability
+	Y axis : operations/second
+	X axis is the size of the operation
+

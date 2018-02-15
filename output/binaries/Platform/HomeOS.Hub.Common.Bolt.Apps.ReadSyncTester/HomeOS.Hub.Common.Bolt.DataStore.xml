@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HomeOS.Hub.Common.Bolt.DataStore</name>
+    </assembly>
+    <members>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.FileDataStream`1.ReadData(HomeOS.Hub.Common.Bolt.DataStore.IValue,HomeOS.Hub.Common.Bolt.DataStore.DataBlockInfo)">
+            <summary>
+            ValuePath is just the value file name ts.dat and not fully qualified file path
+            </summary>
+            <param name="valuePath"></param>
+            <param name="dbi"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HomeOS.Hub.Common.Bolt.DataStore.IStream">
+            <summary>
+            Read and write data to a Windows Azure blob storage account.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.Append(HomeOS.Hub.Common.Bolt.DataStore.IKey,HomeOS.Hub.Common.Bolt.DataStore.IValue,System.Int64)">
+            <summary>
+            Appends a new value to the specified key.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.Append(System.Collections.Generic.List{System.Tuple{HomeOS.Hub.Common.Bolt.DataStore.IKey,HomeOS.Hub.Common.Bolt.DataStore.IValue}})">
+            <summary>
+            Appends a list of key value pairs to the stream. Each key value pair is stored with the current timestamp.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.Append(System.Collections.Generic.List{HomeOS.Hub.Common.Bolt.DataStore.IKey},HomeOS.Hub.Common.Bolt.DataStore.IValue)">
+            <summary>
+            Appends a value to all the keys provided as a list
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.Update(HomeOS.Hub.Common.Bolt.DataStore.IKey,HomeOS.Hub.Common.Bolt.DataStore.IValue)">
+            <summary>
+            Modifies the newest value for the specified key.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.Get(HomeOS.Hub.Common.Bolt.DataStore.IKey)">
+            <summary>
+            Gets the newest value from the specified key.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.GetLatest">
+            <summary>
+            Gets the newest [key, value, timestamp] tuple inserted.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.GetLatest(HomeOS.Hub.Common.Bolt.DataStore.IKey)">
+            <summary>
+            Gets the newest [key, value, timestamp] tuple inserted for the given key.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.GetAll(HomeOS.Hub.Common.Bolt.DataStore.IKey)">
+            <summary>
+            Get all the [key, value, ts] tuples corresponding to the specified key.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.GetAll(HomeOS.Hub.Common.Bolt.DataStore.IKey,System.Int64,System.Int64)">
+            <summary>
+            Get all the [key, value, timestamp] tuples in the given time range corresponding to the specified key.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.GetAllWithSkip(HomeOS.Hub.Common.Bolt.DataStore.IKey,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Get values for given key at startTimeStamp, startTimeStamp+skip, startTimeStamp+2*skip ..... endTimeStamps
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.GetKeys(HomeOS.Hub.Common.Bolt.DataStore.IKey,HomeOS.Hub.Common.Bolt.DataStore.IKey)">
+            <summary>
+            Get a list of all keys in the specified key range.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.GrantReadAccess(System.String)">
+            <summary>
+            Grants read access to the app at the specified AppId.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.GrantReadAccess(System.String,System.String)">
+            <summary>
+            Grants read access to the app at the specified HomeId and AppId.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.RevokeReadAccess(System.String)">
+            <summary>
+            Revokes read access from the app at the specified AppId.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.RevokeReadAccess(System.String,System.String)">
+            <summary>
+            Revokes read access from the app at the specified HomeId and AppId.
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IStream.Close">
+            <summary>
+            Closes the current stream.
+            </summary>
+            <returns>A boolean indicating success or failure.</returns>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.AmazonS3Synchronizer.#ctor(HomeOS.Hub.Common.Bolt.DataStore.RemoteInfo,System.String,HomeOS.Hub.Common.Bolt.DataStore.SynchronizeDirection,HomeOS.Hub.Common.Bolt.DataStore.CompressionType,HomeOS.Hub.Common.Bolt.DataStore.EncryptionType,System.Byte[],System.Byte[],HomeOS.Hub.Common.Bolt.DataStore.Logger,System.Int32,System.Int32)">
+            <summary>
+            We-use the remote info as: accountName = awsAccessKeyId and accountKey = awsSecretAccessKey
+            </summary>
+        </member>
+        <member name="M:HomeOS.Hub.Common.Bolt.DataStore.IChunk.GetCurrentChunkList(System.String)">
+            <summary>
+            For the given file return a list of (chunk-index, chunkInfo) tuples ; chunk-indices start at 0
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

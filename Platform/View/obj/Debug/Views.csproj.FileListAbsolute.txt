@@ -1,0 +1,9 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddInViews\HomeOS.Hub.Platform.Views.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddInViews\HomeOS.Hub.Platform.Views.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\View\obj\Debug\HomeOS.Hub.Platform.Views.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\View\obj\Debug\HomeOS.Hub.Platform.Views.pdb
+C:\PROJECTS\IoT\LoT\Hub\output\binaries\Pipeline\AddInViews\HomeOS.Hub.Platform.Views.dll
+C:\PROJECTS\IoT\LoT\Hub\output\binaries\Pipeline\AddInViews\HomeOS.Hub.Platform.Views.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\View\obj\Debug\Views.csprojResolveAssemblyReference.cache
+C:\PROJECTS\IoT\LoT\Hub\Platform\View\obj\Debug\HomeOS.Hub.Platform.Views.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\View\obj\Debug\HomeOS.Hub.Platform.Views.pdb

@@ -1,0 +1,7 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.WebCam\icon.png
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.WebCam\HomeOS.Hub.Drivers.WebCam.dll.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.WebCam\HomeOS.Hub.Drivers.WebCam.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.WebCam\HomeOS.Hub.Drivers.WebCam.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Drivers\WebCam\obj\Debug\WebCam.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Drivers\WebCam\obj\Debug\HomeOS.Hub.Drivers.WebCam.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Drivers\WebCam\obj\Debug\HomeOS.Hub.Drivers.WebCam.pdb

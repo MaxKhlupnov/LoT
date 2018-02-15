@@ -1,0 +1,110 @@
+﻿<script type="text/javascript" src="homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <title>Add Zwave</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <script type="text/javascript" src="jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+   <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+ 
+
+    <script>
+        var DEVICEID = "";
+       
+
+        function StartPair() {
+
+            //get the type from the drop down list and encode in friendly name
+            var zwaveType = $('#zwaveDeviceList option:selected').val();
+
+            //Call the pair function
+            new PlatformServiceHelper().MakeServiceCall("webapp/AddZwaveWeb", '{"deviceType": "' + zwaveType + '"}', AddZwaveWebCallback);
+        }
+
+        function AddZwaveWebCallback(context, result) {
+
+            UpdateDebugInfo(this, "Call returned");
+            if (result[0] == "") {
+                DEVICEID = result[1];
+                GoToFinalSetup(DEVICEID);
+            }
+
+            else {
+                ShowDebugInfo();
+                UpdateDebugInfo(this, result[0]);
+                //if error  we offer option to try to remove the device. 
+                $("#removeInstruct").show();
+            }
+        }
+
+        function StartReset() {
+            HideDebugInfo();
+            new PlatformServiceHelper().MakeServiceCall("webapp/RemoveUnaddedZwaveWeb", "", RemoveZDeviceCallback);
+        }
+
+        function RemoveZDeviceCallback(context, result) {
+            if (result[0] != "") {
+                ShowDebugInfo();
+                UpdateDebugInfo("Problem with remove:" + result[0]);
+            }
+            else {
+                $("#removeInstruct").html("Reset successful, please try pairing again");
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+
+    <div class="page">
+            <div class="row">
+                 <div class="homeID_title col"><a href="index.html">Dashboard</a> | <a href="AddDeviceUnconfiguredDevicesForScout.html">Add Devices </a> | Add Zwave </div>
+                 <div class="page_title col">Add Zwave Device</div>
+                <div class="status col" id="status" style="display:none">System Status</div> 
+            </div>
+
+     
+             <div>
+               To install a z-wave sensor: <br />
+                 1. Select the Zwave Device Type or leave as unknown. <br />
+                 2. Press the Pair button <br />
+                 3. Within 10 seconds, press the program button on your z-wave sensor <br/><br />
+            
+               
+                 <div id ="divAddZwaveTypeOptions">
+                   Zwave Device Type:&nbsp;&nbsp;
+                    <!-- only shown if it's a zwave device -->
+                    <select class="settings_select" id="zwaveDeviceList">
+                        <option>Unknown</option>
+                        <option>Door-window sensor (any)</option>
+                        <option>Water sensor (any)</option>
+                         <option>Dimmer (any)</option>
+                        <option>aeon smart energy switch</option>
+                        <option>aeon multisensor</option>
+                        <option>aeon home energy meter</option>
+         
+                    </select>
+                    </div>
+                <br /> 
+
+       
+                  <button class="btn" type="button" onclick="StartPair()">Pair</button> <br />
+             </div>
+        
+
+   <!-- Change display style to 'normal' to show debug information and 'none' to turn it off  -->
+   <div class="settings_listitem" id="divDebugInfo" style="display:none">DEBUG info</div>
+
+   <div class="settings_listitem" id="removeInstruct" style="display:none"> If you would like to try to reset the device: <br /> (1) press the reset button below, <br /> (2) press the program button on your z-wave sensor. <br /> Note, sometimes it takes two resets to work.
+       <button class="btn" type="button" onclick="StartReset()">Reset</button> <br />
+   </div>
+  
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<Modules>
+
+  <Module AppName="Alerts" BinaryName="HomeOS.Hub.Apps.Alerts" Description="Get an alert when a sensor is triggered" Rating="5" IconUrl="icon.png">
+    <RoleList>
+      <Role Name=":sensor:"/>
+    </RoleList>
+    <RoleList Optional="true">
+      <Role Name=":camera:"/>
+    </RoleList>
+  </Module>
+
+
+  <Module AppName="CameraViewer" BinaryName="HomeOS.Hub.Apps.SmartCam" Description="View your cameras from anywhere" Rating="5" IconUrl="icon.png" Version="1.0.0.0">
+    <RoleList>
+      <Role Name=":camera:"/>
+    </RoleList>
+  </Module>
+
+
+  <Module AppName="AppDummy" BinaryName="HomeOS.Hub.Apps.Dummy" Description="Example basic application" Rating="5">
+    <RoleList>
+      <Role Name=":dummy:"/>
+    </RoleList>
+  </Module>
+
+  <Module AppName="ValveController" BinaryName="HomeOS.Hub.Apps.ValveController" Description="Lancaster University Valve Controller" Rating="5">
+    <RoleList>
+      <Role Name=":valve:" />
+    </RoleList>
+  </Module>
+
+
+</Modules>

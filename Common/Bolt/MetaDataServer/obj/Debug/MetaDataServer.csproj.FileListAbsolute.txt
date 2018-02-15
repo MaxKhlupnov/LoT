@@ -1,0 +1,12 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\MetaDataServer.exe.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\MetaDataServer.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\MetaDataServer.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\MetaDataServer\obj\Debug\MetaDataServer.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\MetaDataServer\obj\Debug\MetaDataServer.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\MetaDataServer\obj\Debug\MetaDataServer.pdb
+C:\PROJECTS\IoT\LoT\Hub\output\binaries\Platform\MetaDataServer.exe.config
+C:\PROJECTS\IoT\LoT\Hub\output\binaries\Platform\MetaDataServer.exe
+C:\PROJECTS\IoT\LoT\Hub\output\binaries\Platform\MetaDataServer.pdb
+C:\PROJECTS\IoT\LoT\Hub\Common\Bolt\MetaDataServer\obj\Debug\MetaDataServer.csprojResolveAssemblyReference.cache
+C:\PROJECTS\IoT\LoT\Hub\Common\Bolt\MetaDataServer\obj\Debug\MetaDataServer.exe
+C:\PROJECTS\IoT\LoT\Hub\Common\Bolt\MetaDataServer\obj\Debug\MetaDataServer.pdb

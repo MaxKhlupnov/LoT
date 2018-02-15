@@ -1,0 +1,17 @@
+﻿<Group Name="Everyone">
+  <User Password="" ActiveFrom="1/1/0001 12:00:00 AM" ActiveUntil="1/1/2100 11:59:59 PM" LiveId="" LiveIdUniqueUserToken="" Name="systemlow" />
+  <User Password="highpass" ActiveFrom="1/1/0001 12:00:00 AM" ActiveUntil="1/1/2100 11:59:59 PM" LiveId="" LiveIdUniqueUserToken="" Name="systemhigh" />
+
+  <Group Name="Residents">
+    <Group Name="Adults">
+      <!--example of specifying a user -->
+      <User LiveIdUniqueUserToken="261b57aecb03345853d3fee2723598ec" LiveId="janehomeos@live.com" Password="Jane" ActiveFrom="0001/1/1 12:00:00 AM" ActiveUntil="2100/1/01 11:59:59 PM" Name="jane" />
+    </Group>
+
+    <Group Name="Kids">
+    </Group>
+  </Group>
+
+  <Group Name="Guests">
+  </Group>
+</Group>

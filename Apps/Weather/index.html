@@ -1,0 +1,45 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title> Weather Application</title>
+
+   <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+   <script type="text/javascript" src="../GuiWeb/common.js"></script>  <!--contains helpful calls for calling WCF service-->
+   <link rel="Stylesheet" type="text/css" href="Styles/Dummy.css" />
+
+  <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="../GuiWeb/common.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <link rel="stylesheet" media="all" type="text/css" href="Styles/Weather.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />    <!-- Back-up in case there is problem with responsive css-->
+</head>
+<body>
+
+    <div class="dashboard_toolbar">
+            <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | Weather </div>
+        </div>
+        
+        <div class="page">
+            <div class="row">
+                <div class="page_title col">Weather Application</div>
+            </div>
+
+         <div><button class="app_button" id="Button1" onclick="ShowWeatherInfo()">Update</button></div> 
+     
+        <textarea id="WeatherText" class="app_form" rows="30" cols="50" wrap="hard"></textarea>
+
+ 
+    <br />
+
+    <!--Used for debugging messages, set style="display:none" to turn off showing them, common.js will put text into div with id =divDebugInfo when calls are made to service -->
+    <div id="divWeatherServiceDebug" style="display:block">
+    Weather Service Status Debug Info: <p id="divDebugInfo"></p>
+    </div>
+
+   
+</div>
+</body>
+
+</html>

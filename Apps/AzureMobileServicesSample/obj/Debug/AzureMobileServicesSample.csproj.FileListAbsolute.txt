@@ -1,0 +1,10 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.AzureMobileServicesSample\icon.png
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.AzureMobileServicesSample\index.html
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.AzureMobileServicesSample\Styles\Sensor.css
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.AzureMobileServicesSample\HomeOS.Hub.Apps.AzureMobileServicesSample.dll.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.AzureMobileServicesSample\HomeOS.Hub.Apps.AzureMobileServicesSample.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.AzureMobileServicesSample\HomeOS.Hub.Apps.AzureMobileServicesSample.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Apps\AzureMobileServicesSample\obj\Debug\AzureMobileServicesSample.csproj.App.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\Apps\AzureMobileServicesSample\obj\Debug\AzureMobileServicesSample.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Apps\AzureMobileServicesSample\obj\Debug\HomeOS.Hub.Apps.AzureMobileServicesSample.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Apps\AzureMobileServicesSample\obj\Debug\HomeOS.Hub.Apps.AzureMobileServicesSample.pdb

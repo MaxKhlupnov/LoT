@@ -1,0 +1,202 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStore", "Common\Bolt\DataStore\DataStore.csproj", "{540D10B0-39FE-47E7-86AB-AFF845791DAF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7ED475E8-A68E-43D7-AB54-624B6A4A0EAE} = {7ED475E8-A68E-43D7-AB54-624B6A4A0EAE}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaDataServer", "Common\Bolt\MetaDataServer\MetaDataServer.csproj", "{7ED475E8-A68E-43D7-AB54-624B6A4A0EAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreHeat", "Common\Bolt\Apps\PreHeat\PreHeat.csproj", "{53AA0927-CF03-4E55-9EB6-09F4DDACF71F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Energy Data Analytics", "Common\Bolt\Apps\EDA\Energy Data Analytics.csproj", "{E5F76BD9-FD74-4417-96E3-40976F4D73EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNW", "Common\Bolt\Apps\DNW\DNW.csproj", "{0D706F05-DC94-45E0-A04C-1E7B1078B2D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDS_Eval", "Common\Bolt\Apps\HDS_Eval\HDS_Eval.csproj", "{9EF15B65-A6F6-4272-9053-2B02E649D23A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDS_Test", "Common\Bolt\Apps\HDS_Test\HDS_Test.csproj", "{FD4B583E-3F0E-45BF-A0BB-F297E598EE16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\Common\Bolt\DataStore\UnitTests.csproj", "{BCED5CED-5AE7-4684-A9A4-277DADB04857}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{7712ABCA-A2F7-4046-AB64-847F56209314}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{45268CA9-2DBD-4472-ACC2-67449E0206B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Export2CSV", "Common\Bolt\Tools\Export2CSV\Export2CSV.csproj", "{638A4AC7-9ACE-4061-97E0-1641AC4426FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoTDataExport", "Common\Bolt\Tools\LoTDataExport\LoTDataExport\LoTDataExport.csproj", "{B73E5910-EFE5-4986-9157-2D4742093D2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoTDataChecker", "Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\LoTDataChecker.csproj", "{861DF51D-125E-4903-9507-295A03BAEF62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadSyncTester", "Common\Bolt\Apps\ReadStreamSyncTester\ReadSyncTester.csproj", "{0F41432F-0D09-4A88-ABB9-100EC03BC605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteSyncTester", "Common\Bolt\Apps\WriteStreamSyncTester\WriteSyncTester.csproj", "{086EAC54-BC4D-45CD-98FC-62FF04D8C546}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStoreCommon", "Common\Bolt\DataStoreCommon\DataStoreCommon.csproj", "{6494BCCD-3FE4-493F-8C5E-01BD3F91DADB}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 14
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccProjectUniqueName0 = Common\\Bolt\\DataStore\\DataStore.csproj
+		SccProjectName0 = Common/Bolt/DataStore
+		SccAuxPath0 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath0 = Common\\Bolt\\DataStore
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = Common\\Bolt\\MetaDataServer\\MetaDataServer.csproj
+		SccProjectName1 = Common/Bolt/MetaDataServer
+		SccAuxPath1 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath1 = Common\\Bolt\\MetaDataServer
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = Common\\Bolt\\Apps\\PreHeat\\PreHeat.csproj
+		SccProjectTopLevelParentUniqueName2 = Bolt.sln
+		SccProjectName2 = Common/Bolt/Apps/PreHeat
+		SccAuxPath2 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath2 = Common\\Bolt\\Apps\\PreHeat
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = Common\\Bolt\\Apps\\EDA\\Energy\u0020Data\u0020Analytics.csproj
+		SccProjectTopLevelParentUniqueName3 = Bolt.sln
+		SccProjectName3 = Common/Bolt/Apps/EDA
+		SccAuxPath3 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath3 = Common\\Bolt\\Apps\\EDA
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = Common\\Bolt\\Apps\\DNW\\DNW.csproj
+		SccProjectTopLevelParentUniqueName4 = Bolt.sln
+		SccProjectName4 = Common/Bolt/Apps/DNW
+		SccAuxPath4 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath4 = Common\\Bolt\\Apps\\DNW
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName5 = Common\\Bolt\\Apps\\HDS_Eval\\HDS_Eval.csproj
+		SccProjectTopLevelParentUniqueName5 = Bolt.sln
+		SccProjectName5 = Common/Bolt/Apps/HDS_Eval
+		SccAuxPath5 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath5 = Common\\Bolt\\Apps\\HDS_Eval
+		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName6 = Common\\Bolt\\Apps\\HDS_Test\\HDS_Test.csproj
+		SccProjectTopLevelParentUniqueName6 = Bolt.sln
+		SccProjectName6 = Common/Bolt/Apps/HDS_Test
+		SccAuxPath6 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath6 = Common\\Bolt\\Apps\\HDS_Test
+		SccProvider6 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName7 = UnitTests\\Common\\Bolt\\DataStore\\UnitTests.csproj
+		SccProjectName7 = UnitTests/Common/Bolt/DataStore
+		SccAuxPath7 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath7 = UnitTests\\Common\\Bolt\\DataStore
+		SccProvider7 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName8 = Common\\Bolt\\Tools\\Export2CSV\\Export2CSV.csproj
+		SccProjectTopLevelParentUniqueName8 = Bolt.sln
+		SccProjectName8 = Common/Bolt/Tools/Export2CSV
+		SccAuxPath8 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath8 = Common\\Bolt\\Tools\\Export2CSV
+		SccProvider8 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName9 = Common\\Bolt\\Tools\\LoTDataExport\\LoTDataExport\\LoTDataExport.csproj
+		SccProjectTopLevelParentUniqueName9 = Bolt.sln
+		SccProjectName9 = Common/Bolt/Tools/LoTDataExport/LoTDataExport
+		SccAuxPath9 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath9 = Common\\Bolt\\Tools\\LoTDataExport\\LoTDataExport
+		SccProvider9 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName10 = Common\\Bolt\\Tools\\LoTDataChecker\\LoTDataChecker\\LoTDataChecker.csproj
+		SccProjectTopLevelParentUniqueName10 = Bolt.sln
+		SccProjectName10 = Common/Bolt/Tools/LoTDataChecker/LoTDataChecker
+		SccAuxPath10 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath10 = Common\\Bolt\\Tools\\LoTDataChecker\\LoTDataChecker
+		SccProvider10 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName11 = Common\\Bolt\\Apps\\ReadStreamSyncTester\\ReadSyncTester.csproj
+		SccProjectTopLevelParentUniqueName11 = Bolt.sln
+		SccProjectName11 = Common/Bolt/Apps/ReadStreamSyncTester
+		SccAuxPath11 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath11 = Common\\Bolt\\Apps\\ReadStreamSyncTester
+		SccProvider11 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName12 = Common\\Bolt\\Apps\\WriteStreamSyncTester\\WriteSyncTester.csproj
+		SccProjectTopLevelParentUniqueName12 = Bolt.sln
+		SccProjectName12 = Common/Bolt/Apps/WriteStreamSyncTester
+		SccAuxPath12 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath12 = Common\\Bolt\\Apps\\WriteStreamSyncTester
+		SccProvider12 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName13 = Common\\Bolt\\DataStoreCommon\\DataStoreCommon.csproj
+		SccProjectName13 = Common/Bolt/DataStoreCommon
+		SccAuxPath13 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath13 = Common\\Bolt\\DataStoreCommon
+		SccProvider13 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{540D10B0-39FE-47E7-86AB-AFF845791DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540D10B0-39FE-47E7-86AB-AFF845791DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540D10B0-39FE-47E7-86AB-AFF845791DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540D10B0-39FE-47E7-86AB-AFF845791DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED475E8-A68E-43D7-AB54-624B6A4A0EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED475E8-A68E-43D7-AB54-624B6A4A0EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED475E8-A68E-43D7-AB54-624B6A4A0EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED475E8-A68E-43D7-AB54-624B6A4A0EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53AA0927-CF03-4E55-9EB6-09F4DDACF71F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53AA0927-CF03-4E55-9EB6-09F4DDACF71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53AA0927-CF03-4E55-9EB6-09F4DDACF71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53AA0927-CF03-4E55-9EB6-09F4DDACF71F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5F76BD9-FD74-4417-96E3-40976F4D73EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F76BD9-FD74-4417-96E3-40976F4D73EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5F76BD9-FD74-4417-96E3-40976F4D73EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5F76BD9-FD74-4417-96E3-40976F4D73EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D706F05-DC94-45E0-A04C-1E7B1078B2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D706F05-DC94-45E0-A04C-1E7B1078B2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D706F05-DC94-45E0-A04C-1E7B1078B2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D706F05-DC94-45E0-A04C-1E7B1078B2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF15B65-A6F6-4272-9053-2B02E649D23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF15B65-A6F6-4272-9053-2B02E649D23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF15B65-A6F6-4272-9053-2B02E649D23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF15B65-A6F6-4272-9053-2B02E649D23A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4B583E-3F0E-45BF-A0BB-F297E598EE16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4B583E-3F0E-45BF-A0BB-F297E598EE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4B583E-3F0E-45BF-A0BB-F297E598EE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4B583E-3F0E-45BF-A0BB-F297E598EE16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCED5CED-5AE7-4684-A9A4-277DADB04857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCED5CED-5AE7-4684-A9A4-277DADB04857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCED5CED-5AE7-4684-A9A4-277DADB04857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCED5CED-5AE7-4684-A9A4-277DADB04857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{638A4AC7-9ACE-4061-97E0-1641AC4426FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{638A4AC7-9ACE-4061-97E0-1641AC4426FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{638A4AC7-9ACE-4061-97E0-1641AC4426FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{638A4AC7-9ACE-4061-97E0-1641AC4426FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B73E5910-EFE5-4986-9157-2D4742093D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B73E5910-EFE5-4986-9157-2D4742093D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B73E5910-EFE5-4986-9157-2D4742093D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B73E5910-EFE5-4986-9157-2D4742093D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{861DF51D-125E-4903-9507-295A03BAEF62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{861DF51D-125E-4903-9507-295A03BAEF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{861DF51D-125E-4903-9507-295A03BAEF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{861DF51D-125E-4903-9507-295A03BAEF62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F41432F-0D09-4A88-ABB9-100EC03BC605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F41432F-0D09-4A88-ABB9-100EC03BC605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F41432F-0D09-4A88-ABB9-100EC03BC605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F41432F-0D09-4A88-ABB9-100EC03BC605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{086EAC54-BC4D-45CD-98FC-62FF04D8C546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086EAC54-BC4D-45CD-98FC-62FF04D8C546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086EAC54-BC4D-45CD-98FC-62FF04D8C546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086EAC54-BC4D-45CD-98FC-62FF04D8C546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6494BCCD-3FE4-493F-8C5E-01BD3F91DADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6494BCCD-3FE4-493F-8C5E-01BD3F91DADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6494BCCD-3FE4-493F-8C5E-01BD3F91DADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6494BCCD-3FE4-493F-8C5E-01BD3F91DADB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5F76BD9-FD74-4417-96E3-40976F4D73EE} = {7712ABCA-A2F7-4046-AB64-847F56209314}
+		{0D706F05-DC94-45E0-A04C-1E7B1078B2D0} = {7712ABCA-A2F7-4046-AB64-847F56209314}
+		{9EF15B65-A6F6-4272-9053-2B02E649D23A} = {7712ABCA-A2F7-4046-AB64-847F56209314}
+		{FD4B583E-3F0E-45BF-A0BB-F297E598EE16} = {7712ABCA-A2F7-4046-AB64-847F56209314}
+		{53AA0927-CF03-4E55-9EB6-09F4DDACF71F} = {7712ABCA-A2F7-4046-AB64-847F56209314}
+		{0F41432F-0D09-4A88-ABB9-100EC03BC605} = {7712ABCA-A2F7-4046-AB64-847F56209314}
+		{086EAC54-BC4D-45CD-98FC-62FF04D8C546} = {7712ABCA-A2F7-4046-AB64-847F56209314}
+		{638A4AC7-9ACE-4061-97E0-1641AC4426FE} = {45268CA9-2DBD-4472-ACC2-67449E0206B2}
+		{B73E5910-EFE5-4986-9157-2D4742093D2F} = {45268CA9-2DBD-4472-ACC2-67449E0206B2}
+		{861DF51D-125E-4903-9507-295A03BAEF62} = {45268CA9-2DBD-4472-ACC2-67449E0206B2}
+	EndGlobalSection
+EndGlobal

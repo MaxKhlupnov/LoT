@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>HomeOS Heartbeat Cloud Service Test</title>
+    <script type="text/javascript" src="jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="Stylesheet" type="text/css" href="Styles/style.css" />
+</head>
+<body>
+    <div>
+        <div id="pageTitle">Heartbeat Cloud Service Test</div>
+        <br /><br /><br />
+        <div id="divDisplayElements">
+            <textarea style="overflow:auto;" id="HeartbeatList" rows="20" cols="200"></textarea>
+            <button id="btnShowHeartbeatInfo" onclick="ShowHeartbeatInfo()" style="width: 100px; border-style: solid; border-width: medium; border-color: White; padding: 5px;">Update</button>
+        </div>
+        <div id="divHeartbeatPortalServiceDebug" style="display: block">
+            Heartbeat Cloud Service Status:
+        <p id="heartbeatPortalServiceDebugInfoText"></p>
+        </div>
+    </div>
+
+</body>
+</html>

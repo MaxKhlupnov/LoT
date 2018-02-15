@@ -1,0 +1,6 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.ReadSyncTester\ReadStreamSyncTester.exe.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.ReadSyncTester\ReadStreamSyncTester.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.ReadSyncTester\ReadStreamSyncTester.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\ReadStreamSyncTester\obj\Debug\ReadStreamSyncTester.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\ReadStreamSyncTester\obj\Debug\ReadStreamSyncTester.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\ReadStreamSyncTester\obj\Debug\ReadSyncTester.csprojResolveAssemblyReference.cache

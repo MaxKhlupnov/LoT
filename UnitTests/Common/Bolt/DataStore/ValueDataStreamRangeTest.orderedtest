@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="FileStreamRangeTest" storage="c:\home\projects\homeos2\homeos2\hub\unittests\common\datastore\filestreamrangetest.orderedtest" id="b651b657-813d-4a82-a8cc-417ece7c9ebc" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="8e2111a9-24b3-81bc-25dc-679fcc122dc3" name="FileStreamRangeTest_TestGetLatestStrValue" storage="..\..\bin\debug\homeos.hub.unittests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

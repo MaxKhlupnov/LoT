@@ -1,0 +1,100 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title> Powermeter Application</title>
+   <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+      <script type="text/javascript" src="../GuiWeb/common.js"></script>  <!--contains helpful calls for calling WCF service-->
+  <link rel="Stylesheet" type="text/css" href="Styles/Dummy.css" />
+
+    <script>
+
+        window.onload = function () {
+            
+            ShowPowermeters();
+            ShowRealtimeInfo();
+        }
+
+        function ShowRealtimeInfo() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetReceivedMessages", "", GetReceivedMessagesCallback);
+            setTimeout("ShowRealtimeInfo()", 1000);
+        }
+
+
+        function GetReceivedMessagesCallback(context, result) {
+            var realTimeInfo = result.GetReceivedMessagesResult;
+            $("#RealtimeInfoList").html('');
+            for (i = 0; i < result.GetReceivedMessagesResult.length; i++) {
+                $("#RealtimeInfoList").append(realTimeInfo[i] + "<br />");
+            }
+        }
+
+
+        function ShowPowermeters() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetPowerMeterList", "", GetPowerMeterListCallback);
+        }
+
+
+        function GetPowerMeterListCallback(context, result) {
+            
+            var powermeterList = result.GetPowerMeterListResult;
+            
+
+
+            for (i = 0; i < result.GetPowerMeterListResult.length; i++) {
+                document.getElementById("powermeterControl").innerHTML +=
+                powermeterList[i] +
+                "<button onclick=SetON('" + powermeterList[i] + "')>ON</button>" +
+                "<button onclick=SetOFF('" + powermeterList[i] + "')>OFF</button>" +
+                "<br />";
+            }
+        }
+
+        function SetON(powermeterID) {
+
+            
+            new PlatformServiceHelper().MakeServiceCall("webapp/SetON", '{"powermeterID": "' + powermeterID + '"}', SendMessagesCallback);
+        }
+
+        function SetOFF(powermeterID) {
+
+           
+            new PlatformServiceHelper().MakeServiceCall("webapp/SetOFF", '{"powermeterID": "' + powermeterID + '"}', SendMessagesCallback);
+        }
+
+        function SendMessagesCallback(context, result) {
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+    <div class="dashboard_toolbar">
+            <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | PowerMeter </div>
+        </div>
+        
+        <div class="page">
+            <div class="row">
+                <div class="page_title col">PowerMeter Application</div>
+            </div>
+
+
+        <div id="powermeterControl"> 
+            
+        </div>
+
+        <textarea id="RealtimeInfoList" class="app_form" rows="30" cols="50" wrap="hard"></textarea>
+
+ 
+    <br />
+
+    
+
+   
+</div>
+</body>
+
+</html>

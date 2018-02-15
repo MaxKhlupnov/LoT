@@ -1,0 +1,215 @@
+﻿/*
+CSS reset
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/*
+These styles control the page color, font and color.
+*/
+body,
+html,
+div {
+     margin: 0;
+     padding:0;
+     font-family: 'Segoe UI';
+     color:white;
+     /*background-color: #6699FF;*/
+}
+a {text-decoration: none;}
+a:link {text-decoration: none;  color:white;}
+a:visited {color: white}  /* #E0E0E0;*/
+a:hover {COLOR: #A3A3A3;}
+
+ 
+/*
+Page is the primary container; don't mess with it.
+*/
+.page {
+     margin: 0 auto;
+     max-width: 95%;
+     overflow:hidden;
+     position:relative;
+}
+/* 
+Reusable column setup.  Background style controls the box colors.  
+Swap with other colors in the palette by replacing 'background: #3ECFF9' with any of these:
+#2D97B5 = rgb(45,151,181), #007B9D = rgb(0,123,157), #70DAF9 = rgb(112,218,249)
+*/
+.col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+    background: #3ECFF9;
+	margin-bottom: 12px;
+}
+
+.row {
+    margin-left: -12px;
+}
+.col {
+    border-left-width: 12px;
+    padding: 0 12px;
+    font-size: 200%;
+}
+
+.span_1 {
+    width: 8.33333333333%;
+}
+.span_2 {
+    width: 16.6666666667%;
+}
+.span_3,
+.navigation,
+.app_content {
+    width: 100%;
+    height: 50px;
+    margin-left: 0;
+    background-color: rgb(128, 128, 128);
+}
+.span_4,
+.media_block {
+    width: 33.3333333333%;
+    height: 300px;
+}
+.app_block {
+    width: 33.3333333333%;
+    height: 300px;
+    float: left;
+    background-color: rgb(128, 128, 128);
+}
+.app_desc,
+.app_rating,
+.app_reqs {
+    font-size: 80%;
+    padding: 1%;
+    background-color: #3ECFF9;
+}
+.app_image {
+    max-width: 80%;
+    max-height: 80%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: 20%;
+    background-color: #3ECFF9;
+}
+.span_5 {
+    width: 41.6666666667%;
+}
+.span_6,
+.main_content {
+    width: 50.0%;
+    height: 400px;
+}
+.span_7 {
+    width: 58.3333333333%;
+}
+.span_8 {
+    width: 66.6666666667%;
+}
+.span_9 {
+    width: 75.0%;
+}
+.span_10 {
+    width: 83.3333333333%;
+}
+.span_11 {
+    width: 91.6666666667%;
+}
+.dashboard_toolbar {
+    max-width: 100%;
+    border-left-width: 12px;
+    padding: 0 24px;
+    background-color: #69f;
+}
+.span_12,
+.header,
+.homeID_title,
+.footer {
+    width: 100%;
+    height: 40px;
+    /*margin-left: 26px;*/
+    /*padding-left: 12px;*/
+    background-color: #69f;
+    font-size: 150%;
+}
+.page_title {
+    width: 100%;
+    margin-left: 0;
+    font-size: 250%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    background-color: #6699FF;
+}
+.app_content {
+    height: auto;
+}
+.status {
+    width: 100%;
+    height: 50px;
+    margin-left: 0;
+}
+.app_form {
+    font-family: 'Segoe UI';
+    padding: 1%;
+    font-size: 75%;
+}
+.app_button {
+    width: 100px;
+    padding: 5px;
+    margin-left: 0;
+    margin-right: 5px;
+    background-color: #19A347;
+    color: white;
+    font-size: 80%;
+}
+    .app_button:hover {
+        background: #80CC99;
+    }
+.app_button2 {
+    width: 100px;
+    padding: 5px;
+    margin-left: 0;
+    margin-right: 5px;
+    margin-top: 15px;
+    background-color: #D11919;
+    color: white;
+    font-size: 80%;
+}
+    .app_button2:hover {
+        background: #E68080;
+    }
+.app_button3 {
+    width: 100px;
+    padding: 5px;
+    margin-left: 0;
+    margin-right: 5px;
+    margin-top: 5px;
+    background-color: #FFFFFF;
+    color: black;
+    font-size: 80%;
+}
+    .app_button3:hover {
+        background: #A3A3A3;
+    }
+
+input[type=email] {
+    border-style: solid;
+    border-width: medium;
+    border-color: White;
+    padding: 5px;
+    font-size: 90%;
+    width: 60%;
+}
+       

@@ -1,0 +1,660 @@
+﻿     
+
+/*
+CSS reset
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/*
+These styles control the page color, font and color.
+*/
+body,
+html,
+div {
+     margin: 0;
+     padding:0;
+     font-family: 'Segoe UI';
+     color:white;
+     background-color: rgb(100,81,74);
+}
+a {text-decoration: none;}
+a:link {text-decoration: none; color:white;}
+a:visited {color:white;}
+a:hover {COLOR: darkblue;}
+
+ 
+/*
+Page is the primary container; don't mess with it.
+*/
+.page {
+     margin: 0 auto;
+     max-width: 95%;
+     overflow:hidden;
+     position:relative;
+}
+/* 
+Reusable column setup.  Background style controls the box colors.  
+Swap with other colors in the palette by replacing 'background: #3ECFF9' with any of these:
+#2D97B5 = rgb(45,151,181), #007B9D = rgb(0,123,157), #70DAF9 = rgb(112,218,249)
+*/
+.col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+    background: #3ECFF9;
+	margin-bottom: 12px;
+}
+
+    .flip-h {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter:fliph;
+    filter: fliph; 
+}
+
+    /*This bit of CSS fixes the issues with Chrome font rendering smaller than IE*/
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        .homeID_title {
+            font-size: 150%;      
+        }
+        .dashboard_toolbar {
+             padding:0 12px 12px;
+         }
+    }
+
+    /* 1. 2 Column Grid 0px - 339px viewport, basically smartphone browsers */
+    @media screen and (min-width: 0px) and (max-width: 339px) {
+        
+        .row {
+            margin-left:-12px;
+        }
+        .col {
+            border-left-width:12px;
+        	padding:0 12px;
+            height:auto;
+            width:100%;
+            margin-left:0;
+        }
+        
+        .dashboard_toolbar {
+             max-width: 100%;
+             border-left-width:12px;
+             padding:0 12px;
+             background-color: #00BDF2;
+         }
+
+        .homeID_title {
+            width: 100%;
+            height: 25px;
+            margin-left: 6px;
+            background-color: #00BDF2;
+        }
+
+        .homeID_auth {
+            width: 69%;
+            height: 25px;
+            display: inline-block;
+            margin-left: 6px;
+            margin-bottom: 3px;
+            background-color: #00BDF2;
+        }
+
+        .page_title {
+            width: 100%;
+            margin-left: 0;
+            font-size: 150%;
+            background-color:rgb(100,81,74);
+        }
+
+        .app_block {
+            padding:0;
+            /*margin:0;*/
+            margin-left: 12px;
+            font-size: 90%;
+            background-color:rgb(100,81,74);
+        }
+
+        .app_image {
+            width: 100%;
+            height: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .app_control {
+            margin-top: 12px;
+            margin-left: -7px;
+            /*text-align: center;*/
+        }
+
+        .app_button3 {
+            width: 20px;
+            height: 20px;
+            border: solid;
+            border-color: #C0C0C0;
+            padding: 1%;
+            margin-right: 1.5%;
+        }
+
+        select {
+            display: block;
+            position: absolute;
+            top: 44px;
+            padding: 10px 15px;
+            font-size: 85%;
+            line-height: 20px;
+            font-weight: 300;
+            color: #fff;
+            float: left;
+            background: #C0C0C0;
+        }
+
+        .app_content {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+            background-color:rgb(100,81,74);
+        }
+
+        .app_snapshots {
+            float: left; 
+            margin-right:5px;
+            margin-bottom: 5px;
+        }
+
+        .recordings_block {
+        width: 100%;
+        background-color: rgb(100,81,74);
+    }
+    .snapshot_image {
+        width: 100%;
+         height: auto;
+        /*max-width: 30%;  /*20*/
+        background-color: rgb(100,81,74);
+    }
+
+
+        .btn {
+            border: none;
+            font-family: inherit;
+            font-size: 90%;
+            color: inherit;
+            background: #007B9D;
+            cursor: pointer;
+            width: 65px;
+            height: 25px;
+            display: inline-block;
+            letter-spacing: 1px;
+            font-weight:400;
+            outline: none;
+        }
+
+        .btn:hover {
+            background: #2D97B5;
+        }
+        .footer {
+            font-size: 60%;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+    }
+
+    /* 2. 6 Column Grid 340px - 919px viewport, basically 7" and older tablets */
+    @media screen and (min-width: 340px) and (max-width: 919px) {
+        
+        .col {
+            margin-left:2%;
+        	padding:0 2%;
+            font-size:150%;
+        }
+        
+        .row .col:first-child {
+            margin-left:0;
+        }
+     
+        .dashboard_toolbar {
+             max-width: 100%;
+             border-left-width: 50px;
+             padding: 0 4%;
+             background-color: #00BDF2;
+         }
+        
+        .homeID_title {
+            width: 39%;
+            height: 45px;
+            display: inline-block;
+            margin-left: 1%;
+            /*padding-left: 13px;*/
+            background-color: #00BDF2;
+            font-size: 150%;
+        }
+
+        .homeID_auth {
+            width: 34%;
+            height: 45px;
+            display: inline-block;
+            text-align: right;
+            background-color: #00BDF2;
+            font-size: 125%;
+        }
+        
+        .page_title {
+            width: 100%;
+            margin-left: 0;
+            font-size: 250%;
+            background-color: rgb(100,81,74);
+        }
+   
+        .app_block {
+            width:49%; 
+            height: auto;
+            float: left;
+            background-color: rgb(100,81,74);
+        }
+
+        .app_image {
+            width: 100%;
+            height: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(100,81,74);
+        }        
+
+        .app_control {
+            margin-top: 12px;
+            /*margin-left: -7px;*/
+            margin-left: 1%;
+            /*text-align: center;*/
+        }
+
+        .app_button3 {
+            width: 20px;
+            height: 20px;
+            border: solid;
+            border-color: #C0C0C0;
+            padding: 1%;
+            margin-right: 2.5%;
+        }
+
+        select {
+            display: block;
+            position: relative;
+            padding: 5px 10px;
+            font-size: 75%;
+            line-height: 15px;
+            font-weight: 200;
+            color: #fff;
+            float: left;
+            background: #C0C0C0;
+        }
+     
+        .app_content {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+            margin-top: 1%;
+            background-color: rgb(100,81,74);
+         }
+
+        .app_snapshots {
+            float: left; 
+            margin-right:5px;
+            margin-bottom: 5px;
+        }
+
+       .recordings_block {
+        width: 100%;
+        background-color: rgb(100,81,74);
+    }
+    .snapshot_image {
+        max-width: 30%;  /*20?*/
+        background-color: rgb(100,81,74);
+    }
+
+
+        .btn {
+            border: none;
+            font-family: inherit;
+            font-size: 80%;
+            color: inherit;
+            background:#007B9D;
+            cursor: pointer;
+            /*width:100%;
+            height: 45px;*/
+            width: 75px;
+            height: 30px;
+            display: inline-block;
+            margin: 1%;
+            letter-spacing: 1px;
+            font-weight:500;
+            outline: none;
+        }
+        
+        .btn:hover {
+             background: #2D97B5;
+        }
+
+        .footer {
+            font-size: 65%;
+            width: 90%;
+            margin-left: 2%;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    /* 3. 12 Column Grid 920px - 1027px viewport; legacy desktops and mid-size tablets*/
+    @media screen and (min-width: 920px) and (max-width: 1027px) {
+
+    .row {
+        margin-left: -12px;
+    }
+
+    .col {
+        border-left-width: 12px;
+        padding: 0 12px;
+        font-size: 200%;
+    }
+
+    .dashboard_toolbar {
+        max-width: 100%;
+        border-left-width: 50px;
+        padding: 0 4%;
+        background-color: #00BDF2;
+    }
+    
+    .homeID_title {
+        width: 39%;
+        height: 45px;
+        display: inline-block;
+        /*margin-left: 26px;*/
+        background-color: #00BDF2;
+        font-size: 150%;
+    }
+
+    .homeID_auth {
+        width: 34%;
+        height: 45px;
+        display: inline-block;
+        text-align: right;
+        background-color: #00BDF2;
+        font-size: 150%;
+    }
+    .page_title {
+        width: 100%;
+        margin-left: 0;
+        font-size: 250%;
+        background-color: rgb(100,81,74);
+    }
+
+    .app_block {
+        /*width: 33.3333333333%;*/
+        /*height: 275px;*/
+        width: 49.99999999995%;
+        height: auto;
+        float: left;
+        background-color: rgb(100,81,74);
+    }
+
+    .app_image {
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /*margin-left: 20%;*/
+        background-color: rgb(100,81,74);
+    }
+
+    .app_control {
+        margin-top: 12px;
+        margin-left: 1%;
+        /*text-align: center;*/
+    }
+
+    .app_button3 {
+        width: 25px;
+        height: 25px;
+        border: solid;
+        border-color: #C0C0C0;
+        padding: 1%;
+        margin: 0;
+    }
+
+    select {
+        display: block;
+        position: relative;
+        padding: 10px 15px;
+        font-size: 65%;
+        line-height: 20px;
+        font-weight: 300;
+        color: #fff;
+        /*width: 49.99999999995%;*/
+        float: left;
+        background: #C0C0C0;
+    }
+
+    .app_content {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        background-color: rgb(100,81,74);
+    }
+
+    .app_snapshots {
+        float: left; 
+        margin-right:5px;
+        margin-bottom: 5px;
+    }
+
+        .recordings_block {
+        width: 100%;
+        background-color: rgb(100,81,74);
+    }
+    .snapshot_image {
+        max-width: 25%;  /*20?*/
+        background-color: rgb(100,81,74);
+    }
+
+
+    
+    .btn {
+        border: none;
+        font-family: inherit;
+        font-size: 50%;
+        color: inherit;
+        background: #007B9D;
+        cursor: pointer;
+        /*width:100%;
+        height: 45px;*/
+        width: 75px;
+        height: 30px;
+        display: inline-block;
+        margin: 1%;
+        letter-spacing: 1px;
+        font-weight:500;
+        outline: none;
+    }
+    
+    .btn:hover {
+        background: #2D97B5;
+    }
+
+    .footer {
+       font-size: 65%;
+       width: 90%;
+       margin-left: 2%;
+    }
+
+    a {
+       text-decoration: none;
+       color: white;
+    }
+
+}
+    
+    /* 3. 12 Column Grid 1028px to large resolution
+    Note to self: test on Surface, i.e. 1366 x768 resolution 
+    to check for right margin cutoffs and horizontal scrolling */
+    @media screen and (min-width: 1028px) {
+    .row {
+        margin-left: -12px;
+    }
+    .col {
+        border-left-width: 15px;
+        padding: 0 15px;
+        font-size: 200%;
+    }
+    .dashboard_toolbar {
+        max-width: 100%;
+        border-left-width: 15px;
+        padding: 0 3.5%;
+        background-color: #00BDF2;
+    }
+    .homeID_title {
+        width: 39%;
+        height: 50px;
+        display: inline-block;
+        /*margin-left: 26px;*/
+        /*padding-left: 12px;*/
+        background-color: #00BDF2;
+        font-size: 175%;
+    }
+    .homeID_auth {
+        width: 34%;
+        height: 50px;   
+        display: inline-block;
+        text-align: right;
+        background-color: #00BDF2;
+        font-size: 175%;
+    }
+    .page_title {
+        width: 100%;
+        margin-left: 0;
+        font-size: 250%;
+        background-color: rgb(100,81,74);
+    }
+    .app_block {
+        /*width: 49.99999999995%;*/
+        width: auto;
+        /*height: 275px;*/
+        height: auto;
+        float: left;
+        background-color: rgb(100,81,74);
+    }    
+    .app_image {
+        /*max-width: 100%;
+        max-height: 100%;*/
+        width: 80%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /*margin-left: 20%;*/
+        background-color: rgb(100,81,74);
+    }
+
+
+    .app_control {
+        margin-left: 1%;
+        /*text-align: center;*/
+    }
+
+    .app_button3 {
+        width: 30px;
+        height: 30px;
+        border: solid;
+        border-color: #C0C0C0;
+        padding: 1%;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+    select {
+        display: block;
+        position: relative;
+        padding: 10px 15px;
+        font-size: 65%;
+        line-height: 20px;
+        font-weight: 300;
+        color: #fff;
+        float: left;
+        background: #C0C0C0;
+    }
+    .app_content {
+        width: 100%;
+        height: auto;
+        margin-top: 1%;
+        margin-left: 0;
+        margin-bottom: 0;
+        background-color: rgb(100,81,74);
+    }
+
+    .app_snapshots {
+        float: left; 
+        margin-right:5px;
+        margin-bottom: 5px;
+    }
+
+    .recordings_block {
+        width: 100%;
+        background-color: rgb(100,81,74);
+    }
+    .snapshot_image {
+        max-width: 20%;  /*20?*/
+        background-color: rgb(100,81,74);
+    }
+
+
+    .btn {
+        border: none;
+        font-family: inherit;
+        font-size: 50%;
+        color: inherit;
+        background: #007B9D;
+        cursor: pointer;
+        /*width:100%;
+        height: 45px;*/
+        width: 75px;
+        height: 30px;
+        display: inline-block;
+        margin: 1%;
+        letter-spacing: 1px;
+        font-weight:600;
+        outline: none;
+    }
+    .btn:hover {
+        background: #2D97B5;
+    }
+    .footer {
+        font-size: 65%;
+        width: 90%;
+        margin-left: 2%;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+

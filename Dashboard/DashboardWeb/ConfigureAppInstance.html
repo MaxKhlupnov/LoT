@@ -1,0 +1,120 @@
+﻿<script type="text/javascript" src="homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Configure Application</title>
+  <script type="text/javascript" src="jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+
+    <script>
+
+        var APPNAME = "";
+        var DEVICECOUNTER = 0;
+        var NUMCALLBACKS = 0;
+
+        $(document).ready(
+            function () {
+                var qs = getQueryStringArray();
+                if (qs.AppName != undefined && qs.AppName) {
+                    APPNAME = qs.AppName;
+                    $("#appNameDiv").html(APPNAME);
+                    var data2 = '{"appFriendlyName": "' + APPNAME + '"}';
+                    new PlatformServiceHelper().MakeServiceCall("webapp/GetCompatibleDevicesForInstalledApp", data2, GetCompatibleDevicesForInstalledCallback);
+                } else {
+                    UpdateDebugInfo(this, "Could not extract AppName from the URL " + window.location);
+                }
+            }
+         );
+
+
+        function GetCompatibleDevicesForInstalledCallback(context, result) {
+            if (result[0] == "") {
+                for (var i = 1; i + 3 <= result.length; i = i + 3) {
+                    //i is deviceName, i+1 whether app has access, i+2 is location
+                    if (result[i + 1] == "True") {
+                        $("#deviceOptionList").append('<input type="checkbox" checked="checked"  id="' + result[i] + '" />  ' + result[i] + " in " + result[i + 2] + " <br /> ");
+                    }
+                    else {
+                        $("#deviceOptionList").append('<input type="checkbox"  id="' + result[i] + '" />  ' + result[i] + " in " + result[i + 2] + " <br /> ");
+                    }
+                }
+
+            }
+            else {
+                UpdateDebugInfo(this, "GetCompatabileDevicesCallback " + result[0]);
+            }
+        }
+
+
+        function ConfigureAppButtonClicked() {
+            //need to figure out what devices are checked and install the app
+            //Configure all the devices
+            DEVICECOUNTER = 0;
+            NUMCALLBACKS = 0;
+            $('#deviceOptionList').children('input').each(function () {
+                DEVICECOUNTER += 1;
+                if (this.checked == true) {
+                    ConfigureAccess(this.id, true);
+                    UpdateDebugInfo(this, this.id + " app to install");
+                }
+                else {
+                    ConfigureAccess(this.id, false);
+
+                }
+            });
+
+           // GoToHTMLPage("index.html"); AJB - short-circuits waiting for the callback 
+        }
+
+        //Called to Install applications user has selected.
+        function ConfigureAccess(dName, allowAccess) {
+            //List<string> AllowAppAccessToDevice(string appFriendlyName, string deviceFriendlyName);
+            var url2 =  "webapp/AllowAppAccessToDevice";
+            if (!allowAccess)
+                url2 = "webapp/DisallowAppAccessToDevice";
+            var dataParm = '{"appFriendlyName": "' + APPNAME + '","deviceFriendlyName": "' + dName + '"}';
+            new PlatformServiceHelper().MakeServiceCall(url2, dataParm, ConfigureDeviceCallback);
+        }
+
+        function ConfigureDeviceCallback(context, result) {
+
+            if (result[0] != "") {
+                ShowDebugInfo();
+                UpdateDebugInfo(this, "Problem installing device:" + result[0]);
+            }
+            NUMCALLBACKS += 1;
+            if (NUMCALLBACKS == DEVICECOUNTER)  //Get a callback for each device we configured so that we wait for any errors
+                GoToHTMLPage("index.html");
+        }
+
+
+    </script>
+</head>
+<body>
+
+      <div class="page">
+            <div class="row">
+                <div class="homeID_title col"><a href="index.html">Dashboard</a> | <a href="Settings.html">Settings </a> | Configure Application </div>
+                <div class="page_title col"> Configure Application</div>
+                <div class="status col" style="display:none">System Status</div> 
+            </div>
+
+           <div class="row">
+                <div class="related_content col" id="appNameDiv" ></div>                 
+            </div>
+
+      
+          <div id="deviceOptionList"> Allow the application to access these devices <br />
+              <!--<input type="checkbox" checked="checked" /> Test <br /> 
+              <input type="checkbox"  /> Test <br /> 
+              <input type="checkbox" /> Test <br /> -->
+          </div>
+
+          <button class="btn" onclick="ConfigureAppButtonClicked()">   Configure   </button>
+
+
+     </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+﻿<script type="text/javascript" src="homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Configure Scouts</title>
+  <script type="text/javascript" src="jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+
+    <script>
+
+        var REFPAGENAME = "Settings.html";  //go back to settings page as default
+        var DEVICECOUNTER = 0;
+        var NUMCALLBACKS = 0;
+
+        $(document).ready(
+            function () {
+                var qs = getQueryStringArray();
+                if (qs.RefName != undefined && qs.RefName) {
+                    REFPAGENAME = qs.RefName;                               
+                }
+                else {
+                    UpdateDebugInfo(this, "Could not extract referring page from the URL " + window.location);
+                }
+
+                //Fix breadcrumb bar depending on where they came from
+                 if (REFPAGENAME == "AddDeviceUnconfiguredDevicesForScout.html")
+                     $("#breadcrumb").append('<a href="AddDeviceUnconfiguredDevicesForScout.html">Add Devices </a> | Configure Scouts');
+                else                                 
+                     $("#breadcrumb").append('<a href="Settings.html">Settings </a> | Configure Scouts');
+
+               new PlatformServiceHelper().MakeServiceCall("webapp/GetScouts", "", GetScoutsCallback);               
+            }
+         );
+
+
+        function GetScoutsCallback(context, result) {
+            if (result[0] == "") {
+                for (var i = 1; i + 3 <= result.length; i = i + 5) {
+                    /// Each scout is a 5-tuple [name, description, rating, iconurl, whether-its-running]
+                    if (result[i + 4] == "True") {
+                        $("#scoutOptionList").append('<input type="checkbox" checked="checked"  id="' + result[i] + '" />  ' + result[i] + ": " + result[i + 1] + " <br /> ");
+                    }
+                    else {
+                        $("#scoutOptionList").append('<input type="checkbox"  id="' + result[i] + '" />  ' + result[i] + ": " + result[i+1] + " <br /> ");
+                    }
+                }
+
+            }
+            else {
+                UpdateDebugInfo(this, "GetScoutsCallback " + result[0]);
+            }
+        }
+
+
+        function ConfigureScoutButtonClicked() {
+
+            var checkedScouts = new Array();
+
+            //Add each checked scout to the checkedScouts array
+            $('#scoutOptionList').children('input').each(function () {
+                DEVICECOUNTER += 1;
+                if (this.checked == true) {
+                    checkedScouts.push(this.id);
+                }
+            });
+
+            //Tell the platform which scouts are checked
+            var dataParm = JSON.stringify({ scouts: checkedScouts });
+            new PlatformServiceHelper().MakeServiceCall("webapp/SetScouts", dataParm, ConfigureScoutsCallback);
+
+        }
+
+        function ConfigureScoutsCallback(context, result) {
+
+            if (result[0] != "") {
+                ShowDebugInfo();
+                UpdateDebugInfo(this, "Problem configuring scouts:" + result[0]);
+            }
+            
+            GoToHTMLPage(REFPAGENAME);
+        }
+
+    </script>
+</head>
+<body>
+
+      <div class="page">
+            <div class="row">
+                <div class="homeID_title col" id="breadcrumb"><a href="index.html">Dashboard</a> | </div>
+                <div class="page_title col"> Configure Scouts</div>
+                <div class="status col" style="display:none">System Status</div> 
+            </div>
+
+      
+          <div id="scoutOptionList"> Check which scouts to run: <br />
+          </div>
+
+          <button class="btn" onclick="ConfigureScoutButtonClicked()">   OK   </button>
+
+
+     </div>
+
+</body>
+</html>

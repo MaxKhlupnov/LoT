@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HomeOS.Hub.Tools.UpdateManager.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SetupWorkingDirUserSelectedPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SetupRepoAcctInfo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Secure FTP Repository Name</Value>
+    </Setting>
+    <Setting Name="SetupRepoAccountHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[format = ftp://yourserver.com]</Value>
+    </Setting>
+    <Setting Name="SetupRepoAccountPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SetupRepoAccountLogin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ftp login</Value>
+    </Setting>
+    <Setting Name="SetupRepoAccountPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ftp login pw</Value>
+    </Setting>
+    <Setting Name="SetupAzureAccountName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">storage account name</Value>
+    </Setting>
+    <Setting Name="SetupAzureAccountKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">storage account key</Value>
+    </Setting>
+    <Setting Name="SetupAzureAccountTitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Azure Storage Account Title</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,9 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Dummy\icon.png
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Dummy\index.html
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Dummy\Styles\Dummy.css
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Dummy\HomeOS.Hub.Apps.Dummy.dll.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Dummy\HomeOS.Hub.Apps.Dummy.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Dummy\HomeOS.Hub.Apps.Dummy.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Apps\Dummy\obj\Debug\Dummy.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Apps\Dummy\obj\Debug\HomeOS.Hub.Apps.Dummy.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Apps\Dummy\obj\Debug\HomeOS.Hub.Apps.Dummy.pdb

@@ -1,0 +1,6 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Tools.Export2CSV\HomeOS.Hub.Common.Bolt.Tools.Export2CSV.exe.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Tools.Export2CSV\HomeOS.Hub.Common.Bolt.Tools.Export2CSV.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Tools.Export2CSV\HomeOS.Hub.Common.Bolt.Tools.Export2CSV.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\Export2CSV\obj\Debug\Export2CSV.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\Export2CSV\obj\Debug\HomeOS.Hub.Common.Bolt.Tools.Export2CSV.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\Export2CSV\obj\Debug\HomeOS.Hub.Common.Bolt.Tools.Export2CSV.pdb

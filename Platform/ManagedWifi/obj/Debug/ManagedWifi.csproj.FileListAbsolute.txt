@@ -1,0 +1,9 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\ManagedWifi\bin\Debug\HomeOS.Hub.Platform.ManagedWifi.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\ManagedWifi\bin\Debug\HomeOS.Hub.Platform.ManagedWifi.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\ManagedWifi\obj\Debug\HomeOS.Hub.Platform.ManagedWifi.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\ManagedWifi\obj\Debug\HomeOS.Hub.Platform.ManagedWifi.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\ManagedWifi\bin\Debug\HomeOS.Hub.Platform.ManagedWifi.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\ManagedWifi\bin\Debug\HomeOS.Hub.Platform.ManagedWifi.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\ManagedWifi\obj\Debug\ManagedWifi.csprojResolveAssemblyReference.cache
+C:\PROJECTS\IoT\LoT\Hub\Platform\ManagedWifi\obj\Debug\HomeOS.Hub.Platform.ManagedWifi.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\ManagedWifi\obj\Debug\HomeOS.Hub.Platform.ManagedWifi.pdb

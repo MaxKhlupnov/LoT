@@ -1,0 +1,2626 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly HomeOS.Hub.Apps.SmartCam.SmartRecorder, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Struct _EXCEPTION_DISPOSITION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _SID_NAME_USE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _ACL_INFORMATION_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _AUDIT_EVENT_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _ACCESS_REASON_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _SECURITY_IMPERSONATION_LEVEL: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _TOKEN_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _TOKEN_ELEVATION_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _TOKEN_INFORMATION_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MANDATORY_LEVEL: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _SE_LEARNING_MODE_DATA_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _HARDWARE_COUNTER_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _PROCESS_MITIGATION_POLICY: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _JOBOBJECT_RATE_CONTROL_TOLERANCE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _JOBOBJECT_RATE_CONTROL_TOLERANCE_INTERVAL: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _JOBOBJECTINFOCLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _FIRMWARE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _LOGICAL_PROCESSOR_RELATIONSHIP: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _PROCESSOR_CACHE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _SharedVirtualDiskSupportType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _SharedVirtualDiskHandleState: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _SYSTEM_POWER_STATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DEVICE_POWER_STATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MONITOR_DISPLAY_STATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _USER_ACTIVITY_PRESENCE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _POWER_REQUEST_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _POWER_PLATFORM_ROLE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct IMAGE_AUX_SYMBOL_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct IMPORT_OBJECT_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct IMPORT_OBJECT_NAME_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct ReplacesCorHdrNumericDefines: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _RTL_UMS_THREAD_INFO_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _RTL_UMS_SCHEDULER_REASON: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _HEAP_INFORMATION_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _ACTIVATION_CONTEXT_INFO_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _CM_SERVICE_NODE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _CM_SERVICE_LOAD_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _CM_ERROR_CONTROL_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _TAPE_DRIVE_PROBLEM_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _TRANSACTION_OUTCOME: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _TRANSACTION_STATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _TRANSACTION_INFORMATION_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _TRANSACTIONMANAGER_INFORMATION_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _RESOURCEMANAGER_INFORMATION_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _ENLISTMENT_INFORMATION_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _KTMOBJECT_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _TP_CALLBACK_PRIORITY: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _FINDEX_INFO_LEVELS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _FINDEX_SEARCH_OPS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _GET_FILEEX_INFO_LEVELS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _FILE_INFO_BY_HANDLE_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _THREAD_INFORMATION_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _COMPUTER_NAME_FORMAT: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MEMORY_RESOURCE_NOTIFICATION_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _PROCESS_INFORMATION_CLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DEP_SYSTEM_POLICY_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _PROC_THREAD_ATTRIBUTE_NUM: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _COPYFILE2_MESSAGE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _COPYFILE2_MESSAGE_ACTION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _COPYFILE2_COPY_PHASE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STREAM_INFO_LEVELS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _PRIORITY_HINT: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _FILE_ID_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPOINTER_INPUT_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPOINTER_BUTTON_CHANGE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagFEEDBACK_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPOINTER_DEVICE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPOINTER_DEVICE_CURSOR_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagINPUT_MESSAGE_DEVICE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagINPUT_MESSAGE_ORIGIN_ID: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagAR_STATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct ORIENTATION_PREFERENCE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct SYSNLS_FUNCTION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct SYSGEOTYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct SYSGEOCLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _NORM_FORM: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _RPC_HTTP_REDIRECTOR_STAGE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct RPC_ADDRESS_CHANGE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct RpcProxyPerfCounters: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _RPC_NOTIFICATION_TYPES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _RPC_ASYNC_EVENT: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagExtendedErrorParamTypes: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagRpcLocalAddressFormat: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagRpcCallType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagRpcCallClientLocality: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _RPC_NOTIFICATIONS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct ASSOCCLASS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct SHSTOCKICONID: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _USER_MARSHAL_CB_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _IDL_CS_CONVERT: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _system_handle_t: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagMEMCTX: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCLSCTX: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagMSHLFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagMSHCTX: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagDVASPECT: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSTGC: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSTGMOVE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSTATFLAG: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct VARENUM: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagTYSPEC: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STORAGE_MEDIA_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STORAGE_BUS_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STORAGE_QUERY_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STORAGE_PROPERTY_ID: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STORAGE_PORT_CODE_SET: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STORAGE_IDENTIFIER_CODE_SET: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STORAGE_IDENTIFIER_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STORAGE_ID_NAA_FORMAT: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STORAGE_ASSOCIATION_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _WRITE_CACHE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _WRITE_CACHE_ENABLE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _WRITE_CACHE_CHANGE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _WRITE_THROUGH: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DEVICEDUMP_COLLECTION_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _STORAGE_POWERUP_REASON_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MEDIA_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _PARTITION_STYLE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DETECTION_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _BIN_TYPES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _ELEMENT_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _CHANGER_DEVICE_PROBLEM_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _SHRINK_VOLUME_REQUEST_TYPES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _CSV_CONTROL_OP: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _CSVFS_DISK_CONNECTIVITY: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _QUERY_FILE_LAYOUT_FILTER_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _FILE_STORAGE_TIER_MEDIA_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _PRINTER_OPTION_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagREGCLS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCOINITBASE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagACTIVATIONTYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagEXTCONN: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSTGTY: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSTREAM_SEEK: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagLOCKTYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagEOLE_AUTHENTICATION_CAPABILITIES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagRPCOPT_PROPERTIES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagRPCOPT_SERVER_LOCALITY_VALUES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagGLOBALOPT_PROPERTIES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagGLOBALOPT_EH_VALUES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagGLOBALOPT_RPCTP_VALUES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagGLOBALOPT_RO_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagGLOBALOPT_UNMARSHALING_POLICY_VALUES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagDCOM_CALL_STATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _APTTYPEQUALIFIER: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _APTTYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _THDTYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct CO_MARSHALING_CONTEXT_ATTRIBUTES: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSTDMSHLFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCOWAIT_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct CWMO_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct AgileReferenceOptions: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCOINIT: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagBIND_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagMKSYS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagMKREDUCE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagADVF: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagTYMED: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagDATADIR: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCALLTYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSERVERCALL: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPENDINGTYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPENDINGMSG: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagApplicationType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagShutdownType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCOMSD: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagDISCARDCACHE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagOLEGETMONIKER: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagOLEWHICHMK: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagUSERCLASSTYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagOLEMISC: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagOLECLOSE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagOLERENDER: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagOLEUPDATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagOLELINKBIND: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagBINDSPEED: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagOLECONTF: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagOLEVERBATTRIB: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSF_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagTYPEKIND: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCALLCONV: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagFUNCKIND: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagINVOKEKIND: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagVARKIND: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagTYPEFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagFUNCFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagVARFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagDESCKIND: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSYSKIND: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagLIBFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCHANGEKIND: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagDOMNodeType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagXMLEMEM_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IMonikerProp_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IBindStatusCallback_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IBindStatusCallback_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IBindStatusCallback_0003: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IBindStatusCallback_0004: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IBindStatusCallback_0005: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IBindStatusCallback_0006: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagBINDSTATUS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IBindStatusCallbackEx_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IAuthenticateEx_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_ICodeInstall_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IUri_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IUri_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagBINDSTRING: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _tagPI_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _tagOIBDG_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _tagPARSEACTION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _tagPSUACTION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _tagQUERYOPTION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _tagINTERNETFEATURELIST: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IInternetSecurityManager_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IInternetSecurityManager_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IInternetSecurityManager_0003: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagURLZONE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagURLTEMPLATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IInternetZoneManager_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IInternetZoneManager_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _URLZONEREG: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL_IGetBindHandle_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PIDMSI_STATUS_VALUE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagREGKIND: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _SC_ACTION_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _SC_STATUS_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _SC_ENUM_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagUASFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagREADYSTATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagGUIDKIND: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCTRLINFO: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagXFORMCOORDS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPROPPAGESTATUS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPictureAttributes: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagACTIVATEFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagOLEDCFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagVIEWSTATUS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagHITRESULT: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagDVASPECT2: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagExtentMode: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagAspectInfoFlag: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPOINTERINACTIVE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPROPBAG2_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagQACONTAINERFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct DXGI_FORMAT: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct DWRITE_MEASURING_MODE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct D2D1_ALPHA_MODE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICColorContextType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICBitmapCreateCacheOption: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICDecodeOptions: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICBitmapEncoderCacheOption: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICComponentType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICComponentEnumerateOptions: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICBitmapInterpolationMode: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICBitmapPaletteType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICBitmapDitherType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICBitmapAlphaChannelOption: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICBitmapTransformOptions: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICBitmapLockFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICBitmapDecoderCapabilities: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICProgressOperation: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICProgressNotification: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICComponentSigning: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICGifLogicalScreenDescriptorProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICGifImageDescriptorProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICGifGraphicControlExtensionProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICGifApplicationExtensionProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICGifCommentExtensionProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICJpegCommentProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICJpegLuminanceProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICJpegChrominanceProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WIC8BIMIptcProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WIC8BIMResolutionInfoProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WIC8BIMIptcDigestProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPngGamaProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPngBkgdProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPngItxtProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPngChrmProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPngHistProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPngIccpProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPngSrgbProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPngTimeProperties: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICSectionAccessLevel: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPixelFormatNumericRepresentation: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPlanarOptions: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICTiffCompressionOption: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICJpegYCrCbSubsamplingOption: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICPngFilterOption: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICNamedWhitePoint: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICRawCapabilities: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICRawRotationCapabilities: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICRawParameterSet: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICRawRenderMode: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICDdsDimension: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct WICDdsAlphaMode: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSTRRET_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagPERCEIVED: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagSHCOLSTATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct DEVICE_SCALE_FACTOR: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCONDITION_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagCONDITION_OPERATION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct GETPROPERTYSTOREFLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PKA_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PSC_STATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPENUMTYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_TYPE_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_VIEW_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_DISPLAYTYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_GROUPING_RANGE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_FORMAT_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_SORTDESCRIPTION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_RELATIVEDESCRIPTION_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_AGGREGATION_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_CONDITION_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_SEARCHINFO_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_COLUMNINDEX_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct PROPDESC_ENUMFILTER: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _PERSIST_SPROPSTORE_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DMO_INPUT_DATA_BUFFER_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DMO_OUTPUT_DATA_BUFFER_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DMO_INPUT_STATUS_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DMO_INPUT_STREAM_INFO_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DMO_OUTPUT_STREAM_INFO_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DMO_SET_TYPE_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DMO_PROCESS_OUTPUT_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DMO_INPLACE_PROCESS_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DMO_QUALITY_STATUS_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _DMO_VIDEO_OUTPUT_STREAM_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_ATTRIBUTE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_ATTRIBUTES_MATCH_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MF_ATTRIBUTE_SERIALIZE_OPTIONS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF2DBuffer_LockFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoInterlaceMode: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoTransferFunction: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoPrimaries: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoLighting: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoTransferMatrix: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoChromaSubsampling: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFNominalRange: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFStandardVideoFormat: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfobjects_0000_0012_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFBYTESTREAM_SEEK_ORIGIN: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfobjects_0000_0017_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfobjects_0000_0017_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfobjects_0000_0017_0003: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_Plugin_Type: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MF_PLUGIN_CONTROL_POLICY: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _AVRT_PRIORITY: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _AVRT_NOTIFICATION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_ENUM_FLAG: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideo3DFormat: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideo3DSampleFormat: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoRotationFormat: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoDRMFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoPadFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFVideoSrcContentHintFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFWaveFormatExConvertFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _EAllocationType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_INPUT_DATA_BUFFER_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_OUTPUT_DATA_BUFFER_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_INPUT_STATUS_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_OUTPUT_STATUS_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_INPUT_STREAM_INFO_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_OUTPUT_STREAM_INFO_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_SET_TYPE_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_PROCESS_OUTPUT_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_PROCESS_OUTPUT_STATUS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_DRAIN_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFT_MESSAGE_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF3DVideoOutputType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MFSESSION_SETTOPOLOGY_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MFSESSION_GETFULLTOPOLOGY_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MFPMPSESSION_CREATION_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MF_OBJECT_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfidl_0000_0001_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_CONNECT_METHOD: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_TOPOLOGY_RESOLUTION_STATUS_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFMEDIASOURCE_CHARACTERISTICS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFSTREAMSINK_MARKER_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_VIDEO_PROCESSOR_ROTATION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_VIDEO_PROCESSOR_MIRROR: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MFTOPOLOGY_DXVA_MODE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MFTOPOLOGY_HARDWARE_MODE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MF_TOPOLOGY_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_TOPONODE_FLUSH_MODE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_TOPONODE_DRAIN_MODE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFCLOCK_CHARACTERISTICS_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFCLOCK_STATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFCLOCK_RELATIONAL_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MFTIMER_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfidl_0000_0024_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfidl_0000_0024_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFSHUTDOWN_STATUS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfidl_0000_0027_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFRATE_DIRECTION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_QUALITY_DROP_MODE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_QUALITY_LEVEL: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_QUALITY_ADVISE_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFSequencerTopologyFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFNetCredentialRequirements: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFNetCredentialOptions: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFNetAuthenticationFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFNETSOURCE_PROTOCOL_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFNETSOURCE_TRANSPORT_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFNETSOURCE_CACHE_STATE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFNETSOURCE_STATISTICS_IDS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFNET_PROXYSETTINGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFPOLICYMANAGER_ACTION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_OPM_CGMSA_PROTECTION_LEVEL: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_OPM_ACP_PROTECTION_LEVEL: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MFAudioConstriction: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct SAMPLE_PROTECTION_VERSION: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_TRANSCODE_TOPOLOGYMODE_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_TRANSCODE_ADJUST_PROFILE_FLAGS: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _MF_VIDEO_PROCESSOR_ALGORITHM_TYPE: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MF_SOURCE_READER_FLAG: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct MF_SOURCE_READER_CONTROL_FLAG: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfreadwrite_0000_0001_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfreadwrite_0000_0001_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mfreadwrite_0000_0004_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct std._Uninitialized: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct <CppImplementationDetails>.$ArrayType$$$BY0P@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BF@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0EI@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BJ@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.memory_order: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BA@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0FG@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0IH@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY05$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY04$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0FG@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0IH@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0EH@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY01$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY00$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0EH@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.errc: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct std.io_errc: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct <CppImplementationDetails>.$ArrayType$$$BY02$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.error_code: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY07$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0O@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY08$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BG@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY06$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0EI@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0DC@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0L@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BD@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0N@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY09$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BE@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0DH@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0CI@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.istreambuf_iterator<char\,std::char_traits<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ostreambuf_iterator<char\,std::char_traits<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.istreambuf_iterator<wchar_t\,std::char_traits<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ostreambuf_iterator<wchar_t\,std::char_traits<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BO@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BI@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0EJ@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0CD@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0CE@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0CL@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY02$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0GD@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0P@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0EJ@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0CK@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0CJ@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.random_access_iterator_tag: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BF@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.input_iterator_tag: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _Cvtvec: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BH@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.bad_exception: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.bad_alloc: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.bad_array_new_length: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.exception_ptr: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<char>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<wchar_t>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<bool>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<signed char>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<unsigned char>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<short>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<unsigned short>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<int>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<unsigned int>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<long>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<unsigned long>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<__int64>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<unsigned __int64>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<float>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<double>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numeric_limits<long double>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.char_traits<wchar_t>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.char_traits<unsigned short>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.char_traits<char>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Container_proxy: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Container_base12: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Iterator_base12: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator<void>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct __m128: AutoLayout, AnsiClass, Class, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct __m64: AutoLayout, AnsiClass, Class, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.logic_error: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.domain_error: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.invalid_argument: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.length_error: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.out_of_range: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.runtime_error: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_string<char\,std::char_traits<char>\,std::allocator<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Methods:
+    <MarshalCopy>(basic_string<char\,std::char_traits<char>\,std::allocator<char> >*, basic_string<char\,std::char_traits<char>\,std::allocator<char> >*): PrivateScope, Public, Static, SpecialName
+    <MarshalDestroy>(basic_string<char\,std::char_traits<char>\,std::allocator<char> >*): PrivateScope, Public, Static, SpecialName
+Struct std.overflow_error: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.underflow_error: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.range_error: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Timevec: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Locinfo: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _Ctypevec: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct lconv: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Facet_base: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.locale: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.locale+id: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.locale+_Locimp: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.locale+facet: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._DebugHeapTag_t: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.codecvt_base: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.codecvt<wchar_t\,char\,int>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.codecvt<unsigned short\,char\,int>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ctype_base: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ctype<char>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ctype<wchar_t>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ctype<unsigned short>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ctype_byname<char>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.error_category: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.error_condition: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._System_error: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.system_error: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Generic_error_category: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Iostream_error_category: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._System_error_category: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ios_base: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ios_base+event: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct std.ios_base+failure: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ios_base+Init: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ios_base+_Iosarray: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.ios_base+_Fnarray: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_istream<char\,std::char_traits<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_istream<char\,std::char_traits<char> >+_Sentry_base: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_istream<char\,std::char_traits<char> >+sentry: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_istream<wchar_t\,std::char_traits<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_istream<wchar_t\,std::char_traits<wchar_t> >+_Sentry_base: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_istream<wchar_t\,std::char_traits<wchar_t> >+sentry: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_istream<unsigned short\,std::char_traits<unsigned short> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_istream<unsigned short\,std::char_traits<unsigned short> >+_Sentry_base: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_istream<unsigned short\,std::char_traits<unsigned short> >+sentry: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _iobuf: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct SmartRecorder.Config: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ifstream<char\,std::char_traits<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Bitwise_hash<int>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Bitwise_hash<float>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Bitwise_hash<double>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Bitwise_hash<long double>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Yarn<char>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Yarn<wchar_t>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.codecvt<char\,char\,int>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_streambuf<char\,std::char_traits<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_streambuf<wchar_t\,std::char_traits<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numpunct<char>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.num_get<char\,std::istreambuf_iterator<char\,std::char_traits<char> > >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.num_put<char\,std::ostreambuf_iterator<char\,std::char_traits<char> > >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.numpunct<wchar_t>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_string<wchar_t\,std::char_traits<wchar_t>\,std::allocator<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.num_get<wchar_t\,std::istreambuf_iterator<wchar_t\,std::char_traits<wchar_t> > >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.num_put<wchar_t\,std::ostreambuf_iterator<wchar_t\,std::char_traits<wchar_t> > >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ios<char\,std::char_traits<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ios<wchar_t\,std::char_traits<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ostream<char\,std::char_traits<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ostream<char\,std::char_traits<char> >+_Sentry_base: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ostream<char\,std::char_traits<char> >+sentry: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ostream<wchar_t\,std::char_traits<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ostream<wchar_t\,std::char_traits<wchar_t> >+_Sentry_base: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ostream<wchar_t\,std::char_traits<wchar_t> >+sentry: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_iostream<char\,std::char_traits<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_iostream<wchar_t\,std::char_traits<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ios<unsigned short\,std::char_traits<unsigned short> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_streambuf<unsigned short\,std::char_traits<unsigned short> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.fpos<int>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_filebuf<char\,std::char_traits<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_filebuf<char\,std::char_traits<char> >+_Initfl: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct std._String_iterator<std::_String_val<std::_Simple_types<char> > >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._String_const_iterator<std::_String_val<std::_Simple_types<char> > >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Iterator012<std::random_access_iterator_tag\,char\,int\,char const \*\,char const \&\,std::_Iterator_base12>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator<char>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator<char>+rebind<std::_Container_proxy>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._String_alloc<0\,std::_String_base_types<char\,std::allocator<char> > >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<char> >+rebind<char>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<char> >+rebind<char \*>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._String_val<std::_Simple_types<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._String_val<std::_Simple_types<char> >+_Bxty: AutoLayout, AnsiClass, Class, NestedPublic, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator_traits<std::allocator<char> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ostream<unsigned short\,std::char_traits<unsigned short> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ostream<unsigned short\,std::char_traits<unsigned short> >+_Sentry_base: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.basic_ostream<unsigned short\,std::char_traits<unsigned short> >+sentry: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator<wchar_t>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator<wchar_t>+rebind<std::_Container_proxy>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._String_alloc<0\,std::_String_base_types<wchar_t\,std::allocator<wchar_t> > >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._String_val<std::_Simple_types<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._String_val<std::_Simple_types<wchar_t> >+_Bxty: AutoLayout, AnsiClass, Class, NestedPublic, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<wchar_t> >+rebind<wchar_t>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<wchar_t> >+rebind<wchar_t \*>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator<std::_Container_proxy>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator_traits<std::allocator<wchar_t> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_s__RTTIBaseClassArray$_extraBytes_4: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_s__RTTIBaseClassArray$_extraBytes_16: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_s__RTTIBaseClassArray$_extraBytes_12: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_s__RTTIBaseClassArray$_extraBytes_20: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_s__RTTIBaseClassArray$_extraBytes_8: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _s__RTTIBaseClassDescriptor2: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _s__RTTIClassHierarchyDescriptor: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_52: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_50: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_46: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_24: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_23: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_33: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_35: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_34: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_25: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_27: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_20: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_21: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_22: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_26: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_74: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_19: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_51: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_TypeDescriptor$_extraBytes_31: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _s__RTTICompleteObjectLocator: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.exception: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0M@Q6AXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0L@Q6AXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_s__CatchableTypeArray$_extraBytes_8: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.bad_cast: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _s__CatchableType: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _s__ThrowInfo: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY01Q6AXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BM@_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BN@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BM@D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY01$$CBH: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0O@_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BK@_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BL@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY01D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0O@D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BK@D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BA@Q6AXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0P@Q6AXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY08Q6AXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0GM@D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY07D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY05D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0EA@D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0DM@D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0CA@D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0BAA@D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct $_s__CatchableTypeArray$_extraBytes_20: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY02Q6AXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Iosb<int>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Iosb<int>+_Dummy_enum: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct std._Iosb<int>+_Fmtflags: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct std._Iosb<int>+_Iostate: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct std._Iosb<int>+_Openmode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct std._Iosb<int>+_Seekdir: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct <CppImplementationDetails>.$ArrayType$$$BY06Q6AXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.hash<std::error_code>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.hash<int>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY03Q6AXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY04D: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _Collvec: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct type_info: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct __type_info_node: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator_arg_t: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Lockit: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Iterator_base0: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Container_base0: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.piecewise_construct_t: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _Dconst: AutoLayout, AnsiClass, Class, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.float_round_style: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct std.float_denorm_style: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct std.hash<long double>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.hash<double>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.hash<float>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_int: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Nil: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Class SmartRecorder.ObjectDetector: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    InitializeFromFrame(Byte*, Int32, Int32, Int32, SByte*): PrivateScope, Public, HideBySig
+    IsInitialized(): PrivateScope, Public, HideBySig
+    GetObjectRect(Byte*, Int32): PrivateScope, Public, HideBySig
+    GetBinaryImage(Byte*): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct std.vector<SmartRecorder::GMM\,std::allocator<SmartRecorder::GMM> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0EG@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Nonscalar_ptr_iterator_tag: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct SmartRecorder.GMM: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator<SmartRecorder::GMM>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Vector_alloc<0\,std::_Vec_base_types<SmartRecorder::GMM\,std::allocator<SmartRecorder::GMM> > >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<SmartRecorder::GMM> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<SmartRecorder::GMM> >+rebind<SmartRecorder::GMM>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<SmartRecorder::GMM> >+rebind<SmartRecorder::GMM \*>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<SmartRecorder::GMM> >+rebind<std::_Container_proxy>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Vector_val<std::_Simple_types<SmartRecorder::GMM> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Wrap_alloc<std::allocator<std::_Container_proxy> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator_traits<std::allocator<SmartRecorder::GMM> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std.allocator_traits<std::allocator<std::_Container_proxy> >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Vector_const_iterator<std::_Vector_val<std::_Simple_types<SmartRecorder::GMM> > >: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tm: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Rand_urng_from_func: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Class SmartRecorder.VideoWriter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Init(String, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    AddFrame(Byte*, Int32, Int32, Int32, Int64): PrivateScope, Public, HideBySig
+    Done(): PrivateScope, Public, HideBySig
+Struct IMFSinkWriter: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct IMFMediaType: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct IMFSample: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct IMFMediaBuffer: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct IUnknown: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct IMFAttributes: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _GUID: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct IMFByteStream: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _TP_CALLBACK_ENVIRON_V3: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _TP_CALLBACK_ENVIRON_V3+<unnamed-type-u>: AutoLayout, AnsiClass, Class, NestedPublic, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _TP_CALLBACK_ENVIRON_V3+<unnamed-type-u>+<unnamed-type-s>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _tagpropertykey: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _ldiv_t: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagTEXTMETRICW: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagMSG: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct HWND__: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _lldiv_t: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct HDC__: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagRECT: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _SECURITY_ATTRIBUTES: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct localeinfo_struct: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagVARIANT: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagVARIANT+$UnnamedClass$0x3fb5bf91$444$: AutoLayout, AnsiClass, Class, NestedAssembly, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagVARIANT+$UnnamedClass$0x3fb5bf91$444$+$UnnamedClass$0x3fb5bf91$445$: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagVARIANT+$UnnamedClass$0x3fb5bf91$444$+$UnnamedClass$0x3fb5bf91$445$+$UnnamedClass$0x3fb5bf91$446$: AutoLayout, AnsiClass, Class, NestedAssembly, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagVARIANT+$UnnamedClass$0x3fb5bf91$444$+$UnnamedClass$0x3fb5bf91$445$+$UnnamedClass$0x3fb5bf91$446$+$UnnamedClass$0x3fb5bf91$447$: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagPROPVARIANT: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagPROPVARIANT+$UnnamedClass$0x3fb5bf91$452$: AutoLayout, AnsiClass, Class, NestedAssembly, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagPROPVARIANT+$UnnamedClass$0x3fb5bf91$452$+$UnnamedClass$0x3fb5bf91$453$: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagPROPVARIANT+$UnnamedClass$0x3fb5bf91$452$+$UnnamedClass$0x3fb5bf91$453$+$UnnamedClass$0x3fb5bf91$454$: AutoLayout, AnsiClass, Class, NestedAssembly, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Class <CrtImplementationDetails>.Exception: AutoLayout, AnsiClass, Class, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class <CrtImplementationDetails>.ModuleLoadException: AutoLayout, AnsiClass, Class, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Nested = A nested exception occurred after the primary exception that caused the C++ module to fail to load.
+ : Public, Static, Literal, HasDefault
+Class <CrtImplementationDetails>.ModuleLoadExceptionHandlerException: AutoLayout, AnsiClass, Class, Serializable, BeforeFieldInit
+  :<CrtImplementationDetails>.ModuleLoadException
+    Void .ctor(System.String, System.Exception, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Exception NestedException 'get set' : 
+  Methods:
+    get_NestedException(): PrivateScope, Public, HideBySig, SpecialName
+    set_NestedException(Exception): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetObjectData(SerializationInfo, StreamingContext): PrivateScope, Public, Virtual, HideBySig
+Class <CrtImplementationDetails>.ModuleUninitializer: NotPublic
+  :System.Collections.Stack
+  Fields:
+    <CrtImplementationDetails>.ModuleUninitializer _ModuleUninitializer : Assembly, Static
+  Methods:
+    AddHandler(EventHandler): PrivateScope, Assembly, HideBySig
+Class <CrtImplementationDetails>.OpenMPWithMultipleAppdomainsException: AutoLayout, AnsiClass, Class, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Struct ISA_AVAILABILITY: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct <CppImplementationDetails>.$ArrayType$$$BY0CD@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0CE@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct __MIDL___MIDL_itf_gchost_0000_0000_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_gchost_0000_0000_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct ValidatorFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0000_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0000_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0000_0003: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0000_0004: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0000_0005: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0009_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0009_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0009_0003: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0011_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct ETaskType: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0020_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0021_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0021_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0028_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0028_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0028_0003: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0028_0004: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0030_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0030_0002: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _CLRAssemblyIdentityFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _hostBiningPolicyModifyFlags: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0040_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct _HostApplicationPolicy: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0045_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0046_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct __MIDL___MIDL_itf_mscoree_0000_0048_0001: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct <CppImplementationDetails>.$ArrayType$$$BY0N@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0M@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0O@$$CB_W: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _TP_CALLBACK_ENVIRON_V1: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _TP_CALLBACK_ENVIRON_V1+<unnamed-type-u>: AutoLayout, AnsiClass, Class, NestedPublic, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _TP_CALLBACK_ENVIRON_V1+<unnamed-type-u>+<unnamed-type-s>: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CrtImplementationDetails>.NativeDll: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CrtImplementationDetails>.DefaultDomain: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CrtImplementationDetails>.LanguageSupport: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct gcroot<System::String ^>: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct __s_GUID: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY00Q6MPBXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct HINSTANCE__: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CrtImplementationDetails>.Progress: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CrtImplementationDetails>.Progress+State: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct <CppImplementationDetails>.$ArrayType$$$BY0A@P6AXXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0A@P6AHXZ: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct __enative_startup_state: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct tagVARIANT+$UnnamedClass$0xd2508fec$210$: AutoLayout, AnsiClass, Class, NestedAssembly, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagVARIANT+$UnnamedClass$0xd2508fec$210$+$UnnamedClass$0xd2508fec$211$: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagVARIANT+$UnnamedClass$0xd2508fec$210$+$UnnamedClass$0xd2508fec$211$+$UnnamedClass$0xd2508fec$212$: AutoLayout, AnsiClass, Class, NestedAssembly, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagVARIANT+$UnnamedClass$0xd2508fec$210$+$UnnamedClass$0xd2508fec$211$+$UnnamedClass$0xd2508fec$212$+$UnnamedClass$0xd2508fec$213$: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct ICorRuntimeHost: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CrtImplementationDetails>.TriBool: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CrtImplementationDetails>.TriBool+State: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+Struct ICLRRuntimeHost: AutoLayout, AnsiClass, Class, SequentialLayout, Abstract, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagPROPVARIANT+$UnnamedClass$0xd2508fec$218$: AutoLayout, AnsiClass, Class, NestedAssembly, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagPROPVARIANT+$UnnamedClass$0xd2508fec$218$+$UnnamedClass$0xd2508fec$219$: AutoLayout, AnsiClass, Class, NestedAssembly, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagPROPVARIANT+$UnnamedClass$0xd2508fec$218$+$UnnamedClass$0xd2508fec$219$+$UnnamedClass$0xd2508fec$220$: AutoLayout, AnsiClass, Class, NestedAssembly, ExplicitLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct tagTEXTMETRICA: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct _EXCEPTION_POINTERS: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CppImplementationDetails>.$ArrayType$$$BY0CM@$$CBD: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Fac_node: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct std._Fac_tidy_reg_t: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct EHExceptionRecord: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct EHExceptionRecord+EHParameters: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CrtImplementationDetails>.AtExitLock: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Struct <CrtImplementationDetails>.ThisModule: AutoLayout, AnsiClass, Class, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType

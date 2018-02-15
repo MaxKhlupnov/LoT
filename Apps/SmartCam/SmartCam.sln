@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCam", "SmartCam.csproj", "{7C1E0409-69EF-407F-B063-29057BE04992}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartRecorder", "SmartRecorder\SmartRecorder.vcxproj", "{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccProjectUniqueName0 = SmartCam.csproj
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SmartRecorder\\SmartRecorder.vcxproj
+		SccProjectName1 = SmartRecorder
+		SccLocalPath1 = SmartRecorder
+		SccLocalPath2 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C1E0409-69EF-407F-B063-29057BE04992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1E0409-69EF-407F-B063-29057BE04992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1E0409-69EF-407F-B063-29057BE04992}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7C1E0409-69EF-407F-B063-29057BE04992}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7C1E0409-69EF-407F-B063-29057BE04992}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{7C1E0409-69EF-407F-B063-29057BE04992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C1E0409-69EF-407F-B063-29057BE04992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C1E0409-69EF-407F-B063-29057BE04992}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7C1E0409-69EF-407F-B063-29057BE04992}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7C1E0409-69EF-407F-B063-29057BE04992}.Release|Win32.ActiveCfg = Release|Any CPU
+		{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}.Debug|Win32.Build.0 = Debug|Win32
+		{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}.Release|Any CPU.ActiveCfg = Release|Win32
+		{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}.Release|Win32.ActiveCfg = Release|Win32
+		{239CA191-4A9B-4C7D-BC61-D1B82CD678D5}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

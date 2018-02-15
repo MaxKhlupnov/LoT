@@ -1,0 +1,197 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title> Sensor Logger</title>
+   <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+      <script type="text/javascript" src="../GuiWeb/common.js"></script>  <!--contains helpful calls for calling WCF service-->
+  <link rel="Stylesheet" type="text/css" href="Styles/Sensor.css" />
+
+    <script>
+
+        var sensorCheck;
+        var gIsMonitoring = false;
+
+        $(document).ready(
+            function () {
+                //get previously received messages
+                ShowSensorPortsInfo();
+                //Figure out if we are syncing locally
+                GetLocalSyncInformation();
+
+                //Set up to refresh alerts every 2 seconds
+                sensorCheck = setInterval(function () { ShowSensorPortsInfo() }, 2000);
+                //To stop do this: clearInterval(sensorCheck);     
+                GetSensors(); //do this once to check if we had monitoring already set (e.g. before restart of app)
+            }
+        );
+
+        function ShowSensorPortsInfo() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetReceivedMessages", "", GetReceivedMessagesCallback);
+        }
+
+         function GetReceivedMessagesCallback(context, result) {
+            $("#SensorList").html('');
+            for (i = 0; i < result.length; i++) {
+                $("#SensorList").append(result[i] + "&#13;&#10");  //replace <br /> with &#13;&#10 because it works across more browsers
+            }
+         }
+
+         function ToggleLocalSync() {
+             if ($("#LocalSyncSetup").is(':hidden'))
+                 $("#LocalSyncSetup").show();
+             else
+                 $("#LocalSyncSetup").hide();
+         }
+
+        function GetLocalSyncInformation() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetLocalDirectorySyncInfo", "", GetLocalSyncInfoCallback);
+        }
+
+        function GetLocalSyncInfoCallback(context, result) {
+
+            if (result[0] == "") { //success!
+                //first element is whether or not we are syncing locally, second is path 
+                if (result[1] == "True" || result[1] == "true") {
+                    //check the checkbox and set the path
+                    $('#SaveLocally').attr('checked', true);
+                    $('#localDataDirectoryPath').val(result[2]);
+                }
+
+            }
+        }
+
+        function HandleLocalData() {
+            var dPath = $("#localDataDirectoryPath").val();
+            var sVal = $("#SaveLocally").is(":checked");
+            
+            var data2 = JSON.stringify({ syncLocal: sVal, directoryPath: dPath });        
+            new PlatformServiceHelper().MakeServiceCall("webapp/SetLocalDirectory", data2, GetHandleLocalDataCallback);
+        }
+        function GetHandleLocalDataCallback(context, result) {
+            if (result[0] == "") {
+              //success do nothing
+            }
+            else {
+                //divSensorServiceDebug make this visible
+                $("#divSensorServiceDebug").show();
+                DisplayDebugging("GetHandleLocalDataCallback:" + result[0]);
+            }
+            
+        }
+
+        function GetSensors() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetMonitoringInfo", "", MonitorInfoCallback);
+        }
+
+        function MonitorInfoCallback(context, result) {
+
+            if (result[0] == "") {
+                $("#datatomonitor").html('');
+                //i:sensortag name, i+1:isMonitoring, i+2: maxMinutes, i+3: MaxValue, i+4: minValue
+                for (var i = 1; i + 5 <= result.length; i = i + 5) {
+                    //id's don't like to have colons, replace colons in ids of maxMin etc with _                  
+                    var newstring = result[i].split(':').join('_');
+                    if (result[i+1] =="True") {
+                        $("#datatomonitor").append('<input class="selected" id="' + result[i] + '"type="checkbox" checked />&nbsp&nbsp' + result[i] + ', Expect data every <input type="text" size="5" id="txt_' + newstring + '" value ="' + result[i+2] + '"> minutes <br/>');
+                        $("#startmonitoring").html('Reconfigure Monitoring');  //make clear we are monitoring
+                        gIsMonitoring = true;
+                    }
+                    else {
+                        $("#datatomonitor").append('<input class="selected" id="' + result[i] + '"type="checkbox" />&nbsp&nbsp' + result[i] + ', Expect data every <input type="text" size="5" id="txt_' + newstring + '"> minutes <br/>');
+                    }
+                }
+
+                $("#startmonitoring").show();
+                $("#stopmonitoring").show();
+            }
+        }
+
+
+        function StartDataMonitoring() {
+    
+            gIsMonitoring = true;
+            $("#startmonitoring").html('Reconfigure Monitoring');
+
+            //Check each sensor tag,  using the selected class was easiest way for me to find each sensor tag
+            $('#datatomonitor').children(".selected").each(function () {
+                var sTag = this.id;
+                if (this.checked) {
+                    //configure parameters
+                    var isMon = true;
+                    var txtID = "#txt_" + this.id.split(':').join('_'); //create the id with _'s
+                    var maxMin = $(txtID).val();
+                    var data2 = JSON.stringify({ sensorTag: this.id, isMonitoring: isMon, maxMinutesBetweenUpdate: maxMin });
+                    new PlatformServiceHelper().MakeServiceCall("webapp/SetMonitoringInfo", data2, MonitorConfigureCallback);
+                }
+            });
+        }
+        
+
+        function StopMonitoring() {
+            gIsMonitoring = false;
+            $("#datatomonitor").html('');
+            $("#startmonitoring").html('Start Monitoring');
+            new PlatformServiceHelper().MakeServiceCall("webapp/StopMonitoring", "", MonitorConfigureCallback);
+        }
+
+        function MonitorConfigureCallback(context, result) {
+            if (result[0] == "") {
+                //success do nothing
+            }
+            else {
+                //divSensorServiceDebug make this visible
+                $("#divSensorServiceDebug").show();
+                DisplayDebugging("GetHandleLocalDataCallback:" + result[0]);
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="dashboard_toolbar">
+            <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | Sensor </div>
+        </div>
+        
+        <div class="page">
+            <div class="row">
+                <div class="page_title col">Sensor Logger Application</div>
+            </div>
+
+      <div> Most recent sensor readings (100 max):</div>
+        <textarea id="SensorList" class="app_form" rows="30" cols="70" wrap="hard"></textarea>
+        <br />
+  
+        <button class="app_button" onclick="ToggleLocalSync()">Setup Local Sync</button> <p></p>
+            <div id="LocalSyncSetup" style="display:none">
+                To save sensor readings in a local file, enter a directory path and click on the checkbox (we recommend a OneDrive directory which will be automatically sync'd to your OneDrive account)
+                <p></p> Local Directory Path: <input type="text" id="localDataDirectoryPath" size="50" /> <p></p>
+                <input type="checkbox" id="SaveLocally" name="sLocal" onclick="HandleLocalData()" /> Save Data Locally  <br />
+                <br />
+            </div>
+
+            <div>
+              
+                <button class="app_button" onclick="GetSensors()">Get Sensors</button>
+                <div id="datatomonitor">
+
+                </div>
+                <p></p>
+                <button id="startmonitoring" style="display:none" class="app_button" onclick="StartDataMonitoring()">Start Monitoring</button>
+                <button id="stopmonitoring" style="display:none" class="app_button" onclick="StopMonitoring()">Stop Monitoring</button>
+
+            </div>
+           
+    <!--Used for debugging messages, set style="display:none" to turn off showing them, common.js will put text into div with id =divDebugInfo when calls are made to service -->
+    <div id="divSensorServiceDebug" style="display:none">
+    Sensor Service Status Debug Info: <p id="divDebugInfo"></p>
+    </div>
+
+   
+</div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html lang="en" class="js-disabled home">
+
+<head>
+  <title>Thermometer </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+   <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="../GuiWeb/common.js"></script>
+  <link rel="Stylesheet" type="text/css" href="Styles/AppAlertsStyleSheet.css" />
+ 
+    <script>
+        var currentTemperature = 0;
+        var lowThreshold = 20;
+        var highThreshold = 30;
+
+        $(document).ready(
+            function () {
+                RefreshTemperature();
+                setInterval(function () { RefreshTemperature() }, 2000);
+            }
+        );
+
+        function RefreshTemperature() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetTemperature", "", RefreshTemperatureCallback);
+        }
+
+        function RefreshTemperatureCallback(context, result) {
+            currentTemperature = result.GetTemperatureResult;
+            $("#temperatureValue").text(currentTemperature.toString());
+            updateColors();
+        }
+
+        function updateColors() {
+            if (currentTemperature < lowThreshold) {
+                $("#bigtemperaturebox").css('color', 'light-blue');
+                console.log("set blue");
+            }
+            else if (currentTemperature > highThreshold) {
+                $("#bigtemperaturebox").css('color', 'red');
+                console.log("set red");
+            }
+            else {
+                $("#bigtemperaturebox").css('color', 'white');
+                console.log("set white");
+            }
+            console.log("Updated color to " + $("#bigtemperaturebox").css("color"));
+        }
+
+        function setLEDs(e) {
+            lowThreshold = parseInt($("#lowEntry").val());
+            highThreshold = parseInt($("#highEntry").val());
+            updateColors();
+            var json = JSON.stringify({ low: lowThreshold, high: highThreshold });
+            new PlatformServiceHelper().MakeServiceCall("webapp/SetLEDs", json , LEDCallback);
+            return false;
+        }
+
+        function LEDCallback(context, result) {
+            updateColors();
+        }
+    </script>
+</head>
+<body>
+        <div class="dashboard_toolbar">
+            <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | Thermometer </div>
+        </div>
+        
+        <div class="page">
+            <div class="row">
+                <div class="page_title col">Thermometer</div>
+            </div>
+            <div class="row">
+                <div id="bigtemperaturebox" style="text-align:center;width:100%;font-size:200px">
+                    <span id="temperatureValue"></span>&deg;
+                </div>
+            </div>
+            <div class="row">
+                <div style="padding-left:100px">
+                        <input type="number" value="20" id="lowEntry" placeholder="Low value" />
+                        <input type="number" value="30" id="highEntry" placeholder="High value" />
+                        <input type="submit" value="Set lows and highs" onclick="setLEDs()" />
+                    </div>
+            </div>
+        </div>
+
+        <!--Used for debugging messages, set style="display:none" to turn off showing them, common.js will put text into div with id =divDebugInfo when calls are made to service -->
+        <div id="divServiceDebug" style="display:block">
+        Service Status Debug Info: <p id="divDebugInfo"></p>
+        </div>
+
+    
+</body>
+</html>

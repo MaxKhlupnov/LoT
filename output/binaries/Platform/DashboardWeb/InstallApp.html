@@ -1,0 +1,118 @@
+﻿<script type="text/javascript" src="homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Install Application</title>
+  <script type="text/javascript" src="jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+
+    <script>
+        var APPNAME = "";
+        var INSTALLED = "";
+
+        $(document).ready(
+            function () {
+                var qs = getQueryStringArray();
+                if (qs.AppName != undefined && qs.AppName) {
+                    APPNAME = qs.AppName;
+                    $("#appNameDiv").html(APPNAME);
+                    if (qs.Installed != undefined)
+                        INSTALLED = qs.Installed;
+                                 
+                    if (INSTALLED == "True") {
+                      $("#additionalInstance").show();
+                    }
+                     var data2 = '{"appName": "' + APPNAME + '"}';
+                     new PlatformServiceHelper().MakeServiceCall("webapp/GetCompatibleDevicesForHomestoreApp", data2, GetCompatibleDevicesForAppCallback);
+                }
+                else {
+                    UpdateDebugInfo(this, "Could not extract AppName from the URL " + window.location);
+                }
+            }
+         );
+
+      
+        function GetCompatibleDevicesForAppCallback(context, result) {
+            if (result[0] == "") {
+                for (var i = 1; i + 2 <= result.length; i = i + 2) {
+                    //i is deviceName, i+1 is location,                
+                    $("#deviceOptionList").append('<input type="checkbox"  id="' + result[i] + '" /> ' + result[i] + " in " + result[i + 1] + " <br /> ");
+                }
+            }
+            else {
+                UpdateDebugInfo(this, "GetCompatabileDevicesCallback " + result[0]);
+            }
+        }
+
+        function InstallAppButtonClicked() {
+            //install the app
+            var data2 = '{"appName": "' + APPNAME + '"}';
+            new PlatformServiceHelper().MakeServiceCall("webapp/InstallAppWeb", data2, InstallAppWebCallback);
+        }
+
+        function InstallAppWebCallback(context, result) {
+            //figure out what devices are installed and do those
+            if (result[0] == "") {
+                //Install any checked devices
+                $('#deviceOptionList').children('input').each(function () {
+                    if (this.checked == true) {
+                       AssociateDevice(this.id);
+                        UpdateDebugInfo(this, this.id + " app to install");
+                    }
+                });
+
+                //Go back to main
+                GoToHTMLPage("index.html");
+            }
+            else {
+                UpdateDebugInfo(this, "Problem installing application " + result[0]);
+            }
+        }
+
+        //Called to Configure devices user has selected.
+        function AssociateDevice(dName) {
+            //AllowAppAccessToDevice(string appFriendlyName, string deviceFriendlyName);
+            var url2 = "webapp/AllowAppAccessToDevice";
+            var data2 = '{"appFriendlyName": "' + APPNAME + '","deviceFriendlyName": "' + dName + '"}';
+            new PlatformServiceHelper().MakeServiceCall(url2, data2, AssociateDeviceCallback);
+        }
+
+        function AssociateDeviceCallback(context, result) {
+            if (result[0] != "") {
+                UpdateDebugInfo(this, "Problem associating device with app:" + result[0]);
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+      <div class="page">
+            <div class="row">
+                <div class="homeID_title col"><a href="index.html">Dashboard</a> | <a href="HomeStore.html">Store</a> | Install Application </div>
+                <div class="page_title col"> Install Application</div>
+                <div class="status col" style="display:none">System Status</div> 
+            </div>
+
+           <div class="row">
+                <div class="related_content col" id="appNameDiv" >AppName</div>                 
+            </div>
+
+          <div id="additionalInstance" style="display:none" >Note, this will install an additional instance of the application. Go to Settings if you want to configure which devices the installed application can use.<br /> <br /></div>
+
+          <div id="deviceOptionList"> Select the devices the application can access: <br />
+            
+          </div>
+
+          <button class="btn" onclick="InstallAppButtonClicked()">  Install    </button>
+
+
+       
+
+     </div>
+       <!-- Change display style to 'normal' to show debug information and 'none' to turn it off  -->
+            <div class="settings_listitem" id="divDebugInfo" style="display:none">Debug</div>
+
+</body>
+</html>

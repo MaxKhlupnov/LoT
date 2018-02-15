@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="DirStreamTest" storage="c:\home\projects\homeos2\homeos2\hub\unittests\common\datastore\dirstreamtest.orderedtest" id="ee242317-c393-4bd9-83f4-70da7be7da95" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="e00c34b2-fa84-9cab-eae5-55388e0c5969" name="DirStreamTest_TestUpdateByteValue" storage="..\..\bin\debug\homeos.hub.unittests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="08300a98-0019-f3cd-25d3-eb1f33a39a3d" name="DirStreamTest_TestGetByteValue" storage="..\..\bin\debug\homeos.hub.unittests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="23f32899-9388-6730-0fb5-b3f7f7d0765a" name="DirStreamTest_TestGetLatestStrValue" storage="..\..\bin\debug\homeos.hub.unittests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

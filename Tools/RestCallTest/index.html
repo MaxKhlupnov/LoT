@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>HomeOS REST Service Tester</title>
+    <link rel="stylesheet" href="Styles/master.css" type="text/css" />
+    <script
+        src="jquery-1.7.2.js"
+        type="text/javascript"></script>
+    <script
+        src="index.js"
+        type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var myCounter = 0;
+
+            $("#addArg").click(function () {
+
+                $('.myTemplate')
+                    .clone()
+                    .removeClass("myTemplate")
+                    .addClass("additionalArg")
+                    .show()
+                    .appendTo('#serviceCallArgs');
+
+                myCounter++;
+                $('.additionalArg input[name=inputArg]').each(function (index) {
+                    $(this).addClass("myArg");
+                    $(this).attr("name", $(this).attr("name") + myCounter);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="allContent">
+        <div id="myHeader">
+            <div id="myLogo" class="header">
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="myContent">
+            <fieldset>
+                <legend><b>&nbsp;HomeOS Restful Service Call Tester&nbsp;</b></legend>
+                <p>
+                    Url:
+                    <input type="text" name="httpUrl" size="100" value="http://localhost:51430/<Home Id>/<App Friendly Name>/webapp/<Method Name>" />&nbsp;
+                </p>
+                <div id="serviceCallArgs">
+                    <p>
+                        Please list all arguments to the service call.
+                    </p>
+                    <div class="myTemplate" style="display: none">
+                        <p>
+                            Arg:
+                            <input type="text" name="inputArg" size="10" value="" />&nbsp;
+						Value:
+                            <input type="text" name="inputValue" size="10" value="" />&nbsp;
+                        </p>
+                    </div>
+                </div>
+                <input id="addArg" type="button" value="Add Argument" />
+                <input id="callMethod" type="button" onclick="CallMethod()" value="Call Method" />
+                <div>
+                    <textarea id="textAreaRestCallResults" rows="20" cols="60"></textarea>
+                </div>
+                <div id="serviceDebugInfo">
+                    Call Status:
+                    <p id="serviceDebugInfoText"></p>
+                </div>
+
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>

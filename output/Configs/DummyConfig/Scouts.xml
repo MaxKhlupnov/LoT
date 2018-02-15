@@ -1,0 +1,4 @@
+<Scouts>
+  <Scout Name="HomeOS.Hub.Scouts.WebCam" DllName="HomeOS.Hub.Scouts.WebCam" Version="0.0.0.0" />
+  <Scout Name="HomeOS.Hub.Scouts.DigitalMedia" DllName="HomeOS.Hub.Scouts.DigitalMedia" Version="0.0.0.0" />
+</Scouts>

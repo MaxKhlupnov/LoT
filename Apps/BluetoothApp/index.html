@@ -1,0 +1,503 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Bluetooth Application</title>
+
+    <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="../GuiWeb/common.js"></script>
+    <link rel="Stylesheet" type="text/css" href="Styles/BluetoothApp.css" />
+
+    <script>
+
+        function start() {
+            TextArea.innerHTML = 'OUTPUT:\r\n';
+            var interval_inputs = document.getElementsByName("interval_input");
+            for (i = 0; i < interval_inputs.length; i++) {
+                interval_inputs[i].value = "1000";
+            }
+            var table = document.getElementById("deviceTable");
+            var header = table.createTHead();
+            var row = header.insertRow(0);
+            row.setAttribute("id", "tableHeader")
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+
+            cell1.setAttribute('width', 150);
+            var cell1Content = document.createElement("span");
+            cell1Content.innerHTML = "<b>Device Name</b>";
+            cell1Content.setAttribute("style", "margin-left:4px");
+            cell1.appendChild(cell1Content);
+
+            cell2.setAttribute('width', 300);
+            var cell2Content = document.createElement("span");
+            cell2Content.innerHTML = "<b>Device Address</b>";
+            cell2Content.setAttribute("style", "margin-left:4px");
+            cell2.appendChild(cell2Content);
+
+            cell3.setAttribute('width', 55);
+            var cell3Content = document.createElement("span");
+            cell3Content.innerHTML = "<b>Select</b>";
+            cell3Content.setAttribute("style", "margin-left:4px");
+            cell3.appendChild(cell3Content);
+
+            GetConnectedDevices();
+        }
+
+        function GetConnectedDevices() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetConnectedDevices", "", GetConnectedDevicesCallback);
+        }
+
+        var j = 1;
+
+        function GetConnectedDevicesCallback(context, result) {
+            var pairedDevices = result.GetConnectedDevicesResult;
+            for (i = 0; i < result.GetConnectedDevicesResult.length; i++) {
+                var string = pairedDevices[i];
+                var strings = string.split("|");
+                if (strings[3] == "True") {
+                    $("#TextArea").append("Connected to " + strings[2] + " " + strings[0] + " @ " + strings[1] + " \r\n");
+                } else {
+                    $("#TextArea").append("Failed to connect to " + strings[2] + " " + strings[0] + " @ " + strings[1] + " \r\n");
+                }
+                add(strings[0], strings[1], 'checkbox', strings[2], strings[3]);
+                j = j + 1;
+            }
+        }
+
+        function add(device, address, type, deviceType, connected) {
+            var table = document.getElementById("deviceTable");
+            var row = table.insertRow(j);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+
+            var cell1Content = document.createElement("span");
+            cell1Content.innerHTML = device;
+            cell1Content.setAttribute("style", "margin-left:4px");
+            cell1.appendChild(cell1Content);
+
+            var cell2Content = document.createElement("span");
+            cell2Content.innerHTML = address;
+            cell2Content.setAttribute("style", "margin-left:4px");
+            cell2.appendChild(cell2Content);
+
+            var element = document.createElement("input");
+            element.setAttribute("type", type);
+            if (connected == 'False') {
+                element.setAttribute("disabled", "disabled");
+            }
+            element.setAttribute("id", address);
+            element.setAttribute("style", "margin-left:20px");
+            cell3.appendChild(element);
+
+            row.className = deviceType;
+            if (deviceType != "Engduino") { row.setAttribute("style", "display:none"); }
+        }
+
+        function SendMessage() {
+            var isChecked = getChecked();
+
+            if (isChecked.length > 0) {
+                m = $("#messageBox").val();
+                var array = JSON.stringify({ message: m, check: isChecked });
+
+                new PlatformServiceHelper().MakeServiceCall("webapp/SendMessage", array, SendMessageCallback);
+            }
+        }
+
+        function SendMessageCallback() {
+            var sent = "";
+            var isChecked = getChecked();
+            for (i = 0; i < isChecked.length; i++) {
+                if (i > 1) {
+                    sent += ", ";
+                }
+                sent += isChecked[i];
+            }
+            $("#TextArea").append("Sent " + $("#messageBox").val() + " to " + sent + "\r\n");
+        }
+
+        function getChecked() {
+            var k = 0;
+            var isChecked = [];
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].type == "checkbox") {
+                    if (inputs[i].checked == true) {
+                        isChecked[k] = inputs[i].id;
+                        k++;
+                    }
+                }
+            }
+            return isChecked;
+        }
+
+        var temp = "111";
+        var accel = "112";
+        var magno = "113";
+        var light = "114";
+        var all = "110";
+
+        var press = "115";
+        var loc = "116";
+        var prox = "117";
+
+        function startRecord(type) {
+            if (type == "temp") {
+                var int = parseInt(temp_interval_input.value);
+                messageBox.value = "{1;" + temp + ";" + int + "}";
+                SendMessage();
+            }
+            else if (type == "light") {
+                var int = parseInt(light_interval_input.value);
+                messageBox.value = "{1;" + light + ";" + int + "}";
+                SendMessage();
+            }
+            else if (type == "accel") {
+                var int = parseInt(accel_interval_input.value);
+                messageBox.value = "{1;" + accel + ";" + int + "}";
+                SendMessage();
+            }
+            else if (type == "magno") {
+                var int = parseInt(magno_interval_input.value);
+                messageBox.value = "{1;" + magno + ";" + int + "}";
+                SendMessage();
+            }
+            else if (type == "all") {
+                var int = parseInt(all_interval_input.value);
+                messageBox.value = "{1;" + all + ";" + int + "}";
+                SendMessage();
+            }
+            else if (type == "press") {
+                var int = parseInt(press_interval_input.value);
+                messageBox.value = "{1;" + press + ";" + int + "}";
+                SendMessage();
+            }
+            else if (type == "loc") {
+                var int = parseInt(loc_interval_input.value);
+                messageBox.value = "{1;" + loc + ";" + int + "}";
+                SendMessage();
+            }
+            else if (type == "prox") {
+                var int = parseInt(prox_interval_input.value);
+                messageBox.value = "{1;" + prox + ";" + int + "}";
+                SendMessage();
+            }
+        }
+
+        function stopRecord(type) {
+            if (type == "temp") {
+                messageBox.value = "{1;" + temp + ";-1}";
+                SendMessage();
+            }
+            else if (type == "light") {
+                messageBox.value = "{1;" + light + ";-1}";
+                SendMessage();
+            }
+            else if (type == "accel") {
+                messageBox.value = "{1;" + accel + ";-1}";
+                SendMessage();
+            }
+            else if (type == "magno") {
+                messageBox.value = "{1;" + magno + ";-1}";
+                SendMessage();
+            }
+            else if (type == "all") {
+                messageBox.value = "{1;" + all + ";-1}";
+                SendMessage();
+            }
+            else if (type == "press") {
+                messageBox.value = "{1;" + press + ";-1}";
+                SendMessage();
+            }
+            else if (type == "loc") {
+                messageBox.value = "{1;" + loc + ";-1}";
+                SendMessage();
+            }
+            else if (type == "prox") {
+                messageBox.value = "{1;" + prox + ";-1}";
+                SendMessage();
+            }
+        }
+
+        $(document).ready(function () {
+            $('#messageBox').keypress(function (e) {
+                if (e.keyCode == 13)
+                    $('#messageSend').click();
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("#content").find("[id^='tab']").hide(); // Hide all content
+            $("#tabs li:first").attr("id", "current"); // Activate the first tab
+            $("#content #tab1").fadeIn(); // Show first tab's content
+            hideCells();
+            showCells();
+
+            $('#tabs a').click(function (e) {
+                e.preventDefault();
+                if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+                    return;
+                }
+                else {
+                    uncheckAll();
+                    $("#content").find("[id^='tab']").hide(); // Hide all content
+                    hideRows();
+                    hideCells();
+                    $("#messageSend").hide();
+                    $("#messageBox").hide();
+                    $("#TextArea").hide();
+                    $("#tabs li").attr("id", ""); //Reset id's
+                    $(this).parent().attr("id", "current"); // Activate this
+                    $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+                    showRows();
+                    showCells();
+                    $("#messageSend").fadeIn();
+                    $("#messageBox").fadeIn();
+                    $("#TextArea").fadeIn();
+                }
+            });
+        });
+
+        function uncheckAll() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].type == "checkbox") {
+                    if (inputs[i].checked == true) {
+                        inputs[i].checked = false;
+                    }
+                }
+            }
+        }
+
+        function hideRows() {
+            $('#deviceTable tr').each(function () {
+                $(this).hide();
+            });
+        }
+
+        function showRows() {
+            $('#tableHeader').fadeIn();
+            if ($("#tab1").is(":visible")) {
+                $('.Engduino').fadeIn();
+            }
+            if ($("#tab2").is(":visible")) {
+                $('.AndroidPhone').fadeIn();
+            }
+            if ($("#tab3").is(":visible")) {
+                $('.Unknown').fadeIn();
+            }
+        }
+
+        function hideCells()
+        {
+            $('.EngCell').hide();
+            $('.AndCell').hide();
+        }
+
+        function showCells()
+        {
+            var toShow;
+            if ($("#tab1").is(":visible")) {
+                $('.EngCell').fadeIn();
+            }
+            if ($("#tab2").is(":visible")) {
+                $('.AndCell').fadeIn();
+            }
+        }
+
+    </script>
+    <style>
+        #deviceTable {
+            border: thin solid white;
+            border-collapse: collapse;
+            background: #334C80;
+        }
+            #deviceTable th {
+                border: thin solid white;
+                border-collapse: collapse;
+                background: #334C80;
+            }
+            #deviceTable td {
+                border: thin solid white;
+                border-collapse: collapse;
+                background: #334C80;
+            }
+
+        #buttonTable {
+            border-collapse: collapse;
+        }
+
+        textarea {
+            background: #334C80;
+            color: #66FF66;
+        }
+
+        #tabs {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            #tabs li {
+                float: left;
+                margin: 0 .5em 0 0;
+            }
+
+            #tabs a {
+                position: relative;
+                background: #ddd;
+                background-image: linear-gradient(to bottom, #fff, #ddd);
+                padding: .3em 2em;
+                float: left;
+                text-decoration: none;
+                color: #444;
+                text-shadow: 0 1px 0 rgba(255,255,255,.8);
+                border-radius: 5px 0 0 0;
+                box-shadow: 0 2px 2px rgba(0,0,0,.4);
+            }
+
+                #tabs a:hover,
+                #tabs a:hover::after,
+                #tabs a:focus,
+                #tabs a:focus::after {
+                    background: #fff;
+                }
+
+                #tabs a:focus {
+                    outline: 0;
+                }
+
+                #tabs a::after {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    right: -.5em;
+                    bottom: 0;
+                    width: 1em;
+                    background: #fff;
+                    background-image: linear-gradient(to bottom, #fff, #ddd);
+                    box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+                    transform: skew(10deg);
+                    border-radius: 0 5px 0 0;
+                }
+
+            #tabs #current a,
+            #tabs #current a::after {
+                background: #fff;
+                z-index: 3;
+            }
+
+        #content {
+            /*width: 75%;*/
+            padding: 0.5em;
+            padding-top: 1em;
+            position: relative;
+            z-index: 2;
+            border: none;
+            background-image: url(data:image/gif;base64,R0lGODlhCAAIAJEAAMzMzP///////wAAACH5BAEHAAIALAAAAAAIAAgAAAINhG4nudroGJBRsYcxKAA7);
+            border: thin;
+            border: solid;
+            border-radius: 0 5px 5px 5px;
+            border-color: #ddd;
+        }
+    </style>
+</head>
+<body onload="start()" style="background:#6699ff">
+
+    <div class="dashboard_toolbar">
+        <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | Bluetooth </div>
+    </div>
+
+    <div class="page">
+
+        <div class="row">
+            <div class="page_title col">Bluetooth App</div>
+        </div>
+
+        &nbsp;
+
+        <ul id="tabs">
+            <li><a href="#" name="tab1">Engduino</a></li>
+            <li><a href="#" name="tab2">Android</a></li>
+            <li><a href="#" name="tab3">Unknown</a></li>
+        </ul>
+
+        <div id="content">
+            <table id="deviceTable"></table>
+
+            <br />
+            <table id="buttonTable">
+                <tr>
+                    <td><button class="app_button EngCell" onclick="startRecord('temp')">Start Record Temp</button></td>
+                    <td><button class="app_button EngCell AndCell" onclick="startRecord('light')">Start Record Light</button></td>
+                    <td><button class="app_button EngCell AndCell" onclick="startRecord('accel')">Start Record Accel</button></td>
+                    <td><button class="app_button EngCell AndCell" onclick="startRecord('magno')">Start Record Magno</button></td>
+                    <td><button class="app_button AndCell" onclick="startRecord('press')">Start Record Pressure</button></td>
+                    <td><button class="app_button AndCell" onclick="startRecord('loc')">Start Record Location</button></td>
+                    <td><button class="app_button AndCell" onclick="startRecord('prox')">Start Record Proximity</button></td>
+                    <td><button class="app_button EngCell AndCell" onclick="startRecord('all')">Start Record All</button></td>
+                </tr>
+                <tr>
+                    <td><span class="EngCell" style="margin-right:32px">at interval:</span></td>
+                    <td><span class="EngCell AndCell" style="margin-right:32px">at interval:</span></td>
+                    <td><span class="EngCell AndCell" style="margin-right:32px">at interval:</span></td>
+                    <td><span class="EngCell AndCell" style="margin-right:32px">at interval:</span></td>
+                    <td><span class="AndCell" style="margin-right:32px">at interval:</span></td>
+                    <td><span class="AndCell" style="margin-right:32px">at interval:</span></td>
+                    <td><span class="AndCell" style="margin-right:32px">at interval:</span></td>
+                    <td><span class="EngCell AndCell">at interval:</span></td>
+                </tr>
+                <tr>
+                    <td style="white-space:nowrap"><input class="EngCell" type="text" name="interval_input" id="temp_interval_input" size="10" style="margin-right:1px" /><span class="EngCell" style="margin-right:8px">ms</span></td>
+                    <td style="white-space:nowrap"><input class="EngCell AndCell" type="text" name="interval_input" id="light_interval_input" size="10" style="margin-right:1px" /><span class="EngCell AndCell" style="margin-right:7px">ms</span></td>
+                    <td style="white-space:nowrap"><input class="EngCell AndCell" type="text" name="interval_input" id="accel_interval_input" size="10" style="margin-right:1px" /><span class="EngCell AndCell" style="margin-right:8px">ms</span></td>
+                    <td style="white-space:nowrap"><input class="EngCell AndCell" type="text" name="interval_input" id="magno_interval_input" size="10" style="margin-right:1px" /><span class="EngCell AndCell" style="margin-right:8px">ms</span></td>
+                    <td style="white-space:nowrap"><input class="AndCell" type="text" name="interval_input" id="press_interval_input" size="10" style="margin-right:1px" /><span class="AndCell" style="margin-right:8px">ms</span></td>
+                    <td style="white-space:nowrap"><input class="AndCell" type="text" name="interval_input" id="loc_interval_input" size="10" style="margin-right:1px" /><span class="AndCell" style="margin-right:8px">ms</span></td>
+                    <td style="white-space:nowrap"><input class="AndCell" type="text" name="interval_input" id="prox_interval_input" size="10" style="margin-right:1px" /><span class="AndCell" style="margin-right:8px">ms</span></td>
+                    <td style="white-space:nowrap"><input class="EngCell AndCell" type="text" name="interval_input" id="all_interval_input" size="10" style="margin-right:1px" /><span class="EngCell AndCell">ms</span></td>
+                </tr>
+                <tr>
+                    <td><button class="app_button2 EngCell" onclick="stopRecord('temp')">Stop Record Temp</button></td>
+                    <td><button class="app_button2 EngCell AndCell" onclick="stopRecord('light')">Stop Record Light</button></td>
+                    <td><button class="app_button2 EngCell AndCell" onclick="stopRecord('accel')">Stop Record Accel</button></td>
+                    <td><button class="app_button2 EngCell AndCell" onclick="stopRecord('magno')">Stop Record Magno</button></td>
+                    <td><button class="app_button2 AndCell" onclick="stopRecord('press')">Stop Record Pressure</button></td>
+                    <td><button class="app_button2 AndCell" onclick="stopRecord('loc')">Stop Record Location</button></td>
+                    <td><button class="app_button2 AndCell" onclick="stopRecord('prox')">Stop Record Proximity</button></td>
+                    <td><button class="app_button2 EngCell AndCell" onclick="stopRecord('all')">Stop Record All</button></td>
+                </tr>
+            </table>
+
+            <div id="tab1">
+            </div>
+            <div id="tab2">
+            </div>
+            <div id="tab3">
+            </div>
+
+            <div>
+                <br />
+                <button id="messageSend" class="app_button3" onclick="SendMessage()">Send</button>
+                <input id="messageBox" type="text" size="35" value="{1;10;7;7;7;7;7;7;7;7;7;7;7;7;7;7;7;7}" />
+            </div>
+            <br />
+            <br />
+            <div>
+                <textarea id="TextArea" class="app_form" rows="10" cols="90" readonly="readonly"></textarea>
+            </div>
+            <br />
+        </div>
+
+    </div>
+
+</body>
+
+</html>

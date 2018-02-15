@@ -1,0 +1,1 @@
+This is a custom role for Mindwave. The RoleMindWave role is required to be referenced by the Mindwave driver and the MentalHouse sample app.

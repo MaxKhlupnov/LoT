@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="LocalUnlistedFileDataStreamTest" storage="c:\homeos2\hds\src\unittests\common\datastore\localunlistedfiledatastreamtest.orderedtest" id="7dc68e33-561e-490d-83c7-778e7797f096" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="fefd710c-978e-134a-cb50-f925d1bd6074" name="LocalUnlistedFileDataStreamTest_TestUpdateByteValue" storage="bin\release\homeos.hub.unittests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="d3a399c8-75c9-9be4-003d-ca8fc722a7cd" name="LocalUnlistedFileDataStreamTest_TestGetByteValue" storage="bin\release\homeos.hub.unittests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b5fb924e-7995-7713-d629-e60958d8330e" name="LocalUnlistedFileDataStreamTest_TestGetAllStrValue" storage="bin\release\homeos.hub.unittests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

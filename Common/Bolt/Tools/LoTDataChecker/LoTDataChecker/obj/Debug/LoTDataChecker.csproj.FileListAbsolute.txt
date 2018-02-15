@@ -1,0 +1,13 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\LoTDataChecker\LoTDataChecker.exe.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\LoTDataChecker\LoTDataChecker.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\LoTDataChecker\LoTDataChecker.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\obj\Debug\LoTDataChecker.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\obj\Debug\MainWindow.baml
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\obj\Debug\MainWindow.g.cs
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\obj\Debug\App.g.cs
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\obj\Debug\LoTDataChecker_MarkupCompile.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\obj\Debug\LoTDataChecker.g.resources
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\obj\Debug\LoTDataChecker.Properties.Resources.resources
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\obj\Debug\LoTDataChecker.csproj.GenerateResource.Cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\obj\Debug\LoTDataChecker.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Tools\LoTDataChecker\LoTDataChecker\obj\Debug\LoTDataChecker.pdb

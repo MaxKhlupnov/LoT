@@ -1,0 +1,5 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\Contracts\HomeOS.Hub.Platform.Contracts.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\Contracts\HomeOS.Hub.Platform.Contracts.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Contracts\obj\Debug\HomeOS.Hub.Platform.Contracts.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Contracts\obj\Debug\HomeOS.Hub.Platform.Contracts.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Contracts\obj\Debug\Contracts.csprojResolveAssemblyReference.cache

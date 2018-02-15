@@ -1,0 +1,145 @@
+﻿<script type="text/javascript" src="homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Configure Device</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+  <script type="text/javascript" src="jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+
+
+    <script>
+        //constant defined by platform as indicator of orphan
+        var ORPHAN = "OrphanedDevice";
+
+        //For parameters passed in on URL
+        var SCOUTNAME = "";
+
+        //Expect URL to be called with HomeId and ScoutName parameters, this gets unconfigured devices for that scout
+        //e.g. http://localhost:51430/GuiWeb/AddDeviceUnconfiguredDevicesForScout.html?HomeId=Brush&ScoutName=HomeOS.Hub.Scouts.WebCam
+        $(document).ready(
+            function () {
+                var qs = getQueryStringArray();
+                if ((qs.ScoutName != undefined)) { //if ScoutName was passed as a parameter get it
+                    SCOUTNAME = qs.ScoutName;                 
+                }
+                GetUnconfiguredDevices(SCOUTNAME);
+            }
+        );
+
+        function GetUnconfiguredDevices(sName) {
+            var url2 = "";
+            var data2 = "";
+            if (sName == "") {
+                //Get them all
+                url2 = "webapp/GetAllUnconfiguredDevices";
+            }
+            else {
+                url2 = "webapp/GetUnconfiguredDevicesForScout";
+                data2 = '{"scoutName": "' + sName + '"}';
+            }
+            new PlatformServiceHelper().MakeServiceCall(url2, data2, GetUnconfiguredDeviceCallback);
+        }
+
+
+        //Returned array values.
+        //[0]: error code, empty if success, this is going to be our new convention for Gui/Platform communication
+        //[1,2]: deviceName (which you show to the user), scoutName (which you actually passed me)
+        //[3,4]: more devices
+
+        function GetUnconfiguredDeviceCallback(context, result) {
+
+            UpdateDebugInfo(context, result);
+            ClearDeviceList();
+
+            //Convention is that first result should be empty if success.
+            if (result[0] == "") {
+                $("#retryButton").show();   //always show the retry/scanAgain button because it can take some time to find everything
+                $("#scoutButton").show();  //show the configure scouts button in case they want to configure what scouts are showing
+                if (result.length == 1) {
+                    if (SCOUTNAME != "")
+                        $("#deviceList").html("No unconfigured devices found by " + SCOUTNAME);
+                    else
+                        $("#deviceList").html("No unconfigured devices found");
+                    return;
+                }
+
+                var url;
+                for (i = 1; i + 1 < result.length; i = i + 2) {
+                    //i is deviceName, i+1 is scoutName
+                    ClearInformationText();
+                    if (result[i + 1] != ORPHAN)
+                        url = buildURL(result[i + 1], result[i]);
+                    else
+                        url = buildOrphanURL(result[i]);
+
+                    $("#deviceList").append('<a href="' + url + '">' + result[i] + "</a><br/>");
+                }
+            }
+
+            else {
+                ShowDebugInfo();
+                UpdateDebugInfo(context, result[0]);
+            }
+        }
+
+
+        //Examples: The URL of this page is 
+        //      http://localhost:51430/<homeid>/GuiWeb/AddDeviceFinalDeviceSetup.html?DeviceId=camera
+        //Example of final URL we want is
+        //  http://localhost:51430/<homeid>/scouts/HomeOs.Hub.Scouts.Webcam/index.html?DeviceId=camera
+        //returns the location of the web page for configuring scouts of this type
+        function buildURL(sName, deviceName) {
+            var scoutUrl = "../scouts/" + sName + "/index.html?DeviceId=" + deviceName;
+            return encodeURI(scoutUrl);  //encodeURI in case there are spaces or other weirdness in deviceName
+        }
+
+        //This device is half-configured and just needs to go straight to final page
+        function buildOrphanURL(deviceName) {
+            var finalURL = "AddDeviceFinalDeviceSetup.html?Orphan=1&DeviceId=" + deviceName;
+            return encodeURI(finalURL);
+        }
+
+        function ClearDeviceList() {
+            UpdateDebugInfo(this, "Clear Device Called");
+            $("#deviceList").html("");
+        }
+
+        //User pushed scan again
+        function ScanAgain() {
+            $("#retryButton").hide();
+            $("#scoutButton").hide();
+            $("#deviceList").html("Scanning...");
+            GetUnconfiguredDevices(SCOUTNAME);
+        }
+    </script>
+</head>
+<body>
+  <!--  Expect URL to be called with HomeId and ScoutName parameters
+    e.g. http://localhost:51430/GuiWeb/AddDeviceUnconfiguredDevicesForScout.html?HomeId=Brush&ScoutName=HomeOS.Hub.Scouts.WebCam
+      -->
+  
+
+     <div class="page">
+            <div class="row">
+                <div class="homeID_title col"><a href="index.html">Dashboard</a> | Add Devices </div>
+                <div class="page_title col">Add Devices</div>
+                <div class="status col" id="status" style="display:none">System Status</div> 
+            </div>
+
+   
+    <!--This div is populated by asking platform for unconfigured devices from the scoutname passed in-->
+    <div id="deviceList">Scanning for devices </div>
+
+    <button class="btn" type="button" id="addZwaveButton" onclick="GoToHTMLPage('AddDeviceZwave.html')">Add Zwave</button> 
+    <button class="btn" style="display:none" id="retryButton" onclick="ScanAgain()">Scan Again</button>
+    <button class="btn" style="display:none" id="scoutButton" onclick="GoToHTMLPage('ConfigureScouts.html?RefName=AddDeviceUnconfiguredDevicesForScout.html')">Scouts</button>
+   
+
+ <!-- Change display style to 'normal' to show debug information and 'none' to turn it off  -->
+  <div id="divDebugInfo" style="display:none"><p id="controlDebugInfoText"></p></div>
+
+  </div>
+</body>
+</html>

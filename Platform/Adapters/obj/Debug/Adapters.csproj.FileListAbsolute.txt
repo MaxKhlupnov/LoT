@@ -1,0 +1,5 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddInSideAdapters\HomeOS.Hub.Platform.Adapters.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddInSideAdapters\HomeOS.Hub.Platform.Adapters.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Adapters\obj\Debug\Adapters.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Adapters\obj\Debug\HomeOS.Hub.Platform.Adapters.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\Adapters\obj\Debug\HomeOS.Hub.Platform.Adapters.pdb

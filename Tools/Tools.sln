@@ -1,0 +1,146 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gatekeeper", "Gatekeeper", "{401F6FA1-F38C-4D73-8C25-36A8A4FA7BF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HeartBeatMonitor", "HeartBeatMonitor", "{44A8EC09-BFBF-4FF1-A8B0-78140520B94B}"
+	ProjectSection(SolutionItems) = preProject
+		HeartbeatMonitor\index.html = HeartbeatMonitor\index.html
+		HeartbeatMonitor\index.js = HeartbeatMonitor\index.js
+		HeartbeatMonitor\jquery-1.7.1.js = HeartbeatMonitor\jquery-1.7.1.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RestCallTest", "RestCallTest", "{F38A64C4-9F99-418C-B812-3F672DF9BA92}"
+	ProjectSection(SolutionItems) = preProject
+		RestCallTest\index.html = RestCallTest\index.html
+		RestCallTest\index.js = RestCallTest\index.js
+		RestCallTest\jquery-1.7.2.js = RestCallTest\jquery-1.7.2.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StartStopWatchDog", "StartStopWatchDog", "{3E648338-7D11-4C64-B377-79D026CAC8AB}"
+	ProjectSection(SolutionItems) = preProject
+		StartStopWatchdog\Readme.txt = StartStopWatchdog\Readme.txt
+		StartStopWatchdog\StartPlatform.ps1 = StartStopWatchdog\StartPlatform.ps1
+		StartStopWatchdog\StopPlatform.ps1 = StartStopWatchdog\StopPlatform.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebCam", "WebCam", "{35534D74-9EFA-4948-B112-F5ED4B47230A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeService", "Gatekeeper\HomeService.csproj", "{EE0B8570-7E26-4F8E-B9E8-F57796D5ABD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Styles", "Styles", "{013482A0-7B96-477C-A697-354465C0BE2A}"
+	ProjectSection(SolutionItems) = preProject
+		HeartbeatMonitor\Styles\style.css = HeartbeatMonitor\Styles\style.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Styles", "Styles", "{2C410710-9F76-4A88-81B6-245128F31A56}"
+	ProjectSection(SolutionItems) = preProject
+		RestCallTest\Styles\master.css = RestCallTest\Styles\master.css
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Webcam\Demo\Demo.csproj", "{C86E37D6-BE07-4B1C-B89A-8FC1A9A6CBB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{C49914B2-31DE-4CF3-B1C7-0084587B8653}"
+	ProjectSection(SolutionItems) = preProject
+		config-v1.2.0.zip = config-v1.2.0.zip
+		config-v2.0.zip = config-v2.0.zip
+		config.xml = config.xml
+		liveid redirection point.php = liveid redirection point.php
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Update", "Update", "{B9B50489-BFB4-4397-B5F4-B02465F7BEE5}"
+	ProjectSection(SolutionItems) = preProject
+		Update\config-v1.2.0.zip = Update\config-v1.2.0.zip
+		Update\config-v2.0.zip = Update\config-v2.0.zip
+		Update\config.xml = Update\config.xml
+		Update\Sample Repository.zip = Update\Sample Repository.zip
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackagerHelper", "Update\PackagerHelper\PackagerHelper.csproj", "{52643663-BC85-4BAF-9B5B-3E6EDED87B8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateManager", "Update\UpdateManager\UpdateManager.csproj", "{DED3B5C8-01B5-4E83-96C2-CA454FC3417C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateHelper", "Update\UpdateHelper\UpdateHelper.csproj", "{9B3A5992-447D-40CD-BE59-2CF42FFA6054}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5BDB1829-5D12-49C7-B2BD-FCBCD2146117}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccProjectUniqueName0 = Gatekeeper\\HomeService.csproj
+		SccProjectTopLevelParentUniqueName0 = Tools.sln
+		SccProjectName0 = Gatekeeper
+		SccAuxPath0 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath0 = Gatekeeper
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = Webcam\\Demo\\Demo.csproj
+		SccProjectTopLevelParentUniqueName1 = Tools.sln
+		SccProjectName1 = Webcam/Demo
+		SccAuxPath1 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath1 = Webcam\\Demo
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = Update\\PackagerHelper\\PackagerHelper.csproj
+		SccProjectTopLevelParentUniqueName2 = Tools.sln
+		SccProjectName2 = Update/PackagerHelper
+		SccAuxPath2 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath2 = Update\\PackagerHelper
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = Update\\UpdateManager\\UpdateManager.csproj
+		SccProjectTopLevelParentUniqueName3 = Tools.sln
+		SccProjectName3 = Update/UpdateManager
+		SccAuxPath3 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath3 = Update\\UpdateManager
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = Update\\UpdateHelper\\UpdateHelper.csproj
+		SccProjectTopLevelParentUniqueName4 = Tools.sln
+		SccProjectName4 = Update/UpdateHelper
+		SccAuxPath4 = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccLocalPath4 = Update\\UpdateHelper
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE0B8570-7E26-4F8E-B9E8-F57796D5ABD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE0B8570-7E26-4F8E-B9E8-F57796D5ABD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE0B8570-7E26-4F8E-B9E8-F57796D5ABD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE0B8570-7E26-4F8E-B9E8-F57796D5ABD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C86E37D6-BE07-4B1C-B89A-8FC1A9A6CBB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C86E37D6-BE07-4B1C-B89A-8FC1A9A6CBB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C86E37D6-BE07-4B1C-B89A-8FC1A9A6CBB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C86E37D6-BE07-4B1C-B89A-8FC1A9A6CBB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52643663-BC85-4BAF-9B5B-3E6EDED87B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52643663-BC85-4BAF-9B5B-3E6EDED87B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52643663-BC85-4BAF-9B5B-3E6EDED87B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52643663-BC85-4BAF-9B5B-3E6EDED87B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DED3B5C8-01B5-4E83-96C2-CA454FC3417C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED3B5C8-01B5-4E83-96C2-CA454FC3417C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED3B5C8-01B5-4E83-96C2-CA454FC3417C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED3B5C8-01B5-4E83-96C2-CA454FC3417C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3A5992-447D-40CD-BE59-2CF42FFA6054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3A5992-447D-40CD-BE59-2CF42FFA6054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3A5992-447D-40CD-BE59-2CF42FFA6054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3A5992-447D-40CD-BE59-2CF42FFA6054}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE0B8570-7E26-4F8E-B9E8-F57796D5ABD5} = {401F6FA1-F38C-4D73-8C25-36A8A4FA7BF3}
+		{013482A0-7B96-477C-A697-354465C0BE2A} = {44A8EC09-BFBF-4FF1-A8B0-78140520B94B}
+		{2C410710-9F76-4A88-81B6-245128F31A56} = {F38A64C4-9F99-418C-B812-3F672DF9BA92}
+		{C86E37D6-BE07-4B1C-B89A-8FC1A9A6CBB8} = {35534D74-9EFA-4948-B112-F5ED4B47230A}
+		{52643663-BC85-4BAF-9B5B-3E6EDED87B8D} = {B9B50489-BFB4-4397-B5F4-B02465F7BEE5}
+		{DED3B5C8-01B5-4E83-96C2-CA454FC3417C} = {B9B50489-BFB4-4397-B5F4-B02465F7BEE5}
+		{9B3A5992-447D-40CD-BE59-2CF42FFA6054} = {B9B50489-BFB4-4397-B5F4-B02465F7BEE5}
+	EndGlobalSection
+EndGlobal

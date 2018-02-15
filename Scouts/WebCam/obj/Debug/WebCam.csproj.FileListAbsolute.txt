@@ -1,0 +1,7 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Scouts\HomeOS.Hub.Scouts.WebCam\index.html
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Scouts\HomeOS.Hub.Scouts.WebCam\HomeOS.Hub.Scouts.WebCam.dll.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Scouts\HomeOS.Hub.Scouts.WebCam\HomeOS.Hub.Scouts.WebCam.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Scouts\HomeOS.Hub.Scouts.WebCam\HomeOS.Hub.Scouts.WebCam.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Scouts\WebCam\obj\Debug\WebCam.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Scouts\WebCam\obj\Debug\HomeOS.Hub.Scouts.WebCam.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Scouts\WebCam\obj\Debug\HomeOS.Hub.Scouts.WebCam.pdb

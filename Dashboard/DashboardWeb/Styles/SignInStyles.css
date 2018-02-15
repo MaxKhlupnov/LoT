@@ -1,0 +1,193 @@
+﻿/*
+CSS reset
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/*
+These styles control the page color, font and color.
+*/
+body,
+html,
+div {
+     margin: 0;
+     padding:0;
+     font-family: 'Segoe UI';
+     color:white;
+     background-color: #00BDF2;
+}
+a {text-decoration: none;}
+a:link {text-decoration: none;}
+a:visited {color: #E0E0E0;}
+
+ 
+/*
+Page is the primary container; don't mess with it.
+*/
+.page {
+     margin: 0 auto;
+     max-width: 95%;
+     overflow:hidden;
+     position:relative;
+}
+
+/* 
+Reusable column setup.  Background style controls the box colors.  
+Swap with other colors in the palette by replacing 'background: #3ECFF9' with any of these:
+#2D97B5 = rgb(45,151,181), #007B9D = rgb(0,123,157), #70DAF9 = rgb(112,218,249)
+*/
+.col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+    background: #3ECFF9;
+	margin-bottom: 12px;
+}
+
+
+
+    /* 1. 2 Column Grid 0px - 339px viewport, basically smartphone browsers */
+    @media screen and (min-width: 0px) and (max-width: 339px) {
+        
+        .row {
+            margin-left:-12px;
+        }
+        .col {
+            border-left-width:12px;
+        	padding:0 12px;
+            height:50px;
+        }
+        .col {
+            width:100%;
+            margin-left:0;
+        }
+        .media_block {
+            height: 120px;
+        }
+        .auth_block {
+            width:25%;
+            height: auto;
+            margin-top: 3%;
+            padding: 0% .5% .5% 1%;
+            background-color: #E0E0E0;
+        }
+        .auth_block:hover {
+            background-color: #808080;
+        }
+
+        .header,
+        .homeID_title,
+        .footer {
+            width: 100%;
+            height: 25px;
+            margin-left: 0;
+            background-color: #00BDF2;
+        }
+        .page_title {
+            width: 100%;
+            margin-left: 0;
+            font-size: 150%;
+            background-color: #00BDF2;
+        }
+    }
+
+    /* 2. 6 Column Grid 340px - 919px viewport, basically 7" and older tablets */
+    @media screen and (min-width: 340px) and (max-width: 919px) {
+        
+        .col {
+            margin-left:2%;
+        	padding:0 2%;
+            font-size:150%;
+        }
+        
+        .row .col:first-child {
+            margin-left:0;
+        }
+        
+        .media_block {
+            /*width:32.0%;*/
+            width: 99.9999999999%;
+            height: 200px;
+        }
+        
+        .auth_block {
+            width:24%;
+            height: auto;
+            margin-top: 3%;
+            padding: 0% .5% .5% 1%;
+            background-color: #E0E0E0;
+        }
+        
+        .auth_block:hover {
+            background-color: #808080;
+        }
+
+        .homeID_title,
+        .footer,
+        .related_content {
+            width:100%;
+            height: 40px;
+            margin-left:0;
+            background-color: #00BDF2;
+        }
+
+        .page_title {
+            width: 100%;
+            margin-left: 0;
+            font-size: 250%;
+            background-color: #00BDF2;
+        }
+    }
+
+    /* 3. 12 Column Grid 920px - Infinity viewport, basically modern tablets, desktops */
+    @media screen and (min-width: 920px) {
+        
+        .row {
+            margin-left:-12px;
+        }
+        .col {
+            border-left-width:12px;
+        	padding:0 12px;
+            font-size: 200%;
+        }
+        .media_block {
+            /*width:33.3333333333%;*/
+            width: 99.9999999999%;
+            height: 250px;
+        }
+        .auth_block {
+            width:13%;
+            height: auto;
+            margin-top: 3%;
+            padding: 0% .5% .5% 1%;
+            background-color: #E0E0E0;
+        }
+        .auth_block:hover {
+            background-color: #808080;
+            }
+
+        .header,
+        .homeID_title,
+        .footer {
+            width:100%;
+            height: 50px;
+            margin-left:0;
+            background-color: #00BDF2;
+            font-size: 150%;
+        }
+        .page_title {
+            width: 100%;
+            margin-left: 0;
+            font-size: 250%;
+            background-color: #00BDF2;
+        }
+    }

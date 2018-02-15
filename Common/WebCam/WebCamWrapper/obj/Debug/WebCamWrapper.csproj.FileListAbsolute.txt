@@ -1,0 +1,9 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.WebCam.WebCamWrapper.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.WebCam.WebCamWrapper.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamWrapper\obj\Debug\WebCamWrapper.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamWrapper\obj\Debug\Camera\Configuration\CameraFrameSourceConfigurationElement.baml
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamWrapper\obj\Debug\Camera\Configuration\CameraFrameSourceConfigurationElement.g.cs
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamWrapper\obj\Debug\HomeOS.Hub.Common.WebCam.WebCamWrapper_MarkupCompile.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamWrapper\obj\Debug\HomeOS.Hub.Common.WebCam.WebCamWrapper.g.resources
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamWrapper\obj\Debug\HomeOS.Hub.Common.WebCam.WebCamWrapper.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\WebCam\WebCamWrapper\obj\Debug\HomeOS.Hub.Common.WebCam.WebCamWrapper.pdb

@@ -1,0 +1,54 @@
+﻿ <script type="text/javascript" src="../../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <meta charset="utf-8" />
+    <title>Valve Scout</title>
+    <script type="text/javascript" src="../../GuiWeb/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="../../GuiWeb/common.js"></script>
+  <script type="text/javascript" src="ValveScout.js"></script>
+    <link rel="stylesheet" media="all" type="text/css" href="../../GuiWeb/Styles/HomeOSMasterStyleSheet.css" />
+</head>
+<body>
+
+     <div class="page">
+            <div class="row">
+                <div class="homeID_title col"><a href="../../GuiWeb/index.html">Dashboard</a> | <a href="../../GuiWeb/AddDeviceUnconfiguredDevicesForScout.html">Add Devices </a> | Add Valve</div>
+                <div class="page_title col">Valve Setup: Determining next setup step</div>
+                <div class="status col" id="status" style="display:none">System Status</div> 
+            </div>
+         </div>
+    <script>
+
+        jQuery.support.cors = true;
+
+        //For parameters passed in on URL
+        var DEVICEID = "";
+
+
+
+        //Expect URL to be called with DeviceID
+        $(document).ready(
+            function () {
+                var qs = getQueryStringArray();
+                if (qs.DeviceId !== 'undefined' && qs.DeviceId) {
+                    DEVICEID = qs.DeviceId;
+                    GoToFinalSetup(DEVICEID);
+                }
+                else {
+                    UpdateDebugInfo(this, "Could not extract DeviceID URL " + window.location);
+                }
+            }
+        );
+
+        function GoNext() {
+            GoToFinalSetup(DEVICEID);
+        }
+
+    </script>
+       <!-- Change display style to 'normal' to show debug information and 'none' to turn it off  -->
+  <div id="divDebugInfo" style="display:none"></div>
+</body>
+</html>

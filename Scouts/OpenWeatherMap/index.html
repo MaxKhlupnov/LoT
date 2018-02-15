@@ -1,0 +1,56 @@
+﻿<script type="text/javascript" src="../../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Add OpenWeatherMap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script type="text/javascript" src="../../GuiWeb/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="../../GuiWeb/common.js"></script>
+  <script type="text/javascript" src="OwmScout.js"></script>
+  <link rel="stylesheet" media="all" type="text/css" href="../../GuiWeb/Styles/HomeOSMasterStyleSheet.css" />
+</head>
+<body>
+
+     <div class="page">
+            <div class="row">
+                <div class="homeID_title col"><a href="../../GuiWeb/index.html">Dashboard</a> | <a href="../../GuiWeb/AddDeviceUnconfiguredDevicesForScout.html">Add Devices </a> | Add Open Weather Map</div>
+                <div class="page_title col">Open Weather Map Setup</div>
+                <div class="status col" id="status" style="display:none">System Status</div> 
+            </div>
+
+
+   <div id="divInformationText"></div>
+
+     <div style="display:normal" class="settings_listitem" id="divAppId">
+         <!-- see comment in OwmScout.cs as to where the value comes from-->
+       <p> AppId (no need to change unless you want to) <br /> <br />
+           <input type="text" id="appIdTextbox" /> 
+       </p>
+    </div>
+
+   <div style="display:normal" class="settings_listitem" id="divLocation">
+       <p> What location should be used? <br /> <br />
+           <input type="text" id="locationHintTextbox"/>
+           <button class="btn" onclick="QueryLocation()">Query location</button>
+       </p>
+    </div>
+
+   <div style="display:none" class="settings_listitem" id="locationListDiv">
+       <p> Pick the correct location <br /> <br />
+           <select id="locationList">
+                   
+           </select>
+           <button class="btn" id="doneButton" onclick="Go()">Go</button>
+       </p>
+
+  </div>
+
+    <button  class="btn" style="display:normal" id="cButton" onclick="GoToHTMLPage('../../GuiWeb/index.html')">Cancel</button>
+
+   <!-- Change display style to 'normal' to show debug information and 'none' to turn it off  -->
+  <div id="divDebugInfo" style="display:none"><p id="controlDebugInfoText"></p></div>
+         </div>
+</body>
+</html>

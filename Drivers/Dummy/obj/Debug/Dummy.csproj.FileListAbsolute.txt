@@ -1,0 +1,7 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.Dummy\icon.png
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.Dummy\HomeOS.Hub.Drivers.Dummy.dll.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.Dummy\HomeOS.Hub.Drivers.Dummy.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Drivers.Dummy\HomeOS.Hub.Drivers.Dummy.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Drivers\Dummy\obj\Debug\Dummy.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Drivers\Dummy\obj\Debug\HomeOS.Hub.Drivers.Dummy.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Drivers\Dummy\obj\Debug\HomeOS.Hub.Drivers.Dummy.pdb

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxisCamera", "AxisCamera.csproj", "{BBF5BFC4-40A7-433E-8292-E076C36D1B62}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vstf-us-wa-09.partners.extranet.microsoft.com:8443/tfs/ext_09_consol_tpc1
+		SccProjectUniqueName0 = AxisCamera.csproj
+		SccLocalPath0 = .
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBF5BFC4-40A7-433E-8292-E076C36D1B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF5BFC4-40A7-433E-8292-E076C36D1B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF5BFC4-40A7-433E-8292-E076C36D1B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF5BFC4-40A7-433E-8292-E076C36D1B62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+     <title>HomeOS Sign In</title>
+     <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+
+</head>
+    <body>
+        <div class="page">
+            <div class="row">
+                  <div class="homeID_title col"><a href="index.html">Dashboard</a> | Sign In </div>
+                <div class="page_title col">Sign In</div>
+            </div>
+    
+              
+                <div  class="settings_listitem" id ="messageFromJavascript"> </div>
+                   
+                    <div class="settings_listitem">
+                        Click continue to return to Dashboard.
+                        <button class="btn" onClick="location.href='./index.html'" >Continue</button>
+                    </div>
+           
+                </div>
+            
+
+    </body>
+
+
+    <script type="text/javascript">
+
+        var map = parseQueryString();
+        if(map["message"])
+        {
+            var messageDiv = document.getElementById("messageFromJavascript");
+            messageDiv.className = "settings_listitem";
+            messageDiv.innerHTML = decodeURIComponent(map["message"]);
+        }
+
+        function parseQueryString()
+        {
+            var query = (window.location.search || '?').substr(1),
+                map = {};
+            query.replace(/([^&=]+)=?([^&]*)(?:&+|$)/g, function (match, key, value) {
+                (map[key] = map[key] || []).push(value);
+            });
+            return map;
+        }
+    </script>
+
+
+
+</html>

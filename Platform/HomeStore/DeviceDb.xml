@@ -1,0 +1,123 @@
+﻿<Devices>
+
+  <Device DeviceName="Awesome Thermostat" ManufacturerName="Thermocline, LLC" Description="7-day thermostat" Rating="5" Model="THERM-55166" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="programmablethermostat"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverThermostatThermocline"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="Basic Thermostat" ManufacturerName="Thermocline, LLC" Description="Set and forget" Rating="3" Model="THERM-55166" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="programmablethermostat"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverThermostatThermocline"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="Dummy Device" ManufacturerName="Silly Devices, Inc." Description="Hey! I'm a device." Rating="4" Model="DD001X" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="dummy"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverDummy"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="Universal Shades" ManufacturerName="Shady, Inc." Description="Don't let the sun get in your eyes" Rating="4" Model="THERM-55166" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="windowshades"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverThermostatThermocline"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="Eastern Promises" ManufacturerName="The Orient Company" Description="For a brighter morning" Rating="2" Model="THERM-55166" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="windowshades"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverThermostatThermocline"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="PIR motion detector" ManufacturerName="Stationary Inc." Description="The latest in PIR" Rating="5" Model="THERM-55166" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="motiondetector"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverThermostatThermocline"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="Ultrasonic motion" ManufacturerName="Mach" Description="It'll drive your dog crazy" Rating="3" Model="THERM-55166" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="motiondetector"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverThermostatThermocline"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="The toggler" ManufacturerName="Switchroos" Description="It'll turn you on" Rating="2" Model="THERM-55166" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="switchbinary"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverThermostatThermocline"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="On/off switch" ManufacturerName="Better off than on" Description="It'll turn you off" Rating="1" Model="THERM-55166" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="switchbinary"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverThermostatThermocline"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="Axis Camera" ManufacturerName="Axis Inc." Description="the most wonderful camera" Rating="5" Model="PTZ 1200" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="camera"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverAxisCamera"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="Foscam camera" ManufacturerName="Foscam" Description="the 2nd most wonderful camera" Rating="4" Model="12321" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="camera"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverFoscam"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="Aeon d/w sensor" ManufacturerName="Aeon labs" Description="tells you when the door/window opens" Rating="5" Model="best" IconUrl="http://nota.url.foobarbaz/png.png">
+    <RoleList>
+      <Role Name="sensor"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="DriverZwaveZensys"/>
+    </DriverList>
+  </Device>
+
+  <Device DeviceName="Kinect sensor" ManufacturerName="Microsoft" Description="the best sensor for photo taking, depth detection, skeleton tracking and audio recording." Rating="5" Model="Kinect for Windows" IconUrl="http://i.msdn.microsoft.com/dynimg/IC534687.png">
+    <RoleList>
+      <Role Name="camera"/>
+      <Role Name="depthcam"/>
+      <Role Name="skeletontracker"/>
+      <Role Name="microphone"/>
+    </RoleList>
+    <DriverList>
+      <Driver Name="Kinect"/>
+    </DriverList>
+  </Device>
+
+</Devices>

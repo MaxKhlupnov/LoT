@@ -1,0 +1,375 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lights</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="Styles/jquery-1.9.1.js"></script>
+    <script src="Styles/jquery-ui.js"></script>
+    <script type="text/javascript" src="../GuiWeb/common.js"></script>
+  <link rel="stylesheet" type="text/css" href="Styles/LightsStyle.css" /> 
+    <link rel="stylesheet" href="Styles/jquery-ui.css" />
+ 
+    <script>
+
+        //A few constants
+        var ON_VALUE = 1;
+        var OFF_VALUE = 0;
+        var COLOR_MAX = 255;
+
+        var uiRefresh;
+
+        //array of switchs, each switch has 8 elements: name, location, type (multi, binary), value, isColored (can you change color), red, green, blue
+        var SWITCH_INFORMATION_ARRAY = new Array();
+
+        $(document).ready(
+          function () {
+              CreateUI();
+              //Set up to refresh UI every 10 seconds  - really only needed if speech interaction enabled and light might change underneath
+              uiRefresh = setInterval(function () { CreateUI() }, 10000);
+              //To stop do this: clearInterval(uiRefresh);      
+          }
+      );
+
+        
+        function switchObject(sName, locationAtHome, sType, sValue, isColored, red, green, blue) {
+            var switchO = new Object();
+            switchO.switchName = sName;
+            switchO.switchLocation = locationAtHome;
+            switchO.switchType = sType;
+            switchO.switchValue = sValue;
+            switchO.switchIsColored = isColored;
+            switchO.switchRed = red;
+            switchO.switchGreen = green;
+            switchO.switchBlue = blue;
+            return switchO;
+        }
+
+        function CreateUI() {
+            // Creates the UI in 3 steps. 
+            //1) Ask the switch service for information on all switches 
+            // 2) GetSwtichesCallback - create switch information array 
+            // 3) CreateHTMLUI - process the switch information array and generate appropriate html
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetAllSwitches", "", GetSwitchesCallback);
+        }
+
+        function GetSwitchesCallback(context, result) {
+           
+            SWITCH_INFORMATION_ARRAY = new Array();  //delete the old one
+
+            //create switch objects and add them to the SWITCH_INFORMATION_ARRAY
+            if (result[0] == "") {
+                for (j = 1; j + 7 < result.length; j = j + 8) {
+
+                    if (notUnconfiguredHueLight(result[j])) {  //ignore the unconfigured hue lights
+                        var newSwitch = switchObject(result[j], result[j + 1], result[j + 2], result[j + 3], result[j + 4], result[j + 5], result[j + 6], result[j + 7]);
+                        SWITCH_INFORMATION_ARRAY.push(newSwitch);
+                    }
+                }
+
+                CreateHTMLUI();
+            }
+            else {
+                DisplayDebugging("GetSwitchesCallback:" + result[0]);
+            }
+        }
+
+
+
+        function CreateHTMLUI() {
+            $("#lights").html("");
+
+            var handledLocations = new Array();
+
+            //We want to show the lights grouped by location - for each light, check if it's location has already been handled, 
+            for (i = 0; i < SWITCH_INFORMATION_ARRAY.length; i++) {
+
+                if (jQuery.inArray(SWITCH_INFORMATION_ARRAY[i].switchLocation, handledLocations) == -1) {
+                    //this location hasn't been handled so we need to create a new header, add this switch and look for any others with this location
+                    var currentLocation = SWITCH_INFORMATION_ARRAY[i].switchLocation;
+                    //add header
+                    $("#lights").append('<div class="row"> <div class="related_content col" >' + currentLocation + '</div></div>');
+
+                    //add this switch andd through the rest of array looking for others in this location
+                    for (j = i; j < SWITCH_INFORMATION_ARRAY.length; j++) {
+                        if (SWITCH_INFORMATION_ARRAY[j].switchLocation == currentLocation) {                       
+                            var cSwitch = SWITCH_INFORMATION_ARRAY[j];
+                            var currSValue = cSwitch.switchValue;
+                            var currSName = cSwitch.switchName;
+
+                            if (cSwitch.switchType == "Binary") {
+                                $("#lights").append('<div class="app_content col">' + SwitchSimpleName(currSName) + " is " + isOnorOff(currSValue, true) +
+                                    '      <button class= "app_button" onclick="SingleSwitch(' + "'" + currSName + "','0'" + ')"  >Off </button>' +
+                                    '     <button class= "app_button" onclick="SingleSwitch(' + "'" + currSName + "','1'" + ')"  >On </button>' +
+                                    ' </div>');
+                            }
+                            else if (cSwitch.switchIsColored == "False") {  //Multi but not with color
+                             
+                                $("#lights").append('<div class="app_content col">' + SwitchSimpleName(currSName) + " is " + isOnorOff(currSValue, false) +
+                                    '      <button class= "app_button" onclick="SingleSwitch(' + "'" + currSName + "','0'" + ')"  >Off </button>' +
+                                    '        <button class= "app_button" onclick="SingleSwitch(' + "'" + currSName + "','1'" + ')"  >On </button>' +
+                                    ' <div id="' + currSName + '" class="slider"></div>' +
+                                    '</div>');
+                                var sValue = getUIDimmerValue(currSValue);
+                                createDimmerSlider(currSName, sValue);
+                               
+                            }
+                            else { //Multi - colored
+                                ////colored light gets 3 sliders for now  - TODO - nicer control
+                                var rValue = cSwitch.switchRed;
+                                var gValue = cSwitch.switchGreen;
+                                var bValue = cSwitch.switchBlue;
+                                $("#lights").append('<div class="app_content col">' + SwitchSimpleName(currSName) + " is " + isOnorOffColored(currSValue, rValue, gValue, bValue) +
+                                    '      <button class= "app_button" onclick="SingleSwitch(' + "'" + currSName + "','0'" + ')"  >Off </button>' +
+                                    '        <button class= "app_button" onclick="SingleSwitch(' + "'" + currSName + "','1'" + ')"  >On </button>' +
+                                    ' <div id="' + currSName + '-red" class="slider"></div>' +
+                                     ' <div id="' + currSName + '-green" class="slider"></div>' +
+                                     ' <div id="' + currSName + '-blue" class="slider"></div>' +
+                                    '</div>');
+                                createColorSliders(currSName, rValue, gValue, bValue);
+                            }
+                        }
+                    }
+                    //we have now handled location.
+                    handledLocations.push(currentLocation);
+                }
+            }
+        }
+       
+
+        function AllLights(level) {
+            new PlatformServiceHelper().MakeServiceCall("webapp/SetAllSwitches", '{"level":"' + level + '"}', SetAllLightsCallback);
+        }
+
+        function SetAllLightsCallback(context, result) {
+            if (result[0] == "") {
+                CreateUI(); //rebuild the UI
+            }
+            else {
+                DisplayDebugging("SetAllLightsCallback:" + result[0]);
+            }
+
+        }
+
+        // Doing this in a function is important because otherwise the changeColorCallback functions don't get the right lightName.
+        function createColorSliders(lightName, redValue, greenValue, blueValue) {
+            $(function () {
+                $("#" + lightName + "-red").slider({
+                    min: 0,
+                    max: 255,
+                    value: redValue,
+                    change: function () { changeColorCallback(lightName, "red") }  //must be value, not expression
+                });
+            });
+
+            $(function () {
+                $("#" + lightName + "-green").slider({
+                    min: 0,
+                    max: 255,
+                    value: greenValue,
+                    change: function () { changeColorCallback(lightName, "green") }  //must be value, not expression
+                });
+            });
+
+            $(function () {
+                $("#" + lightName + "-blue").slider({
+                    min: 0,
+                    max: 255,
+                    value: blueValue,
+                    change: function () { changeColorCallback(lightName, "blue") }  //must be value, not expression
+                });
+            });
+
+        }
+
+        function createDimmerSlider(currSName, sValue) {
+            $(function () {
+                $("#" + currSName).slider({
+                    min: 0,
+                    max: 100,
+                    value: sValue,
+                    showControls: true,
+                    change: function () { changeLightCallback(currSName) }  //must be value, not expression
+                });
+            });
+        }
+
+
+        function SingleSwitch(switchName, level) {
+       
+            //if (isOnAndColoredSwitch(switchName, level)) {  
+            //    //set all the switches to 255
+              
+            //    $("#" + lightName + "-red").slider("value", COLOR_MAX);
+            //    ($("#" + lightName + "-green").slider("value")) = COLOR_MAX;
+            //    ($("#" + lightName + "-blue").slider("value")) = COLOR_MAX;
+            //}
+            new PlatformServiceHelper().MakeServiceCall("webapp/SetLevel", '{"switchFriendlyName": "' + switchName + '","level":"' + level + '"}', SetLevelCallback);
+
+        }
+
+       
+
+        function SetLevelCallback(context, result) {         
+            if (result[0] == "") {
+                //figure out which switch it was     
+                var dataAsObject = JSON.parse(context.Data);
+                var switchName = dataAsObject.switchFriendlyName;
+                var switchLevel = dataAsObject.level;
+
+                //if (isOnAndColoredSwitch(switchName, switchLevel)) {  //if you turned on the switch and it has color - set them.
+                //    changeColorCallback(switchName, "red"); //color doesn't matter here - will get all of them.
+                //}
+
+                CreateUI();
+            }
+            else {
+                DisplayDebugging("SetLevelCallback:" + result[0]);
+            }
+        }
+
+        function changeLightCallback(lightName) {
+            var sliderVal = ($("#" + lightName).slider("value"))/100;
+            SingleSwitch(lightName, sliderVal);
+        }
+
+        function changeColorCallback(lightName, color) {
+           
+            var rSliderVal = ($("#" + lightName + "-red").slider("value"));
+            var gSliderVal = ($("#" + lightName + "-green").slider("value"));
+            var bSliderVal = ($("#" + lightName + "-blue").slider("value"));
+
+
+            if (rSliderVal > 0 || gSliderVal > 0 || bSliderVal > 0) {
+                new PlatformServiceHelper().MakeServiceCall("webapp/SetColor", '{"switchFriendlyName": "' + lightName + '","red":"' + rSliderVal + '","green":"' + gSliderVal + '","blue":"' + bSliderVal + '"}', SetLevelCallback);
+            }
+       
+        }
+
+        function SwitchSimpleName(nameWithType) {
+            var nameWithoutType = nameWithType.split("::");
+            return nameWithoutType[0];
+        }
+
+        function getUIDimmerValue(oValue) {
+            var sValue = Math.round((oValue * 100));
+            return sValue;
+        }
+
+        function isOnorOff(currentLevel, isBinary) {
+            var currState = "Off";        
+
+            if ((currentLevel != OFF_VALUE && isBinary) || (currentLevel == ON_VALUE)) {
+                currState = "On";
+            }
+            else if (currentLevel != OFF_VALUE) {
+                currState = getUIDimmerValue(currentLevel);
+            }
+            return currState;
+        }
+
+        function isOnorOffColored(currSValue, rValue, gValue, bValue) {
+            currState = "On";
+            if (currSValue == OFF_VALUE) {
+                //if (rValue != OFF_VALUE && gValue != OFF_VALUE & bValue != OFF_VALUE)
+                //    currState = "OFF";
+                //else
+                    currState = "Off";
+
+            }
+            return currState;
+        }
+
+        function findSwitch(sName) {
+            //return the switch with the switchName
+            for (i = 0; i < SWITCH_INFORMATION_ARRAY.length; i++) {
+                if (SWITCH_INFORMATION_ARRAY[i].switchName == sName)
+                    return SWITCH_INFORMATION_ARRAY[i];
+            }
+            return null;
+        }
+
+        function isOnAndColoredSwitch(switchName, switchLevel) {
+            var retVal = false;
+            if (switchLevel == ON_VALUE) {  //if you turned on the switch and it has color - set them.
+                var switch1 = findSwitch(switchName);
+                retVal = (switch1.switchIsColored == "True");
+            }
+            return retVal;
+        }
+
+        function notUnconfiguredHueLight(switchName) {
+            if (switchName.indexOf("hb:") == "-1") {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+      
+    </script>
+
+
+</head>
+<body>
+        <div class="dashboard_toolbar">
+            <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | Lights </div>
+        </div>
+        
+        <div class="page">
+            <div class="row">
+                <div class="page_title">Lights</div>
+            </div>
+            <div class="row">
+                <div id="allOffButton" class="app_content">
+                    <button id="btnAllOff" class="app_button" onclick="AllLights(0)">
+                        All Off
+                    </button>
+                         <button id="btnAllOn" class="app_button" onclick="AllLights(1)">
+                        All On
+                    </button>
+                 <!-- <div class="row">Dim:</div>
+                    <div id="slider-range" class="slider">Test</div>
+                </div>-->
+                </div>
+            </div>
+     
+                     <!--spacer div to create a line between sections on the page -->
+            <div class="spacer"></div>
+            <div class="row" id="lights" >
+            <!--    <div class="app_content col"> Test:0 <button class= "app_button" onclick="SingleSwitch('Test','1')"  >On </button>      <button class= "app_button" onclick="SingleSwitch('Test','0')"  >Off </button> </div>
+            -->
+            </div>
+       
+        </div>
+            <!--spacer div to create a line between major sections on the page
+            <div class="spacer"></div>
+            <!--section: knob for the LED lights-->
+           <!-- <div class="row">LED trim</div>
+                <div id="knob">
+                    <input class="knob" data-width="150" data-fgColor="#C0C0C0" data-cursor="true" value="29">
+                </div>-->
+            
+            <!--spacer div to create a line between sections on the page
+            <div class="spacer"></div>
+            <!--section: selector for lights by location
+                <div class="location">Location:</div>
+                    <select id="location">
+                        <option>Office</option>
+                        <option>Home</option>
+                    </select>
+            </div>
+            <!--section: lights state  
+            <div class="app_content">
+                <span id="light_state">{light name} is Off:</span>
+                <button class="app_button" onclick="SingleSwitch('Test','1')">On</button>
+                <button class="app_button" onclick="SingleSwitch('Test','0')">Off</button>
+            </div>
+
+        <!--Used for debugging messages, set style="display:none" to turn off showing them, common.js will put text into div with id =divDebugInfo when calls are made to service -->
+       <div id="divDebugInfo" style="display:none"></div>
+    
+</body>
+</html>

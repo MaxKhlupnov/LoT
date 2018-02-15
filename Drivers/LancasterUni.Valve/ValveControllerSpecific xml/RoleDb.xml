@@ -1,0 +1,19 @@
+﻿<Roles>
+  <Role Name=":motiondetector:" />
+  <Role Name=":tv:" />
+  <Role Name=":speaker:" />
+  <Role Name=":dvdplayer:" />
+  <Role Name=":thermostat:" />
+  <Role Name=":microphone:" />
+  <Role Name=":lock:" />
+  <Role Name=":windowshades:"/>
+  <Role Name=":sensor:"/>  
+  <Role Name=":switchmultilevel:" />
+  <Role Name=":camera:"/>
+  <Role Name=":dummy:"/>
+  <Role Name=":switchbinary:"/>
+  <Role Name=":huebridge:"/>
+  <Role Name=":couch:" /> 
+  <Role Name=":doorjamb:" />
+  <Role Name=":valve:" />
+</Roles>

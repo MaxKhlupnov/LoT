@@ -1,0 +1,29 @@
+################################## Object Detection #####################################
+
+
+# Number of Gaussians in GMM (or max number)
+N_Gaussian = 3
+
+# learning rate for Gaussian Mixture Model
+Alpha_LearningRate = 0.01
+
+# initial variance for a Gaussian in initial stage
+Init_Var = 500
+
+# initial variance for a new Gaussian in training and testing stage
+Init_new_Var = 500
+
+# initial weight for a new Gaussian in training and testing stage
+Init_new_w = 0.15
+
+# CT value in GMM algorithm in (Zivkovic et.al. '05) 
+CT= 0.01
+
+# size of the SE in dilation
+SE_Dilate1 = 7
+
+# size of the SE in erosion
+SE_Erode1 = 3
+
+# minimum delta thresh-hold to detect object in the image differential (in percentage of total pixels)
+ObjectDetect_MinDelta = 0.04

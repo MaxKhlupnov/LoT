@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:23456/MetaDataServer?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" />
+  <xs:import schemaLocation="http://localhost:23456/MetaDataServer?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="RegisterPubKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="prin" nillable="true" type="q1:Principal" />
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterPubKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterPubKeyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPubKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="prin" nillable="true" type="q2:Principal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPubKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPubKeyResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateReaderKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="caller" nillable="true" type="q3:Principal" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="FQName" nillable="true" type="q4:FQStreamID" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="entry" nillable="true" type="q5:ACLEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateReaderKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateReaderKeyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReaderKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="FQName" nillable="true" type="q6:FQStreamID" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="prin" nillable="true" type="q7:Principal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReaderKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="GetReaderKeyResult" nillable="true" type="q8:ACLEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="FQName" nillable="true" type="q9:FQStreamID" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="accinfo" nillable="true" type="q10:AccountInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddAccountResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="FQName" nillable="true" type="q11:FQStreamID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAllAccountsResult" nillable="true" type="q12:ArrayOfKeyValueOfintAccountInfoQh5iDqTt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMdAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="FQName" nillable="true" type="q13:FQStreamID" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="accinfo" nillable="true" type="q14:AccountInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMdAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddMdAccountResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMdAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="FQName" nillable="true" type="q15:FQStreamID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMdAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="GetMdAccountResult" nillable="true" type="q16:AccountInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllReaders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="FQName" nillable="true" type="q17:FQStreamID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllReadersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="GetAllReadersResult" nillable="true" type="q18:ArrayOfPrincipal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAllInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" minOccurs="0" name="FQName" nillable="true" type="q19:FQStreamID" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAllInfoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

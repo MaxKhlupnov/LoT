@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{540D10B0-39FE-47E7-86AB-AFF845791DAF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HomeOS.Hub.Common.Bolt.DataStore</RootNamespace>
+    <AssemblyName>HomeOS.Hub.Common.Bolt.DataStore</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\binaries\Platform\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DocumentationFile>..\..\..\output\binaries\Platform\HomeOS.Hub.Common.Bolt.DataStore.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\output\binaries\Platform\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK, Version=1.0.7.0, Culture=neutral, PublicKeyToken=cd2d24cd2bace800, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AWSSDK\AWSSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Synchronization, Version=2.1.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Synchronization.Files, Version=2.1.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Synchronization.MetadataStorage, Version=2.1.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Synchronization.SimpleProviders, Version=2.1.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="openstacknet, Version=1.3.0.0, Culture=neutral, PublicKeyToken=8965cea5c205d3a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\openstack.net.1.3.1.0\lib\net40\openstacknet.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleRESTServices, Version=1.3.0.0, Culture=neutral, PublicKeyToken=8965cea5c205d3a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\SimpleRESTServices.1.3.0.1\lib\net40\SimpleRESTServices.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartThreadPool, Version=2.2.3.0, Culture=neutral, PublicKeyToken=1126fe8b671e8a79, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\SmartThreadPool.dll.2.2.3\lib\SmartThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CallerInfo.cs" />
+    <Compile Include="FileDataStream.cs" />
+    <Compile Include="HDSLegacy\OldDataDirStream.cs" />
+    <Compile Include="HDSLegacy\OldDataFileStream.cs" />
+    <Compile Include="HDSLegacy\OldMetaData.cs" />
+    <Compile Include="LocalMetaDataServer.cs" />
+    <Compile Include="MetaStream.cs" />
+    <Compile Include="DataBlockInfo.cs" />
+    <Compile Include="FqStreamID.cs" />
+    <Compile Include="Crypto.cs" />
+    <Compile Include="KeyRegression.cs" />
+    <Compile Include="LocationInfo.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Serializer.cs" />
+    <Compile Include="Service References\MetaDataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Sync\AmazonS3Helper.cs" />
+    <Compile Include="Sync\AmazonS3Synchronizer.cs" />
+    <Compile Include="HDSLegacy\AzureBlobStore.cs" />
+    <Compile Include="HDSLegacy\AzureBlobSyncProvider.cs" />
+    <Compile Include="Sync\AzureHelper.cs" />
+    <Compile Include="Sync\AzureChunkSynchronizer.cs" />
+    <Compile Include="HDSLegacy\AzureSynchronizer.cs" />
+    <Compile Include="HDSLegacy\FileRetriever.cs" />
+    <Compile Include="Sync\RackspaceCloudFilesSynchronizer.cs" />
+    <Compile Include="Sync\RemoteInfo.cs" />
+    <Compile Include="Sync\ISync.cs" />
+    <Compile Include="Sync\SyncFactory.cs" />
+    <Compile Include="DataItems.cs" />
+    <Compile Include="IVal.cs" />
+    <Compile Include="DataBlock.cs" />
+    <Compile Include="IKey.cs" />
+    <Compile Include="IStream.cs" />
+    <Compile Include="IndexMetaData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StreamFactory.cs" />
+    <Compile Include="ValueDataStream.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\HomeOS.Hub.Common.MDServer.AccountInfo.datasource" />
+    <None Include="Properties\DataSources\HomeOS.Hub.Common.MDServer.ACLEntry.datasource" />
+    <None Include="Properties\DataSources\HomeOS.Hub.Common.MDServer.Principal.datasource" />
+    <None Include="Service References\MetaDataService\HomeOS.Hub.Common.Bolt.DataStore.MetaDataService.AccountInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MetaDataService\HomeOS.Hub.Common.Bolt.DataStore.MetaDataService.ACLEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MetaDataService\HomeOS.Hub.Common.Bolt.DataStore.MetaDataService.Principal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MetaDataService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetaDataService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetaDataService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetaDataService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetaDataService\MetaDataServer.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AWSSDK\AWSSDK.dll" />
+    <Content Include="AWSSDK\readme.txt" />
+    <None Include="Service References\MetaDataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MetaDataService\configuration.svcinfo" />
+    <None Include="Service References\MetaDataService\configuration91.svcinfo" />
+    <None Include="Service References\MetaDataService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MetaDataService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataStoreCommon\DataStoreCommon.csproj">
+      <Project>{6494bccd-3fe4-493f-8c5e-01bd3f91dadb}</Project>
+      <Name>DataStoreCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

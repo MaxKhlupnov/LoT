@@ -1,0 +1,130 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html lang="en" class="js-disabled home">
+
+<head>
+  <title>Alerts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+   <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="../GuiWeb/common.js"></script>
+  <link rel="Stylesheet" type="text/css" href="Styles/AppAlertsStyleSheet.css" />
+ 
+    <script>
+
+
+        var alertCheck;
+
+        $(document).ready(
+            function () {
+                
+                RefreshAlerts();
+                //Set up to refresh alerts every 2 seconds
+                alertCheck = setInterval(function () { RefreshAlerts() }, 2000);
+                //To stop do this: clearInterval(alertCheck);
+                //new PlatformServiceHelper().MakeServiceCall("../GuiWeb/webapp/GetConfSettingWeb", '{"confKey":"NotificationEmail"}', GetSettingsEmailCallback);
+                //new PlatformServiceHelper().MakeServiceCall("../GuiWeb/webapp/GetPrivateConfSettingWeb", '{"confKey":"NotificationEmail"}', GetSettingsEmailCallback);
+
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetEmail", "", GetSettingsEmailCallback);
+            }
+        );
+    
+
+        function GetSettingsEmailCallback(context, result) {
+            var realResult = result.GetEmailResult;
+            if (realResult[0] == "") {
+                $('#emailAddr').val(realResult[1]);
+             }
+            else {
+                DisplayDebugging("GetDefaultEmailCallback:" + realResult[0]);
+            }
+        }
+
+        function GetAlerts(mode, time, numAlerts) {
+            var data  = '{"mode": "' + mode + '","time": "' + time + '","numAlerts":"' + numAlerts + '"}';
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetAlerts", data, GetAlertsCallback);
+        }
+        function GetAlertsCallback(context, result) {
+            
+                UpdateDebugInfo(context, result);
+                ClearAlerts();
+                var alertList = result.GetAlertsResult;
+            if (alertList[0] == "") {
+                for (i = 1; i < alertList.length; i++)
+                    $("#alertList").append(alertList[i] + "<p />");
+            }
+            else {
+                DisplayDebugging("GetDefaultEmailCallback:" + result[0]);
+            }
+
+        }   
+
+        function SendTestEmail() {
+            UpdateDebugInfo(this, "send test email called");
+        }
+
+        function ClearAlerts() {
+            UpdateDebugInfo(this, "Clear Alerts Called");
+            $("#alertList").html("");
+        }
+
+        function ShowAllAlerts() {
+            UpdateDebugInfo(this, "Show All Alerts called");
+        }
+
+        function RefreshAlerts() {
+            UpdateDebugInfo(this, "Refresh Alerts called");
+            var currTime = new Date();
+            GetAlerts("latest", "12:00", 10);
+        }
+
+        function UpdateEmail() {
+            var data = '{"email": "' + $("#emailAddr").val() + '"}';
+            new PlatformServiceHelper().MakeServiceCall("webapp/UpdateEmail", data, UpdateEmailCallback);
+        }
+
+        function UpdateEmailCallback(context, result) {
+            UpdateDebugInfo(this, "Update Email Called");
+        }
+
+    </script>
+</head>
+<body>
+        <div class="dashboard_toolbar">
+            <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> | Alerts </div>
+        </div>
+        
+        <div class="page">
+            <div class="row">
+                <div class="page_title col">Alerts</div>
+            </div>
+            <div class="row">
+                <div class="app_content col">
+                    <textarea id="alertList" class="app_form" rows="10" cols="50" wrap="hard"></textarea>
+                </div>
+            </div>
+            <!-- Two buttons -->
+            <div class="row">
+                <div id="alertListButtons" class="app_content col">
+                    <button id="btnAlertClear" class="app_button" onclick="ClearAlerts()">
+                        Clear
+                    </button>
+                    <button id="btnAlertRefresh" class="app_button" onclick="RefreshAlerts()">
+                        Refresh
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div id="alertEmail" class="app_content col">
+                    Alert email will be sent to:<br />
+                    <input id="emailAddr" type="email" maxlength="150" />
+                    <br />
+                    <button id="emailConfirmButton" class="app_button2" onclick="UpdateEmail()">
+                     Change
+                    </button>
+            </div>
+            </div>
+        </div>
+    <div id="divDebugInfo" style="display:none"></div>
+
+</body>
+</html>

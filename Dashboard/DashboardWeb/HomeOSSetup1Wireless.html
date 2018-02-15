@@ -1,0 +1,61 @@
+﻿<script type="text/javascript" src="homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HomeOS Setup</title>
+    <script type="text/javascript" src="jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="HomeOSSetup.js"></script>
+     <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+
+
+    <script>
+        //putting document.ready here so we can use one.js file for all of setup
+        $(document).ready(
+   function () {
+
+       //populate the wireless network
+       getAvailableWirelessNetworks();
+   }
+   );
+  
+    </script>
+</head>
+<body>
+
+    <div class="page">
+            <div class="row">
+                
+                <div class="page_title col">Setup</div>
+               
+                </div>
+
+    <div   class="settings_listitem" id="pageInformationLine">Welcome! </div>
+
+    <div  class="settings_listitem" id="wirelessNetworkSetup">
+        <div> Please select your wireless network: &nbsp
+        <select id="wirelessNetworkList"></select></div>
+        <br />
+        <div> Network Security Key:  &nbsp
+        <input type="text" id="networkSecurityKey" /><br /></div>
+
+        <div> <button  class="btn" id="joinButton" onclick="JoinWirelessNetwork()">Join</button>
+                  <button class="btn" onclick="GoToHTMLPage('HomeOSSetup2HomeID.html')">Skip</button>
+        </div>
+    </div>
+
+    <div  class="settings_listitem"  id="statusInfo"></div>
+
+  
+
+    <div id="errorHandling" style="display:normal">
+        <button class="btn" style="width: 250px" onclick="RetryWirelessNetwork()">Refresh Network List</button>
+    </div>
+
+    <!-- Change display style to 'normal' to show debug information and 'none' to turn it off  -->
+    <div id="divDebugInfo" style="display:none">
+       </div>
+
+</div>
+</body>
+</html>

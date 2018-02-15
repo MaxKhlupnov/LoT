@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SynapseWirelessScout</title>
+    <script>
+        function getQueryStringArray() {
+            //The URL of this page is 
+            //       http://localhost:51430/ratul/scouts/HomeOs.Hub.Scouts.Webcam/index.html?DeviceId=camera
+            //The final URL we want is
+            //       http://localhost:51430/ratul/GuiWeb/AddDeviceFinalDeviceSetup.html?DeviceId=camera
+
+            var assoc = [];
+            var decodedParams = decodeURI(window.location.search); //decodeURI in case there were spaces.
+            var items = decodedParams.substring(1).split('&');
+            for (var j = 0; j < items.length; j++) {
+                var a = items[j].split('=');
+                assoc[a[0]] = a[1];
+            }
+            return assoc;
+        }
+
+        //point at which you want to determine redirection
+        var qs = getQueryStringArray();
+        var url = "../../GuiWeb/AddDeviceFinalDeviceSetup.html?DeviceId=";
+        if (qs.DeviceId !== 'undefined' && qs.DeviceId) {
+            window.location.href = encodeURI(url + qs.DeviceId); //reroute
+        }    
+        else {
+            alert("Could not extract DeviceId from the URL " + window.location);
+        }
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<script type="text/javascript" src="homeos-1.1.js"></script>
+<script type="text/javascript" src="jquery-1.7.1.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add User</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+</head>
+<body>
+      <div class="page">
+            <div class="row">
+                <div class="homeID_title col"><a href="index.html">Dashboard</a> | <a href="Settings.html">Settings </a> | Add User </div>
+                <div class="page_title col">Add Microsoft Account</div>
+                <div class="status col" id="status" style="display:none">System Status</div> 
+            </div>
+
+           <div  class="settings_listitem" id ="messageFromJavascript"> </div>
+
+    <!--<h1>Add Microsoft Account User </h1>-->
+    <div id="liveidlogout">
+        <div id="liveidlogoutlink" class="settings_listitem"> Click Logout and then re-try adding the user. (Note the browser may open another window that can safely be closed.)
+           <br />
+            <button class="btn" onclick="logout()"  >Logout</button>  </div>
+    </div>
+   
+          <div id="addUserPage">
+     Name : <input type="text" name="name" id="name" /><br/>
+
+<!--Not displaying group since you can't do anything with it yet.-->
+<div style="display:none">
+Group: 
+<select name="group" id="group">
+  <option value="everyone">Everyone</option>
+  <option value="adults">Adults</option>
+  <option value="kids">Kids</option>
+  <option value="guests">Guests</option>
+</select>  
+  </div>      
+        
+        <br/>
+Microsoft Account: <input type="text" name="liveid" id="liveid" /><br/>
+        <button class="btn" id="addUser" onclick="addUser()" >Add User</button>
+        
+          </div>
+   </div>
+</body>
+</html>
+
+<script type="text/javascript" src="jquery-1.7.1.js"></script>
+
+ <script type="text/javascript">
+
+     //constants
+     var LiveIdAppId = "000000004C0FF8E2";
+     var liveIdLogoutUrl = "http://login.live.com/logout.srf?appid=" + LiveIdAppId + "&appctx=" + appctx;
+     var userDetailsDiv = "addUserPage";
+     var logoutButtonDiv = "liveidlogout";
+     var messageDiv = "messageFromJavascript";
+     var SignInPage = "SignIn.html";
+     var successMessage = "User Added Successfully!";
+     var failureMessage = "User Add Failed! ";
+     var duplicateLiveIDTokenMessage = failureMessage+" Attempted duplicate registration of Microsoft Account or you may be already logged into a Microsoft Account";
+     //
+
+     function logout()
+     {
+         window.open(liveIdLogoutUrl, '_blank');
+         displayDiv(userDetailsDiv);
+         hideDiv(logoutButtonDiv);
+         hideDiv(messageDiv);
+     }
+
+     function hideDiv(divId)
+     {
+         div = document.getElementById(divId);
+         div.style.display = "none";
+     }
+
+     function displayDiv(divId)
+     {
+         div = document.getElementById(divId);
+         div.style.display = "block";
+     }
+
+     function addUser()
+     {
+         var liveIdUrl = "http://login.live.com/wlogin.srf?appid=" + LiveIdAppId + "&alg=" + "wsignin1.0" + /*"&username=" + document.getElementById("liveid").value + */"&appctx=";
+         liveIdUrl = liveIdUrl + document.URL.split('?')[0] + "?function=add,userName=" + document.getElementById("name").value;
+         liveIdUrl = liveIdUrl + ",groupName=" + document.getElementById("group").value;
+         liveIdUrl = liveIdUrl + ",liveId=" + document.getElementById("liveid").value;
+         liveIdUrl = liveIdUrl + ",liveIdUniqueUserToken=<liveIdUniqueUserToken>";
+         document.location.href = liveIdUrl;
+     }
+     
+     function parseQueryString()
+     {
+         var query = (window.location.search || '?').substr(1),
+             map = {};
+         query.replace(/([^,=]+)=?([^,]*)(?:,+|$)/g, function (match, key, value) {
+             (map[key] = map[key] || []).push(value);
+         });
+         return map;
+     }
+
+     function AddUserCallBack(context, result)
+     {
+         if (result[0] == "") // null response from server means call succeeded
+         {
+             result[0] = successMessage;
+             document.location.href = SignInPage + "?message=" + result[0];
+         }
+         else if (result[0].toLowerCase() == "duplicate liveiduniqueusertoken")
+         {
+             message = document.getElementById(messageDiv);
+             message.innerHTML = duplicateLiveIDTokenMessage;
+             displayDiv(logoutButtonDiv);
+         }
+         else
+         {
+             result[0] = failureMessage + result[0];
+             document.location.href = SignInPage + "?message=" + result[0];
+         }
+         
+     }
+
+     var param = parseQueryString();
+     
+    
+     if (param["function"] == "message")
+     {
+         document.location.href = SignInPage + "?message=" + param["message"];
+     }
+     else if (param["function"] == "add" && param["userName"]!=null && param["groupName"]!=null && param["liveId"]!=null && param["liveIdUniqueUserToken"]!=null) 
+     {
+         hideDiv(userDetailsDiv);
+         hideDiv(logoutButtonDiv);
+         
+         var url = "webapp/AddLiveIdUser";
+         var data = '{"userName": "' + param["userName"] + '","groupName": "' + param["groupName"] + '","liveId": "' + param["liveId"] + '",' + '"liveIdUniqueUserToken":"' + param["liveIdUniqueUserToken"] + '"}';
+         new PlatformServiceHelper().MakeServiceCall(url, data, AddUserCallBack);
+     }
+     else 
+     {
+         //hideDiv(userDetailsDiv);
+         hideDiv(logoutButtonDiv);
+         $.ajax({
+             type: "GET", //GET or POST or PUT or DELETE verb
+             url: getStatusEndpoint() + "?url=" + encodeURI(liveIdLogoutUrl), // Location of the service
+             dataType: "JSON", //Expected data format from server
+             processdata: true, //True or False
+             cache: false,
+             async: false,
+             success: function (msg) {//On Successfull service call
+                 if (msg == "false")
+                     alert("Live ID server is unreachable. Cannot add Live ID Users.");
+             },
+             error: function (msg) {
+                 alert("Quering for Live ID server status. Refresh page if taking too long.");
+             },
+
+         });
+
+         var url = "webapp/GetVersion";
+         new PlatformServiceHelper().MakeServiceCall(url, "{}", null);
+
+     }
+
+
+    </script>

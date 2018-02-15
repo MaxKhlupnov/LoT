@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MetaDataServer" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:23456/MetaDataServer/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:23456/MetaDataServer/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:23456/MetaDataServer/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HomeOS.Hub.Common.MDServer" />
+      <xsd:import schemaLocation="http://localhost:23456/MetaDataServer/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMetaDataService_RegisterPubKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterPubKey" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_RegisterPubKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterPubKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_GetPubKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPubKey" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_GetPubKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPubKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_UpdateReaderKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReaderKey" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_UpdateReaderKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReaderKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_GetReaderKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaderKey" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_GetReaderKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaderKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_AddAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccount" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_AddAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_GetAllAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_GetAllAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_GetMdAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMdAccount" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_GetMdAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMdAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_AddMdAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMdAccount" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_AddMdAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMdAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_GetAllReaders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReaders" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_GetAllReaders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReadersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_RemoveAllInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllInfo" />
+  </wsdl:message>
+  <wsdl:message name="IMetaDataService_RemoveAllInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMetaDataService">
+    <wsdl:operation name="RegisterPubKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetaDataService/RegisterPubKey" message="tns:IMetaDataService_RegisterPubKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetaDataService/RegisterPubKeyResponse" message="tns:IMetaDataService_RegisterPubKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPubKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetaDataService/GetPubKey" message="tns:IMetaDataService_GetPubKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetaDataService/GetPubKeyResponse" message="tns:IMetaDataService_GetPubKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReaderKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetaDataService/UpdateReaderKey" message="tns:IMetaDataService_UpdateReaderKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetaDataService/UpdateReaderKeyResponse" message="tns:IMetaDataService_UpdateReaderKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReaderKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetaDataService/GetReaderKey" message="tns:IMetaDataService_GetReaderKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetaDataService/GetReaderKeyResponse" message="tns:IMetaDataService_GetReaderKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetaDataService/AddAccount" message="tns:IMetaDataService_AddAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetaDataService/AddAccountResponse" message="tns:IMetaDataService_AddAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetaDataService/GetAllAccounts" message="tns:IMetaDataService_GetAllAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetaDataService/GetAllAccountsResponse" message="tns:IMetaDataService_GetAllAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMdAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetaDataService/GetMdAccount" message="tns:IMetaDataService_GetMdAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetaDataService/GetMdAccountResponse" message="tns:IMetaDataService_GetMdAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMdAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetaDataService/AddMdAccount" message="tns:IMetaDataService_AddMdAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetaDataService/AddMdAccountResponse" message="tns:IMetaDataService_AddMdAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReaders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetaDataService/GetAllReaders" message="tns:IMetaDataService_GetAllReaders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetaDataService/GetAllReadersResponse" message="tns:IMetaDataService_GetAllReaders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetaDataService/RemoveAllInfo" message="tns:IMetaDataService_RemoveAllInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetaDataService/RemoveAllInfoResponse" message="tns:IMetaDataService_RemoveAllInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMetaDataService" type="tns:IMetaDataService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterPubKey">
+      <soap:operation soapAction="http://tempuri.org/IMetaDataService/RegisterPubKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPubKey">
+      <soap:operation soapAction="http://tempuri.org/IMetaDataService/GetPubKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReaderKey">
+      <soap:operation soapAction="http://tempuri.org/IMetaDataService/UpdateReaderKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReaderKey">
+      <soap:operation soapAction="http://tempuri.org/IMetaDataService/GetReaderKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <soap:operation soapAction="http://tempuri.org/IMetaDataService/AddAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAccounts">
+      <soap:operation soapAction="http://tempuri.org/IMetaDataService/GetAllAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMdAccount">
+      <soap:operation soapAction="http://tempuri.org/IMetaDataService/GetMdAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMdAccount">
+      <soap:operation soapAction="http://tempuri.org/IMetaDataService/AddMdAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReaders">
+      <soap:operation soapAction="http://tempuri.org/IMetaDataService/GetAllReaders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllInfo">
+      <soap:operation soapAction="http://tempuri.org/IMetaDataService/RemoveAllInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MetaDataServer">
+    <wsdl:port name="BasicHttpBinding_IMetaDataService" binding="tns:BasicHttpBinding_IMetaDataService">
+      <soap:address location="http://localhost:23456/MetaDataServer/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

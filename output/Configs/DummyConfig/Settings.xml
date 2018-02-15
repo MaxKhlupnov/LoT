@@ -1,0 +1,29 @@
+<Settings>
+  <Param Name="OrgId" Value="mtc" />
+  <Param Name="StudyId" Value="DummyStudyId" />
+  <Param Name="HomeId" Value="MTCMoscow" />
+  <Param Name="ConfigDir" Value="C:\PROJECTS\IoT\LoT\Hub\output\Configs\DummyConfig" />
+  <Param Name="ModuleWorkingDirBase" Value="C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\..\..\Data" />
+  <Param Name="RunningMode" Value="standard" />
+  <Param Name="StayOffline" Value="False" />
+  <Param Name="EnforcePolicies" Value="False" />
+  <Param Name="LogFile" Value=":stdout" />
+  <Param Name="LogArchivalDir" Value="archived-logs" />
+  <Param Name="LogRotationThreshold" Value="1000" />
+  <Param Name="AutoSyncLogs" Value="True" />
+  <Param Name="PortRegisterDelay" Value="1000" />
+  <Param Name="MaxStopExecutionTime" Value="5000" />
+  <Param Name="MaxFinallyBlockExecutionTime" Value="30000" />
+  <Param Name="MaxPortDeregisteredExecutionTime" Value="5000" />
+  <Param Name="HomeStoreBase" Value="file:///C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform/../../HomeStore" />
+  <Param Name="RepositoryURIs" Value="file:///C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform/../../HomeStore/repository" />
+  <Param Name="GatekeeperURI" Value="www.lab-of-things.net" />
+  <Param Name="HeartbeatServiceHost" Value="www.lab-of-things.net" />
+  <Param Name="DataStoreAccountName" Value="testdrive" />
+  <Param Name="DataStoreAccountKey" Value="zRTT++dVryOWXJyAM7NM0TuQcu0Y23BgCQfkt7xh2f/Mm+r6c8/XtPTY0xxaF6tPSACJiuACsjotDeNIVyXM8Q==" />
+  <Param Name="ConfigLookupFrequency" Value="300000" />
+  <Param Name="HomeStoreRefreshIntervalMins" Value="60" />
+  <Param Name="HeartbeatServiceMode" Value="Production" />
+  <Param Name="HeartbeatIntervalMins" Value="1" />
+  <Param Name="EmailServiceHost" Value="www.lab-of-things.net" />
+</Settings>

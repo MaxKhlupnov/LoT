@@ -1,0 +1,3 @@
+﻿<Configuration>
+  <Panel IPID="1" IPAddress="10.0.1.1" IPPort="41794" UserName="user" Password="userpassword" UseSSL="false"/>
+</Configuration>

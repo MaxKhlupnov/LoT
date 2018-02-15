@@ -1,0 +1,1 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\UnitTests\Common\Bolt\DataStore\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache

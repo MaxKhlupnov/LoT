@@ -1,0 +1,6 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.WriteSyncTester\WriteStreamSyncTester.exe.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.WriteSyncTester\WriteStreamSyncTester.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.WriteSyncTester\WriteStreamSyncTester.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\WriteStreamSyncTester\obj\Debug\WriteStreamSyncTester.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\WriteStreamSyncTester\obj\Debug\WriteStreamSyncTester.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\WriteStreamSyncTester\obj\Debug\WriteSyncTester.csprojResolveAssemblyReference.cache

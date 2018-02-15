@@ -1,0 +1,8 @@
+<Devices>
+  <Device FriendlyName="Integrated Camera" UniqueName="Integrated Camera" IPAddress="" DriverBinaryName="HomeOS.Hub.Drivers.WebCam" Configured="False" DriverModuleFriendlyName="">
+    <DriverParams Count="1" Param0="Integrated Camera" />
+  </Device>
+  <Device FriendlyName="Crestron control panel" UniqueName="digitalsignal" IPAddress="10.101.50.61" DriverBinaryName="HomeOS.Hub.Drivers.DigitalMedia" Configured="True" DriverModuleFriendlyName="HomeOS.Hub.Drivers.DigitalMedia for Crestron control panel">
+    <DriverParams Count="7" Param0="digitalsignal" Param1="10.101.50.61" Param2="119" Param3="41794" Param4="" Param5="" Param6="False" />
+  </Device>
+</Devices>

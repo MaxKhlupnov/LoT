@@ -1,0 +1,12 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Switch\icon.png
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Switch\index.html
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Switch\Styles\jquery-1.9.1.js
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Switch\Styles\jquery-ui.css
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Switch\Styles\jquery-ui.js
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Switch\Styles\LightsStyle.css
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Switch\HomeOS.Hub.Apps.Switch.dll.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Switch\HomeOS.Hub.Apps.Switch.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Pipeline\AddIns\HomeOS.Hub.Apps.Switch\HomeOS.Hub.Apps.Switch.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Apps\Switch\obj\Debug\Switch.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Apps\Switch\obj\Debug\HomeOS.Hub.Apps.Switch.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Apps\Switch\obj\Debug\HomeOS.Hub.Apps.Switch.pdb

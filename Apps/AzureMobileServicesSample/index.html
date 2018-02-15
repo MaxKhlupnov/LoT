@@ -1,0 +1,130 @@
+﻿<script type="text/javascript" src="../GuiWeb/homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title> Sensor Logger Sensor App - Storing data using Azure Mobile Services</title>
+   <script type="text/javascript" src="../GuiWeb/jquery-1.7.1.js"></script>
+      <script type="text/javascript" src="../GuiWeb/common.js"></script>  <!--contains helpful calls for calling WCF service-->
+  <link rel="Stylesheet" type="text/css" href="Styles/Sensor.css" />
+
+    <script>
+
+        var sensorCheck;
+    
+
+        $(document).ready(
+            function () {
+                //get previously received messages
+                ShowSensorPortsInfo();
+                //Figure out if we are syncing locally
+                GetLocalSyncInformation();
+
+                //Set up to refresh alerts every 2 seconds
+                sensorCheck = setInterval(function () { ShowSensorPortsInfo() }, 2000);
+ 
+            }
+        );
+
+        function ShowSensorPortsInfo() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetReceivedMessages", "", GetReceivedMessagesCallback);
+        }
+
+         function GetReceivedMessagesCallback(context, result) {
+            $("#SensorList").html('');
+            for (i = 0; i < result.length; i++) {
+                $("#SensorList").append(result[i] + "&#13;&#10");  //replace <br /> with &#13;&#10 because it works across more browsers
+            }
+         }
+
+         function ToggleLocalSync() {
+             if ($("#LocalSyncSetup").is(':hidden'))
+                 $("#LocalSyncSetup").show();
+             else
+                 $("#LocalSyncSetup").hide();
+         }
+
+        function GetLocalSyncInformation() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/GetLocalDirectorySyncInfo", "", GetLocalSyncInfoCallback);
+        }
+
+        function GetLocalSyncInfoCallback(context, result) {
+
+            if (result[0] == "") { //success!
+                //first element is whether or not we are syncing locally, second is path 
+                if (result[1] == "True" || result[1] == "true") {
+                    //check the checkbox and set the path
+                    $('#SaveLocally').attr('checked', true);
+                    $('#localDataDirectoryPath').val(result[2]);
+                }
+
+            }
+        }
+
+        function HandleLocalData() {
+            var dPath = $("#localDataDirectoryPath").val();
+            var sVal = $("#SaveLocally").is(":checked");
+            
+            var data2 = JSON.stringify({ syncLocal: sVal, directoryPath: dPath });        
+            new PlatformServiceHelper().MakeServiceCall("webapp/SetLocalDirectory", data2, GetHandleLocalDataCallback);
+        }
+        function GetHandleLocalDataCallback(context, result) {
+            if (result[0] == "") {
+              //success do nothing
+            }
+            else {
+                //divSensorServiceDebug make this visible
+                $("#divSensorServiceDebug").show();
+                DisplayDebugging("GetHandleLocalDataCallback:" + result[0]);
+            }
+            
+        }
+
+ 
+ 
+
+ 
+        
+
+ 
+ 
+
+    </script>
+</head>
+<body>
+
+    <div class="dashboard_toolbar">
+        <div class="homeID_title"><a href="../GuiWeb/index.html">Dashboard</a> </div>        </div>
+        
+        <div class="page">
+           
+                Sample App using Azure Mobile Services 
+ 
+
+      <div> Most recent sensor readings (100 max):</div>
+        <textarea id="SensorList" class="app_form" rows="30" cols="70" wrap="hard"></textarea>
+        <br />
+  
+        <button class="app_button" onclick="ToggleLocalSync()">Setup Local Sync</button> <p></p>
+            <div id="LocalSyncSetup" style="display:none">
+                To save sensor readings in a local file, enter a directory path and click on the checkbox (we recommend a OneDrive directory which will be automatically sync'd to your OneDrive account)
+                <p></p> Local Directory Path: <input type="text" id="localDataDirectoryPath" size="50" /> <p></p>
+                <input type="checkbox" id="SaveLocally" name="sLocal" onclick="HandleLocalData()" /> Save Data Locally  <br />
+                <br />
+            </div>
+
+            <div >
+                This sample app stores sensor data in Azure SQL by using <a target="_blank"  style="color:chartreuse" href="http://azure.microsoft.com/en-us/services/mobile-services/" > Azure Mobile Services</a>.<br />
+                Note that this version of the sample does not include the implementation of offline data sync. <br />
+            (To learn how to add the offline sync functionality, go <a style="color:chartreuse" href="http://azure.microsoft.com/en-us/documentation/articles/mobile-services-windows-store-dotnet-get-started-offline-data/" target="_blank">here</a> )</div>
+           
+    <!--Used for debugging messages, set style="display:none" to turn off showing them, common.js will put text into div with id =divDebugInfo when calls are made to service -->
+    <div id="divSensorServiceDebug" style="display:none">
+    Sensor Service Status Debug Info: <p id="divDebugInfo"></p>
+    </div>
+
+   
+</div>
+</body>
+
+</html>

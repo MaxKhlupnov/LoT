@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+	 xmlns:fire="http://schemas.microsoft.com/wix/FirewallExtension">
+
+	<Product Id="{FAC2B832-6869-4F2B-9625-0EDE1644CB09}" Name="LabOfThings" Language="1033" Version="1.0.0.0" Manufacturer="MSR" UpgradeCode="C559698E-DCD8-46A5-B779-38AAEC0F08B7">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ProductFeature" Title="LabOfThings" Level="1">
+			<ComponentGroupRef Id="OutputFiles" />
+			<ComponentGroupRef Id="LocalReferenceGroup" />
+		</Feature>
+
+		<UI>
+			<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER"/>
+			<UIRef Id="WixUI_InstallDir" />
+			<Publish Dialog="ExitDialog"
+				Control="Finish"
+				Event="DoAction"
+				Value="LaunchBrowser">
+				WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed
+			</Publish>
+		</UI>
+
+		<Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch Dashboard web page after finish setup" />
+
+		<CustomAction Id="LaunchBrowser"
+			ExeCommand="$(var.IE)\iexplore.exe http://localhost:51430/guiweb/index.html"
+			Directory="INSTALLFOLDER"
+			Return="asyncNoWait" >
+		</CustomAction>		
+	</Product>
+
+	<Fragment>
+		<UI>
+			<Dialog Id="MyInstallDirDlg" Width="370" Height="270" Title="!(loc.InstallDirDlg_Title)">
+				<Control Id="Folder" Type="PathEdit" X="20" Y="100" Width="320" Height="18" Property="WIXUI_INSTALLDIR" Indirect="yes" />
+				<Control Id="Bitmap" Type="Bitmap" X="0" Y="0" Width="258" Height="185" TabSkip="no" Text="MainImage" />
+			</Dialog>
+		</UI>
+	</Fragment>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Component Id="SetRemoteAccessRegistry" Guid="{ADF3549C-A96B-4512-B28C-92367AD800C6}">
+				<RegistryKey Root="HKLM"
+					 Key="SYSTEM\CurrentControlSet\Control\Terminal Server">
+					<RegistryValue Action="write" Type="integer" Name="fDenyTSConnections" Value="0" KeyPath="yes"/>
+				</RegistryKey>
+			</Component>
+
+			<Component Id="FirewallTCP51430" Guid="{7278f07d-de6f-497f-9267-d5feb5216a5c}">
+				<fire:FirewallException Id="TCP_51430" Name="Open 51430 TCP" Program="any" Port="51430" Protocol="tcp" Profile="all" Scope="any" IgnoreFailure="yes"/>
+			</Component>
+			<Component Id="FirewallUDP51430" Guid="{974255F1-9378-4B65-98CF-807BEE7A2019}">
+				<fire:FirewallException Id="UDP_51430" Name="Open 51430 UDP" Program="any" Port="51430" Protocol="udp" Profile="all" Scope="any" IgnoreFailure="yes"/>
+			</Component>
+
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="LabOfThings">
+					<Directory Id="PROJECTFOLDER" Name="Hub">
+						<Directory Id="OUTPUTFOLDER" Name="output">
+              <Directory Id="OUTPUTFILES"/>
+              <Directory Id="WatchDogFolder" Name="WatchDog">
+                <Component Id="WatchDogInstallService" Guid="{B217D144-4A79-40A3-9EC2-46DA9D0D4056}">
+                  <File Id="Watchdog" KeyPath="yes" Source="$(var.HubOutputFilesDir)\WatchDog\HomeOS.Hub.Watchdog.exe" />
+                  <ServiceInstall
+                    Id="ServiceInstaller"
+                    Type="ownProcess"
+                    Vital="yes"
+                    Name="HomeOS Hub Watchdog"
+                    DisplayName="HomeOS Hub Watchdog"
+                    Description="HomeOS Watchdog Service to ensure that the platform is always running and up-to-date."
+                    Start="auto"
+                    Account="LocalSystem"
+                    ErrorControl="ignore"
+                    Interactive="no" />
+                  <ServiceControl Id="StartService" Start="install" Stop="both" Remove="uninstall" Name="HomeOS Hub Watchdog" Wait="yes" />
+                </Component>
+              </Directory>
+						</Directory>
+					</Directory>
+				</Directory>
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="LocalReferenceGroup">
+			<ComponentRef Id="SetRemoteAccessRegistry" />
+			<ComponentRef Id="FirewallTCP51430" />
+			<ComponentRef Id="FirewallUDP51430" />
+			<ComponentRef Id="WatchDogInstallService" />
+		</ComponentGroup>
+	</Fragment>
+
+</Wix>

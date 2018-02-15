@@ -1,0 +1,50 @@
+﻿body {
+        background-color: rgb(128, 128, 128);
+        font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+        color: White;
+        }      
+ 
+ #pageTitle
+        {font-size: 36px;
+         position:absolute;
+         top: 10px;
+         left: 20px;
+        }
+ #pageTitleBBar {
+         font-size: 36px;
+         position:absolute;
+         top: 10px;
+         left: 90px;
+        }
+
+#alertList {
+    position:absolute;
+    top:70px;
+    left: 70px;
+}
+
+#alertListButtons {
+  position:absolute;
+    top:400px;
+    left: 70px;  
+}
+
+#alertEmail {
+    position:absolute;
+    top: 70px;
+    left: 600px;
+}
+
+#divDebugInfo {
+    position:absolute;
+    top:450px;
+    left:70px;
+}
+
+.
+
+/*#testEmailButton {
+    position:absolute;
+    top:350px;
+    left:70px;
+}*/

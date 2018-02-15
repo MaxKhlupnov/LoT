@@ -1,0 +1,9 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.DataStoreCommon.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.DataStoreCommon.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\DataStoreCommon\obj\Debug\HomeOS.Hub.Common.Bolt.DataStoreCommon.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\DataStoreCommon\obj\Debug\HomeOS.Hub.Common.Bolt.DataStoreCommon.pdb
+C:\PROJECTS\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.DataStoreCommon.dll
+C:\PROJECTS\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.DataStoreCommon.pdb
+C:\PROJECTS\IoT\LoT\Hub\Common\Bolt\DataStoreCommon\obj\Debug\DataStoreCommon.csprojResolveAssemblyReference.cache
+C:\PROJECTS\IoT\LoT\Hub\Common\Bolt\DataStoreCommon\obj\Debug\HomeOS.Hub.Common.Bolt.DataStoreCommon.dll
+C:\PROJECTS\IoT\LoT\Hub\Common\Bolt\DataStoreCommon\obj\Debug\HomeOS.Hub.Common.Bolt.DataStoreCommon.pdb

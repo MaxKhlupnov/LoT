@@ -1,0 +1,11 @@
+<Modules>
+  <Module FriendlyName="HomeOS.Hub.Drivers.DigitalMedia for Crestron control panel" AppName="driver for Crestron control panel" BinaryName="HomeOS.Hub.Drivers.DigitalMedia" WorkingDir="C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\..\..\Data\HomeOS.Hub.Drivers.DigitalMedia for Crestron control panel" AutoStart="1" Background="1">
+    <Args Count="7" val1="digitalsignal" val2="10.101.50.61" val3="119" val4="41794" val5="" val6="" val7="False" />
+  </Module>
+  <Module FriendlyName="DigitalMediaPanel" AppName="DigitalMediaPanel" BinaryName="HomeOS.Hub.Apps.DigitalMedia" WorkingDir="C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\..\..\Data\DigitalMediaPanel" AutoStart="1" Background="0">
+    <RoleList Optional="False">
+      <Role Name=":crestronsignal:" />
+      <Role Name=":dummy:" />
+    </RoleList>
+  </Module>
+</Modules>

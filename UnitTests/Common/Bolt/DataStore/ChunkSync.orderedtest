@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="chunksync" storage="d:\git\hds-new\src\unittests\common\datastore\chunksync.orderedtest" id="e3442213-b66b-4f09-86b8-a5c798bfc324" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="830c4b79-35bb-e9ab-3b49-6ec6cb9cd020" name="AzureChunkWriteRead" storage="..\..\bin\debug\homeos.hub.unittests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="45adffb1-ad69-ae6d-e6c0-163ac5d5018c" name="AmazonS3ChunkWriteRead" storage="..\..\bin\debug\homeos.hub.unittests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

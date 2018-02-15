@@ -1,0 +1,493 @@
+﻿<script type="text/javascript" src="homeos-1.1.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <script type="text/javascript" src="jquery-1.7.1.js"></script>
+     <script type="text/javascript" src="common.js"></script>
+     <link rel="stylesheet" media="all" type="text/css" href="Styles/HomeOSMasterStyleSheet.css" />
+    <script>
+
+        var HOMEID;
+        var ORGID;
+        var DATASTOREACCOUNTNAME;
+        var DEFAULTEMAIL;
+        var WIRELESSNETWORK;
+        var REMOTEACCESSLINK;
+        //Load  1. HomeID, 2. RemoteAccessURL  3. Apps  4. Devices
+        
+        $(document).ready(
+            function () {
+                //Ask dashboard for all the information we need to display
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetConfSettingWeb", '{"confKey":"HomeId"}', GetSettingsCallback);
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetConfSettingWeb", '{"confKey":"DataStoreAccountName"}', GetSettingsCallback);
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetConfSettingWeb", '{"confKey":"OrgId"}', GetSettingsCallback);
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetPrivateConfSettingWeb", '{"confKey":"NotificationEmail"}', GetSettingsCallback);
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetPrivateConfSettingWeb", '{"confKey":"WifiSsid"}', GetSettingsCallback);
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetRemoteAccessUrlWeb", "", GetSettingsRemoteAccessUrlWebCallback);
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetInstalledAppsWeb", "", GetAppsCallback);
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetConfiguredDevicesWeb", "", GetConfiguredDevicesCallback);
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetOrphanedDevicesWeb", "", GetOrphanedDevicesCallback);
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetAllUsersWeb", "", GetAllUsersCallback);
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetAllGroupsWeb", "", GetAllGroupsCallback);
+            }
+         );
+      
+        function GetSettingsCallback(context, result) {
+            if (result[0] == "") {
+                //figure out which setting it is    
+                var dataAsObject = JSON.parse(context.Data);
+                var confKey = dataAsObject.confKey;
+
+                switch (confKey) {
+                    case "HomeId":
+                        HOMEID = result[1];
+                        $("#homeIDSetting").html("Home ID: " + HOMEID);
+                        break;
+                    case "DataStoreAccountName":
+                        DATASTOREACCOUNTNAME = result[1];
+                        $("#datastoreAccountNameSetting").html("Datastore Account Name: " + DATASTOREACCOUNTNAME);
+                        break;
+                    case "OrgId":
+                        $("#editOrgId").hide();
+                        ORGID = result[1];
+                        $("#orgIDSetting").html("Org ID: " + ORGID  + '<button class="btn" onclick="ShowEditButton(' + "'OrgId'" +')">Edit</button>');
+                        break;
+                    case "NotificationEmail":
+                        $("#editEmail").hide();
+                        DEFAULTEMAIL = result[1];
+                        $("#defaultEmail").html("Email: " + DEFAULTEMAIL + '<button class="btn" onclick="ShowEditButton(' + "'NotificationEmail'" + ')">Edit</button>');
+                        break;
+                    case "WifiSsid":
+                        $("#editWireless").hide();
+                        WIRELESSNETWORK = result[1];
+                        $("#wirelessSetting").html("Wireless:" + WIRELESSNETWORK + '<button class="btn" onclick="ShowEditButton(' + "'WifiSsid'" + ')">Edit</button>');
+
+                }
+            }
+            else {
+                var dataAsObject = JSON.parse(context.Data);
+                var confKey = dataAsObject.confKey;
+                DisplayDebugging("GetSetingsCallback:" + confKey + " " + result[0]);
+            }
+        }
+
+       
+        function GetSettingsRemoteAccessUrlWebCallback(context, result) {
+            if (result[0] == "") {
+                REMOTEACCESSLINK = result[1];
+                $("#urlInfo").html("URL for remote access: <a href='" + result[1] + "' target='_blank'>" + result[1] + '</a>'); //<button class="btn" onclick="EmailRemoteAccessLink()">Email Link </button>');
+            }
+            else {
+                DisplayDebugging("GetRemoteAccess URL " + result[0]);
+            }          
+        }
+
+        function GetAppsCallback(context, result) {
+            $("#status").hide();
+            $("#installedApplications").html("");
+            if (result[0] == "") {
+                if (result.length == 1) {
+                    $("#installedApplications").html('<div class="settings_listitem"> No applications installed<br /></div>');
+                }
+                else {
+                    for (i = 1; i + 3 < result.length; i = i + 4) {
+                        //i is appName, i+1 is description,  i+2 is image file,  i+3 is version,
+                        $("#installedApplications").append('<div class="settings_listitem">' + result[i] + ' ' + result[i+3] + '<button class="btn" onclick="ConfigureApp(' + "'" + result[i] + "'" + ')"  >Configure </button>  <button class= "btn" onclick="RemoveApp(' + "'" + result[i] + "'" + ')">Remove </button></div>');
+                    }
+                }
+            }
+            else {
+                DisplayDebugging("GetApps" + result[0]);
+            }
+
+  
+        }
+
+        function GetConfiguredDevicesCallback(context, result) {
+            $("#status").hide();
+            $("#installedDevices").html("");
+
+            if (result[0] == "") {
+
+                if (result.length == 1) {
+                    $("#installedDevices").html('<div class="settings_listitem"> No devices fully installed<br /></div>');
+                }
+                else {
+                    for (i = 1; i + 2 < result.length; i = i + 3) {
+                        //i:friendly name, i+1: module facing name, i+2:location
+                        $("#installedDevices").append('<div class="settings_listitem">' + result[i] + " in " + result[i + 2] + '<button class= "btn" onclick="RemoveDevice(' +  "'" + result[i] + "',"+ "'" + result[i + 1] + "'" + ')"  >Remove </button> </div>');
+                    }
+                }
+
+            }
+            else {
+                DisplayDebugging("GetDevices" + result[0]);
+            }
+        }
+
+        function GetOrphanedDevicesCallback(context, result) {
+            $("#status").hide();
+            $("#orphanedDevices").html("");
+
+            if (result[0] == "") {
+
+                if (result.length == 1) {
+                    //Hide stuff
+                    $("#orphanedDevices").hide();
+                    $("#orphanedHeader").hide();
+                }
+                else {
+                    for (i = 1; i < result.length; i = i + 1) {
+                        //i:module facing name, 
+                        if (!IsZwaveDevice(result[i])) {
+                            $("#orphanedDevices").append('<div class="settings_listitem">' + result[i] + '<button class= "btn" onclick="ConfigureOrphanDevice(' + "'" + result[i] + "'" + ')"  >Configure </button>' + '<button class= "btn" onclick="RemoveOrphanDevice(' + "'" + result[i] + "'" + ')"  >Remove </button> </div>');
+                        }
+                        else {//zwave devices do not a get a remove button
+                            $("#orphanedDevices").append('<div class="settings_listitem">' + result[i] + '<button class= "btn" onclick="ConfigureOrphanDevice(' + "'" + result[i] + "'" + ')"  >Configure </button> </div>');
+                        }
+                    }
+
+
+                }
+
+            }
+            else {
+                DisplayDebugging("OrphanedDevices" + result[0]);
+            }
+
+        }
+
+        function ConfigureApp(appName) {
+            $("#status").hide();         
+            GoToHTMLPage("./ConfigureAppInstance.html?AppName=" + appName);
+        }
+
+        function RemoveApp(appName) {        
+            $("#status").hide();
+            new PlatformServiceHelper().MakeServiceCall("webapp/RemoveAppWeb", '{"appFriendlyName": "' + appName + '"}', RemoveAppCallback);
+        }
+        function RemoveAppCallback(context, result) {
+            if (result[0] == "") {
+                //remove was successful - get new list of apps
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetInstalledAppsWeb", "", GetAppsCallback);
+            }
+            else {
+                $("#status").show();
+                $("#status").html("Problem with remove:" + result[0]);  
+            }
+        }
+
+        function RemoveDevice(deviceFriendlyName, moduleName) {
+            $("#status").hide();
+
+            if (IsZwaveDevice(moduleName)) {
+                //Handle removal of Zwave by going to the remove zwave page
+                var url = "RemoveZwaveDevice.html?DeviceName=" + deviceFriendlyName + "&NodeId=" + moduleName;
+                window.location.href = encodeURI(url);
+            }
+            else {
+                new PlatformServiceHelper().MakeServiceCall("webapp/RemoveDeviceWeb", '{"deviceFriendlyName": "' + deviceFriendlyName + '"}', RemoveDeviceCallback);
+            }
+          
+        }
+
+        function RemoveDeviceCallback(context, result) {
+            if (result[0] == "") {
+                //remove was successful - get new list of devices
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetConfiguredDevicesWeb", "", GetConfiguredDevicesCallback);
+            }
+            else {
+                $("#status").show();
+                $("#status").html("Problem with remove:" + result[0]);  
+            }
+        }
+
+        function RemoveOrphanDevice(moduleFacingName) {
+            $("#status").hide();
+            new PlatformServiceHelper().MakeServiceCall("webapp/RemoveOrphanedDeviceWeb", '{"moduleFacingName": "' + moduleFacingName + '"}', RemoveOrphanDeviceCallback);
+
+        }
+
+        //Could probably combine with RemoveDeviceCallback, remember state and have a switch statement
+        //Could also have a "refresh" page that made all the calls, but trying to minimize calls to platform - painful on mobile
+        function RemoveOrphanDeviceCallback(context, result) {
+            if (result[0] == "") {
+                //remove was successful - get new list of devices
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetOrphanedDevicesWeb", "", GetOrphanedDevicesCallback);
+            }
+            else {
+                $("#status").show();
+                $("#status").html("Problem with remove:" + result[0]);
+            }
+        }
+
+        function ConfigureOrphanDevice(moduleFacingName) {
+            $("#status").hide();
+            //Go to AddFinalDeviceSetup
+            var url = "./AddDeviceFinalDeviceSetup.html?Orphan=1&DeviceId=" + moduleFacingName;
+            GoToHTMLPage(url);
+
+        }
+
+        function RemoveUser(username) {
+            $("#status").hide();
+            new PlatformServiceHelper().MakeServiceCall("webapp/RemoveLiveIdUser", '{"userName": "' + username + '"}', RemoveUserCallback);
+        }
+
+        function RemoveUserCallback(context, result) {
+            if (result[0] == "") {
+                //remove successful get all users again
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetAllUsersWeb", "", GetAllUsersCallback);
+            }
+            else {
+                $("#status").show();
+                $("#status").html("Problem with remove user:" + result[0]);
+            }
+        }
+
+        function ShowEditButton(confKey) {
+            
+            switch (confKey) {
+
+                case "OrgId":
+                    $("#editOrgId").show();
+                    break;
+
+                case "NotificationEmail":
+                    $("#editEmail").show();
+                    break;
+
+                case "WifiSsid":
+                    //need to load wireless names 
+                    new PlatformServiceHelper().MakeServiceCall("webapp/GetVisibleWifiNetworksWeb", "", GetVisibleWifiNetworksWebCallback);
+                    break;
+            }
+
+        }
+
+
+        function EmailRemoteAccessLink() {
+           // Tuple<bool, string> SendEmail(string dst, string subject, string body);
+            //  var data2 = '{"uniqueDeviceId": "' + DEVICEID + '","friendlyName": "' + friendlyName + '","highSecurity": "false","location": "' + locationTmp + '",' + '"' + APPS_USER_PERMITS_NAME + '":' + appText + '}';
+            var dataParm = '{"dst": "' + DEFAULTEMAIL + '","subject": "Hub access link","body": "This is a test message"}';
+            new PlatformServiceHelper().MakeServiceCall("webapp/SendEmail",  dataParm, EmailAccessLinkSentCallback);
+           
+        }
+
+        function EmailAccessLinkSentCallback(context, result) {
+
+            if (result[0] == "") {
+                $("#status").show();
+                $("#status").html("Remote access link sent");
+            }
+            else {
+                $("#status").show();
+                $("#status").html("Problem sending email:" + result[0]);
+            }
+
+        }
+
+        function SetNewEmail() {
+            var emailAddr = $('#newEmail').val();
+            new PlatformServiceHelper().MakeServiceCall("webapp/SetNotificationEmailWeb", '{"emailAddress": "' + emailAddr + '"}', EmailCallback);
+        }
+
+        function EmailCallback(context, result) {
+
+             if (result[0] == "") {
+                $("#status").show();
+                $("#status").html("Email reset was successful");  
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetPrivateConfSettingWeb", '{"confKey":"NotificationEmail"}', GetSettingsCallback);
+            }
+        }
+
+        function SetOrgId() {
+            ORGID = $('#newOrgID').val();
+            new PlatformServiceHelper().MakeServiceCall("webapp/SetOrgIdWeb", '{"orgId": "' + ORGID + '"}', OrgIdCallback);
+        }
+
+        function OrgIdCallback(context, result) {
+            if (result[0] == "") {
+                $("#status").show();
+                $("#status").html("OrgId reset was successful");
+                new PlatformServiceHelper().MakeServiceCall("webapp/GetConfSettingWeb", '{"confKey":"OrgId"}', GetSettingsCallback);
+            }
+        }
+
+
+        function GetAllUsersCallback(context, result) {
+            $("#status").hide();
+            $("#users").html("");
+
+            if (result[0] == "") {
+
+                if (result.length == 1) {
+                    $("#users").html('<div class="settings_listitem"> No users configured for remote access. <br /></div>');
+                }
+                else {
+                    for (i = 1; i + 1 < result.length; i = i + 2) {
+                        //i:name, i+1: liveid
+                        $("#users").append('<div class="settings_listitem">' + result[i] + ":" + result[i + 1] + '<button class= "btn" onclick="RemoveUser(' + "'" + result[i] + "'" + ')"  >Remove </button> </div>');
+                    }
+                }
+
+            }
+            else {
+                DisplayDebugging("Getusers" + result[0]);
+            }
+
+
+        }
+
+        function GetAllGroupsCallback(context, result) {
+            $("#status").hide();
+            //$("#users").html("");
+
+            if (result[0] == "") {
+            }
+            else {
+                DisplayDebugging("GetGroups" + result[0]);
+            }
+        }
+
+        function DoRestart() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/RestartWeb", "", RestartShutCallback);
+
+        }
+
+        function DoShutdown() {
+            new PlatformServiceHelper().MakeServiceCall("webapp/ShutdownWeb", "", RestartShutCallback);
+        }
+
+        function RestartShutCallback(context, result) {
+            if (result[0] = "") {
+
+
+            }
+            else 
+            {
+                DisplayDebugging("Restart or ShutDown " + result[0]);
+            }
+        }
+
+        //Wireless stuff
+        function GetVisibleWifiNetworksWebCallback(context, result) {
+            if (result[0] == "") {
+                PopulateWifiList(result);
+                $("#editWireless").show();
+            }
+            else {
+                DisplayDebugging("Settings: GetVisibleWifiNetworksWebCallback: " + result[0]);
+
+            }
+        }
+
+        function PopulateWifiList(result) {
+            //Read through the network and add to the list   
+            $("#wirelessNetworkList").html("");
+            for (i = 1; i < result.length; i++) {
+                $("#wirelessNetworkList").append("<option>" + result[i] + "</option>");
+            }
+        }
+
+        function JoinWireless() {
+            //AJB TODO - fix for this page - use json parameter packing
+            $("#status").show();
+            $("#statusInfo").html("Joining wireless network");
+            var homeWireless = $('#wirelessNetworkList option:selected').val();     //figure out the selected option
+            var pPhrase = $('#newWirelessPwd').val();
+            var data2 = JSON.stringify({ targetSsid: homeWireless, passPhrase: pPhrase });           
+            new PlatformServiceHelper().MakeServiceCall("webapp/ConnectToWifiNetworkWeb", data2, ConnectToWifiNetworksWebCallback);
+        }
+
+
+        function ConnectToWifiNetworksWebCallback(context, result) {
+
+            if (result[0] == "") {
+                    $("#status").show();
+                    $("#status").html("Connect to Wireless successful");
+                    new PlatformServiceHelper().MakeServiceCall("webapp/GetPrivateConfSettingWeb", '{"confKey":"WifiSsid"}', GetSettingsCallback);
+                }
+            else {
+               DisplayDebugging("Settings:Connect to Wifi Callback: " + result[0]); //only shows up if debug div is set to normal in .html file
+                $("#status").html(result[0]);
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+     <div class="page">
+            <div class="row">
+                <div class="homeID_title col"><a href="index.html">Dashboard</a> | Settings</div>
+                <div class="page_title col">Settings</div>
+                <div class="status col" id="status" style="display:none">System Status</div> 
+            </div>
+  
+         <div  class="settings_listitem" id="homeIDSetting"> </div>
+         <div  class="settings_listitem" id="orgIDSetting"> </div>
+         <div class="settings_listitem" id="editOrgId" style="display:none">New Org ID: <input type="text" id="newOrgID"/><button class="btn" onclick="SetOrgId()">Set</button></div>
+         <div class="settings_listitem" id="wirelessSetting"> </div>
+         <div class="settings_listitem" id="editWireless" style="display:none">     
+            Please select your wireless network: &nbsp <select id="wirelessNetworkList"></select> Password: <input type="text" id="newWirelessPwd" /><button class="btn" onclick="JoinWireless()">Join</button></div>
+          <div  class="settings_listitem" id="datastoreAccountNameSetting"> </div>
+
+         <div class="settings_listitem" id="urlInfo">  </div>
+
+         
+         <div class="settings_listitem" id ="defaultEmail"> </div> 
+         <div class="settings_listitem" id="editEmail" style="display:none">New email address: <input type="text" id="newEmail"/><button class="btn" onclick="SetNewEmail()">Set</button></div>
+  
+               <div class="row">
+                <div class="related_content col" >Users</div>     
+          </div>
+                  <div class="row" id="users" ></div>
+                  <button class="btn" onclick="GoToHTMLPage('AddLiveIdUser.html')">Add Users</button>
+
+         <br />
+
+          <div class="row">
+                <div class="related_content col" >Installed Applications</div>     
+          </div>
+          
+         <div class="row" id="installedApplications" ></div>
+           
+         <br />
+
+            <div class="row">
+                <div class="related_content col"  >Installed Devices</div>        
+            </div>
+            <div class="row" id="installedDevices" ></div>
+
+                <br />
+
+             <div class="row">
+                <div class="related_content col"  id="orphanedHeader" >Partially Installed Devices</div>        
+            </div>
+             <div class="row" id="orphanedDevices" ></div> 
+         
+         <div class="row">
+             <div class="related_content col" id="Scouts">Scouts</div>
+         </div>
+         <div class="row" id="Scouts2">  </div> 
+         
+             <button class="btn" onclick="GoToHTMLPage('ConfigureScouts.html?RefName=Settings.html')">Configure Scouts</button>
+       
+         <div class="row">
+             <div class="related_content col" id="restart">Danger Zone</div>
+         </div>
+
+         <button class="btn" onclick="DoRestart()">Restart</button> <button class="btn" onclick="DoShutdown()">Shutdown</button>
+         
+         <br />
+            <div class="settings_listitem" id="divDebugInfo" style="display:none">DEBUG info</div>
+  
+     </div>
+
+</body>
+</html>

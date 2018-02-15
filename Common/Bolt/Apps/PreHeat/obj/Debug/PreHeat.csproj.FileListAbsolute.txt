@@ -1,0 +1,6 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.PreHeat\HomeOS.Hub.Common.Bolt.Apps.PreHeat.exe.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.PreHeat\HomeOS.Hub.Common.Bolt.Apps.PreHeat.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\output\binaries\Platform\HomeOS.Hub.Common.Bolt.Apps.PreHeat\HomeOS.Hub.Common.Bolt.Apps.PreHeat.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\PreHeat\obj\Debug\HomeOS.Hub.Common.Bolt.Apps.PreHeat.exe
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\PreHeat\obj\Debug\HomeOS.Hub.Common.Bolt.Apps.PreHeat.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Common\Bolt\Apps\PreHeat\obj\Debug\PreHeat.csprojResolveAssemblyReference.cache

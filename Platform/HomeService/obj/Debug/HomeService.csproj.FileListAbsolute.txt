@@ -1,0 +1,16 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\HomeService\bin\Debug\HomeOS.Hub.Platform.Gatekeeper.HomeService.dll.config
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\HomeService\bin\Debug\HomeOS.Hub.Platform.Gatekeeper.HomeService.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\HomeService\bin\Debug\HomeOS.Hub.Platform.Gatekeeper.HomeService.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\HomeService\bin\Debug\HomeOS.Shared.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\HomeService\bin\Debug\HomeOS.Shared.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\HomeService\obj\Debug\HomeService.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\HomeService\obj\Debug\HomeOS.Hub.Platform.Gatekeeper.HomeService.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\HomeService\obj\Debug\HomeOS.Hub.Platform.Gatekeeper.HomeService.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\HomeService\bin\Debug\HomeOS.Hub.Platform.Gatekeeper.HomeService.dll.config
+C:\PROJECTS\IoT\LoT\Hub\Platform\HomeService\bin\Debug\HomeOS.Hub.Platform.Gatekeeper.HomeService.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\HomeService\bin\Debug\HomeOS.Hub.Platform.Gatekeeper.HomeService.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\HomeService\bin\Debug\HomeOS.Shared.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\HomeService\bin\Debug\HomeOS.Shared.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\HomeService\obj\Debug\HomeService.csprojResolveAssemblyReference.cache
+C:\PROJECTS\IoT\LoT\Hub\Platform\HomeService\obj\Debug\HomeOS.Hub.Platform.Gatekeeper.HomeService.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\HomeService\obj\Debug\HomeOS.Hub.Platform.Gatekeeper.HomeService.pdb

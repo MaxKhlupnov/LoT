@@ -1,0 +1,14 @@
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\DeviceScout\bin\Debug\HomeOS.Hub.Platform.DeviceScout.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\DeviceScout\bin\Debug\HomeOS.Hub.Platform.DeviceScout.pdb
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\DeviceScout\obj\x86\Debug\DeviceScout.csprojResolveAssemblyReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\DeviceScout\obj\x86\Debug\Interop.UPNPLib.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\DeviceScout\obj\x86\Debug\DeviceScout.csproj.ResolveComReference.cache
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\DeviceScout\obj\x86\Debug\HomeOS.Hub.Platform.DeviceScout.dll
+C:\projects\MICROSOFT\IoT\LoT\Hub\Platform\DeviceScout\obj\x86\Debug\HomeOS.Hub.Platform.DeviceScout.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\DeviceScout\bin\Debug\HomeOS.Hub.Platform.DeviceScout.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\DeviceScout\bin\Debug\HomeOS.Hub.Platform.DeviceScout.pdb
+C:\PROJECTS\IoT\LoT\Hub\Platform\DeviceScout\obj\x86\Debug\DeviceScout.csprojResolveAssemblyReference.cache
+C:\PROJECTS\IoT\LoT\Hub\Platform\DeviceScout\obj\x86\Debug\Interop.UPNPLib.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\DeviceScout\obj\x86\Debug\DeviceScout.csproj.ResolveComReference.cache
+C:\PROJECTS\IoT\LoT\Hub\Platform\DeviceScout\obj\x86\Debug\HomeOS.Hub.Platform.DeviceScout.dll
+C:\PROJECTS\IoT\LoT\Hub\Platform\DeviceScout\obj\x86\Debug\HomeOS.Hub.Platform.DeviceScout.pdb

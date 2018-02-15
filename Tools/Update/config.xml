@@ -1,0 +1,19 @@
+﻿<Config>
+  <Version Number="2.0.0.0" />
+  <Configdir Type="zip" Location=""/>
+  <Checksum Type="md5" Value="" />
+  <!--  Examples
+  <Version Number="1.2.0" />
+  <Configdir Type="zip" Location="http://localhost/config-v1.2.0.zip"/>
+  <Checksum Type="md5" Value="eb6265105e6af129af1bb3907dd2eacb" />
+  
+  <Version Number="2.0" />
+  <Configdir Type="zip" Location="http://localhost/config-v2.0.zip"/>
+  <Checksum Type="md5" Value="ffd4d0064930261425042bd6e52a2215" />
+  
+  
+  -->
+  
+  
+  
+</Config>
